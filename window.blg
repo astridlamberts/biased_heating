@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: window.aux
+The style file: apj.bst
+Database file #1: biblio_total.bib
+Repeated entry---line 8160 of file biblio_total.bib
+ : @article{2009MNRAS.398L..26B
+ :                             ,
+I'm skipping whatever remains of this entry
+Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
+while executing---line 1587 of file apj.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
+while executing---line 1671 of file apj.bst
+Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
+while executing---line 1671 of file apj.bst
+Warning--empty publisher in 1981csup.book.....H
+Warning--can't use both author and editor fields in Peebles
+You've used 67 entries,
+            3085 wiz_defined-function locations,
+            1178 strings with 23584 characters,
+and the built_in function-call counts, 33416 in all, are:
+= -- 2689
+> -- 2655
+< -- 21
++ -- 885
+- -- 956
+* -- 2944
+:= -- 6368
+add.period$ -- 67
+call.type$ -- 67
+change.case$ -- 457
+chr.to.int$ -- 67
+cite$ -- 69
+duplicate$ -- 1264
+empty$ -- 1890
+format.name$ -- 1046
+if$ -- 6556
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 67
+newline$ -- 205
+num.names$ -- 269
+pop$ -- 499
+preamble$ -- 1
+purify$ -- 457
+quote$ -- 0
+skip$ -- 1040
+stack$ -- 0
+substring$ -- 1350
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 597
+warning$ -- 2
+while$ -- 254
+width$ -- 0
+write$ -- 672
+(There were 4 error messages)
