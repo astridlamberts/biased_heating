@@ -31,8 +31,7 @@
 
 \bibitem[{{Allevato} {et~al.}(2014){Allevato}, {Finoguenov}, \&
   {Cappelluti}}]{2014arXiv1410.0358A}
-{Allevato}, V., {Finoguenov}, A., \& {Cappelluti}, N. 2014, ArXiv e-prints,
-  arXiv:1410.0358
+{Allevato}, V., {Finoguenov}, A., \& {Cappelluti}, N. 2014, arXiv:1410.0358
 
 \bibitem[{{Bardeen} {et~al.}(1986){Bardeen}, {Bond}, {Kaiser}, \&
   {Szalay}}]{1986ApJ...304...15B}
@@ -74,6 +73,15 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 \bibitem[{{Broderick} {et~al.}(2012){Broderick}, {Chang}, \&
   {Pfrommer}}]{2012ApJ...752...22B}
 {Broderick}, A.~E., {Chang}, P., \& {Pfrommer}, C. 2012, \apj, 752, 22
+
+\bibitem[{{Broderick} {et~al.}(2013){Broderick}, {Pfrommer}, {Puchwein}, \&
+  {Chang}}]{2013arXiv1308.0015B}
+{Broderick}, A.~E., {Pfrommer}, C., {Puchwein}, E., \& {Chang}, P. 2013, ApJ,
+  in print, arXiv:1308.0015
+
+\bibitem[{{Broderick} {et~al.}(2014){Broderick}, {Pfrommer}, {Puchwein}, \&
+  {Chang}}]{2014ApJ...790..137B}
+---. 2014, \apj, 790, 137
 
 \bibitem[{{Cavaliere} \& {D'Elia}(2002)}]{2002ApJ...571..226C}
 {Cavaliere}, A., \& {D'Elia}, V. 2002, \apj, 571, 226
@@ -117,6 +125,14 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 \bibitem[{{Franceschini} {et~al.}(2008){Franceschini}, {Rodighiero}, \&
   {Vaccari}}]{2008A&A...487..837F}
 {Franceschini}, A., {Rodighiero}, G., \& {Vaccari}, M. 2008, \aap, 487, 837
+
+\bibitem[{{Giommi} {et~al.}(2013){Giommi}, {Padovani}, \&
+  {Polenta}}]{Giommi:2013}
+{Giommi}, P., {Padovani}, P., \& {Polenta}, G. 2013, \mnras, 431, 1914
+
+\bibitem[{{Giommi} {et~al.}(2012){Giommi}, {Padovani}, {Polenta}, {Turriziani},
+  {D'Elia}, \& {Piranomonte}}]{Giommi:2012}
+{Giommi}, P., {Padovani}, P., {Polenta}, G., {et~al.} 2012, \mnras, 420, 2899
 
 \bibitem[{{Gould} \& {Schr{\'e}der}(1967)}]{1967PhRv..155.1408G}
 {Gould}, R.~J., \& {Schr{\'e}der}, G.~P. 1967, Physical Review, 155, 1408
@@ -174,6 +190,11 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 {Mandelbaum}, R., {Li}, C., {Kauffmann}, G., \& {White}, S.~D.~M. 2009, \mnras,
   393, 377
 
+\bibitem[{{McQuinn} {et~al.}(2009){McQuinn}, {Lidz}, {Zaldarriaga},
+  {Hernquist}, {Hopkins}, {Dutta}, \&
+  {Faucher-Gigu{\`e}re}}]{2009ApJ...694..842M}
+{McQuinn}, M., {Lidz}, A., {Zaldarriaga}, M., {et~al.} 2009, \apj, 694, 842
+
 \bibitem[{{Miniati} \& {Elyiv}(2013)}]{2013ApJ...770...54M}
 {Miniati}, F., \& {Elyiv}, A. 2013, \apj, 770, 54
 
@@ -200,6 +221,11 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 
 \bibitem[{{Pritchard} \& {Furlanetto}(2007)}]{2007MNRAS.376.1680P}
 {Pritchard}, J.~R., \& {Furlanetto}, S.~R. 2007, \mnras, 376, 1680
+
+\bibitem[{{Puchwein} {et~al.}(2014){Puchwein}, {Bolton}, {Haehnelt}, {Madau},
+  \& {Becker}}]{2014arXiv1410.1531P}
+{Puchwein}, E., {Bolton}, J.~S., {Haehnelt}, M.~G., {Madau}, P., \& {Becker},
+  G.~D. 2014, ArXiv e-prints, arXiv:1410.1531
 
 \bibitem[{{Puchwein} {et~al.}(2012){Puchwein}, {Pfrommer}, {Springel},
   {Broderick}, \& {Chang}}]{2012MNRAS.423..149P}
