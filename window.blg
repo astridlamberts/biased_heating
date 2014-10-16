@@ -1,8 +1,8 @@
-This is BibTeX, Version 0.99c (Web2C 7.5.4)
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: window.aux
 The style file: apj.bst
 Database file #1: biblio_total.bib
-Repeated entry---line 8229 of file biblio_total.bib
+Repeated entry---line 8231 of file biblio_total.bib
  : @article{2009MNRAS.398L..26B
  :                             ,
 I'm skipping whatever remains of this entry
@@ -16,45 +16,45 @@ Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein}
 while executing---line 1671 of file apj.bst
 Warning--empty publisher in 1981csup.book.....H
 Warning--can't use both author and editor fields in Peebles
-You've used 71 entries,
+You've used 73 entries,
             3085 wiz_defined-function locations,
-            1207 strings with 24503 characters,
-and the built_in function-call counts, 35446 in all, are:
-= -- 2863
-> -- 2809
+            1220 strings with 25016 characters,
+and the built_in function-call counts, 36567 in all, are:
+= -- 2956
+> -- 2908
 < -- 21
-+ -- 938
-- -- 1016
-* -- 3122
-:= -- 6746
-add.period$ -- 71
-call.type$ -- 71
-change.case$ -- 490
-chr.to.int$ -- 71
-cite$ -- 74
-duplicate$ -- 1341
-empty$ -- 2003
-format.name$ -- 1107
-if$ -- 6954
++ -- 973
+- -- 1056
+* -- 3224
+:= -- 6960
+add.period$ -- 73
+call.type$ -- 73
+change.case$ -- 510
+chr.to.int$ -- 73
+cite$ -- 76
+duplicate$ -- 1380
+empty$ -- 2058
+format.name$ -- 1146
+if$ -- 7168
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 71
-newline$ -- 217
-num.names$ -- 285
-pop$ -- 537
+missing$ -- 73
+newline$ -- 223
+num.names$ -- 293
+pop$ -- 560
 preamble$ -- 1
-purify$ -- 490
+purify$ -- 510
 quote$ -- 0
-skip$ -- 1100
+skip$ -- 1127
 stack$ -- 0
-substring$ -- 1430
+substring$ -- 1462
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 633
+type$ -- 651
 warning$ -- 3
-while$ -- 269
+while$ -- 276
 width$ -- 0
-write$ -- 711
+write$ -- 731
 (There were 4 error messages)
