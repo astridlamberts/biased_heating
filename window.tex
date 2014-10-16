@@ -306,87 +306,86 @@ The authors acknowledge the Texas Advanced Computing Center (TACC) at The Univer
 
 \appendix
 
-We detail the derivation of the window function of Eq.~\eqref{eq:window}. We start from a purely Newtonian universe, then include the impact of expansion and finally various first order corrections to the received TeV flux.
+We detail the derivation of the window function of Eq.~\eqref{eq:window}. We start from a purely Newtonian universe, then include the impact of expansion and finally various first order corrections to the received TeV flux.\\
+
+
 \section {Newtonian case}\label{sec:windon_newt}
 
 \subsection {Fluctuations with respect to the mean heating rate}
 
+\Cc{[{\em I edited almost every equation below: some cosmetic changes to unify the notation, some streamlining and correction of typos. Please check carefully!}]}
+
 The TeV flux received (in photons s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$ is given by the sum over all the sources within a radius $r\leqslant r_{\mathrm{max}}$.
 \begin{equation}
   \label{eq:flux_recu0}
-  J(\mathbf{x})=\int_{0}^{2\pi}\int_{0}^{\pi}\int_0^{r_{\mathrm{max}}}   \frac{\mathcal{E}(\mathbf{x}') }{4\pi |\mathbf{x}'-\mathbf{x}|^2} e^{-\tau} |\mathbf{x}'-\mathbf{x}|^2 \sin\theta d\theta d\phi d(\mathbf{x}'-\mathbf{x}),
+  J(\mathbf{x})=
+  \int_{0}^{2\pi}d\phi\int_{0}^{\pi}\sin\theta d\theta\int_0^{r_{\mathrm{max}}}|\mathbf{x}'-\mathbf{x}|^2 d(\mathbf{x}'-\mathbf{x})
+  \frac{\mathcal{E}(\mathbf{x}') }{4\pi |\mathbf{x}'-\mathbf{x}|^2} e^{-\tau}
+  =\int_{\Omega} d\Omega\int_0^{r_{\mathrm{max}}} dr' \frac{\mathcal{E}(\mathbf{r}'+\mathbf{x}) }{4\pi } e^{-\tau},
 \end{equation}
-where the emissivity $\mathcal{E}$ is given in photons per unit time, per unit volume. $\tau=\kappa (\mathbf{x}'-\mathbf{x})$ is the optical depth along the line of sight, $\kappa$ the absorption coefficient.
-Introducing $\mathbf{r'}=\mathbf{x}'-\mathbf{x}$, and $d\Omega=sin\theta d\theta d\phi$ this gives
-
-
-\begin{equation}
-  \label{eq:flux_recu}
-  J(\mathbf{x})=\int_{\Omega}\int_0^{r_{\mathrm{max}}}   \frac{\mathcal{E}(\mathbf{r}'+\mathbf{x}) }{4\pi } e^{-\tau} d\Omega dr'.
-\end{equation}
-
-The corresponding heating rate (erg cm$^{-3}$ s$^{-1}$ ) is given by 
+where the emissivity $\mathcal{E}$ is given in photons per unit time, per unit volume, $\tau=\kappa (\mathbf{x}'-\mathbf{x})$ is the optical depth along the line of sight, and $\kappa$ the absorption coefficient. In the last step, we introduced $\mathbf{r'}=\mathbf{x}'-\mathbf{x}$ and $d\Omega=\sin\theta d\theta d\phi$. The corresponding heating rate and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
 \begin{equation}
   \label{eq:heating_rate0}
-  \dot{Q}(\mathbf{x})=\frac{E_0}{D_{pp}}J(\mathbf{x}) =\frac{E}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}   \mathcal{E}(\mathbf{r}'+\mathbf{x}) \frac{1}{D_{pp}}  e^{-\tau} dr' ,
+  \dot{Q}(\mathbf{x})=\frac{E_0}{D_{pp}}J(\mathbf{x}) =
+  \frac{E_0}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \mathcal{E}(\mathbf{r}'+\mathbf{x}) \frac{1}{D_{pp}} e^{-\tau},\quad\mbox{and}\quad
+  \bar{\dot{Q}}= \frac{E_0}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \bar{\mathcal{E}} \frac{1}{D_{pp}} e^{-\tau},
 \end{equation}
-with $E_0$ the mean energy of the TeV photons and $D_{pp}$ their mean free path  before they pair-produce. For convenience reasons,  we  do not take into account the integral on the spectral energy distribution of the TeV photons in this Appendix. 
-
-This gives the  heating rate per baryon
-\begin{equation}
-  \label{eq:heating_rate0}
-  \dot{q}(\mathbf{x})=\frac{\dot{Q}}{n}= \frac{E_0}{4\pi}  \int_{\Omega}\int_0^{r_{\mathrm{max}}}   \mathcal{E}(\mathbf{r}'+\mathbf{x})\sigma  e^{-\tau}d\Omega dr' ,
-\end{equation}
-where $n$ is the average density of the target photons (i.e. the EBL) and $\sigma$ (in cm$^{-2}$) is the energy averaged cross section for pair production on the extragalactic background light photons \citep{1967PhRv..155.1408G}. 
-
-
-The mean heating rate can be expressed as
-\begin{equation}
-  \label{eq:heating_rate0}
-  \bar{\dot{q}}=\frac{E_0}{4\pi} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  \bar{\mathcal{E}}\sigma  e^{-\tau}dr', 
-\end{equation}
-with $\bar{\mathcal{E}}$ the mean emissivity. Throughout the whole appendix, barred quantities are spatially averaged quantities.
-
-The heating rate fluctuations at a given point are then given by 
-
+where $E_0$ denotes the mean energy of the TeV photons and $D_{pp}$ is their mean free path before they pair-produce. For convenience, we do not take into account the integral on the spectral energy distribution of the TeV photons in this Appendix. 
+%
+%This gives the  heating rate per baryon
+%\begin{equation}
+%  \label{eq:heating_rate0}
+%  \dot{q}(\mathbf{x})=\frac{\dot{Q}}{n}= \frac{E_0}{4\pi}  \int_{\Omega}\int_0^{r_{\mathrm{max}}}   \mathcal{E}(\mathbf{r}'+\mathbf{x})\sigma  e^{-\tau}d\Omega dr' ,
+%\end{equation}
+%where $n$ is the average density of the target photons (i.e. the EBL) and $\sigma$ (in cm$^{-2}$) is the energy averaged cross section for pair production on the extragalactic background light photons \citep{1967PhRv..155.1408G}. 
+%The mean heating rate can be expressed as
+%\begin{equation}
+%  \label{eq:heating_rate0}
+%  \bar{\dot{q}}=\frac{E_0}{4\pi} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  \bar{\mathcal{E}}\sigma  e^{-\tau}dr', 
+%\end{equation}
+%with $\bar{\mathcal{E}}$ the mean emissivity. Throughout the whole appendix, barred quantities are spatially averaged quantities.
+%
+The heating rate fluctuations at a given point $\mathbf{x}$ are then given by 
 \begin{eqnarray}
   \label{eq:heat_fluc_newt0}
-  \delta_H(\mathbf{x})&=&\frac{\dot{q}(\mathbf{x})-\bar{\dot{q}}}{\bar{\dot{q}}}=\frac{E_0}{4\pi\bar{\dot{q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}   (\mathcal{E}(\mathbf{r}'+\mathbf{x})-\bar{\mathcal{E}}) \sigma  e^{-\tau} dr' \\ \nonumber
-  &=&\frac{E_0}{4\pi\bar{\dot{q}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}   \delta_E(\mathbf{r}'+\mathbf{x})\bar{\mathcal{E}}\sigma  e^{-\kappa r'}dr',
+  \delta_H(\mathbf{x})&=&\frac{\dot{Q}(\mathbf{x})-\bar{\dot{Q}}}{\bar{\dot{Q}}}=
+  \frac{E_0}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' 
+  (\mathcal{E}(\mathbf{r}'+\mathbf{x})-\bar{\mathcal{E}}) \sigma n_{\mathrm{EBL}} e^{-\tau} \nonumber\\
+  &=&\frac{E_0}{4\pi\bar{\dot{Q}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \delta_E(\mathbf{r}'+\mathbf{x})\bar{\mathcal{E}}\sigma n_{\mathrm{EBL}} e^{-\kappa r'},
 \end{eqnarray}
-with the fluctuations in the TeV emissivity $\delta_E$ such that one has $\delta_E=\delta$ if the emissivity fluctuations directly relate to the density fluctuations.
+where $n_{\mathrm{EBL}}$ is the average density of the target EBL photons and $\sigma$ (in units of cm$^{-2}$) is the energy averaged cross section for pair production on the extragalactic background light photons \citep{1967PhRv..155.1408G}. In the last step, we have assumed that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$.
 
 \subsection{Window function}
-As the universe is infinite and asymptotically flat, we can expand the fluctuations into planar waves, in order to get the length scale dependence of heating rate fluctuations.
-
+As the universe is infinite and asymptotically flat, we can expand the fluctuations into planar waves, in order to get the length scale dependence of heating rate fluctuations,
 \begin{eqnarray}
   \label{eq:FT_delta}
-  \delta_H(\mathbf{x})&=&\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_H(\mathbf{k'}) e^{-i\mathbf{k'}\cdot\mathbf{x}}\\ \nonumber
-  \delta_E(\mathbf{r}'+\mathbf{x})&=&\frac{1}{(2\pi)^3}\int d^3\mathbf{k'} \tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot(\mathbf{r'}+\mathbf{x})},
+  \delta_H(\mathbf{x})&=&\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_H(\mathbf{k'}) e^{-i\mathbf{k'}\cdot\mathbf{x}},\\ \nonumber
+  \delta_E(\mathbf{r}'+\mathbf{x})&=&\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot(\mathbf{r'}+\mathbf{x})}.
 \end{eqnarray}
 Eq.~\eqref{eq:heat_fluc_newt0} then gives
-\begin{eqnarray}
+\begin{equation}
   \label{eq:heat_fluc_newt1}
-\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_H(\mathbf{k'}) e^{-i\mathbf{k'}\cdot\mathbf{x}}&=&\frac{E_0}{4\pi\bar{\dot{q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{\mathcal{E}}\sigma  e^{-\kappa r'}  \frac{1}{(2\pi)^3}\int d^3\mathbf{k'} \tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot(\mathbf{r'}+\mathbf{x})}.
-\end{eqnarray}
-
-Performing an inverse Fourier transform on the right-hand side of Eq.~\eqref{eq:heat_fluc_newt0}, we have
+  \delta_H(\mathbf{x})
+  =\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_H(\mathbf{k'}) e^{-i\mathbf{k'}\cdot\mathbf{x}}
+  =\frac{1}{ (2\pi)^3}\frac{E_0}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{\mathcal{E}}\sigma n_{\mathrm{EBL}} e^{-\kappa r'} \int d^3\mathbf{k'} \tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot(\mathbf{r'}+\mathbf{x})}.
+\end{equation}
+Performing an inverse Fourier transform of Eq.~\eqref{eq:heat_fluc_newt1} yields
 \begin{eqnarray}
-  \label{eq:right}
-  &=& \frac{1}{(2\pi)^3} \frac{E_0}{4\pi\bar{\dot{q}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr'\bar{ \mathcal{E}}\sigma  e^{-\kappa r'} \int d^3\mathbf{k'}\int d^3\mathbf{x} \tilde{\delta}_E(\mathbf{k'})e^{-i\mathbf{k'}\cdot{\mathbf{r}'}} e^{i(\mathbf{k}-\mathbf{k'})\cdot\mathbf{x}} \\ \nonumber
-  &=&\frac{1}{(2\pi)^3} \frac{E_0}{4\pi\bar{\dot{q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}   dr' \bar{\mathcal{E}}\sigma  e^{-\kappa r'} \int d^3\mathbf{k'} \delta^{0}(\mathbf{k}-\mathbf{k}')e^{-i\mathbf{k'}\cdot{\mathbf{r}'}} \tilde{\delta}_E(\mathbf{k'})    \\ \nonumber
-  &=&\frac{1}{(2\pi)^3} \frac{E_0}{4\pi\bar{\dot{q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{ \mathcal{E}}\sigma  e^{-\kappa r'}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}'}}  ,
+  \label{eq:heat_fluc_newt2}
+  \tilde{\delta}_H(\mathbf{k})&=& \frac{1}{(2\pi)^3} \frac{E_0}{4\pi\bar{\dot{Q}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr'\bar{ \mathcal{E}}\sigma n_{\mathrm{EBL}}  e^{-\kappa r'} \int d^3\mathbf{k'}\int d^3\mathbf{x} \tilde{\delta}_E(\mathbf{k'})e^{-i\mathbf{k'}\cdot{\mathbf{r}'}} e^{i(\mathbf{k}-\mathbf{k'})\cdot\mathbf{x}} \\ \nonumber
+  &=&\frac{E_0}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}   dr' \bar{\mathcal{E}}\sigma n_{\mathrm{EBL}}  e^{-\kappa r'} \int d^3\mathbf{k'} \delta^{0}(\mathbf{k}-\mathbf{k}')\tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot{\mathbf{r}'}}  \\ \nonumber
+  &=&\frac{E_0}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{ \mathcal{E}}\sigma n_{\mathrm{EBL}}  e^{-\kappa r'}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}'}}  ,
 \end{eqnarray}
-with $\delta^{(0)}$ the Dirac function, which Fourier transform equals 1. Introducing $\mu=cos\theta$, where $\theta$ is the angle between the wavevector and the line of sight, Eq.~\eqref{eq:heat_fluc_newt0} rewrites
+where $\delta^{(0)}$ denotes the Dirac delta distribution. Introducing $\mu=\cos\theta$, where $\theta$ is the angle between the wave vector and the line of sight, and assuming statistical isotropy and homogeneity, Eq.~\eqref{eq:heat_fluc_newt2} can be simplified as follows,
 \begin{eqnarray}
-  \label{eq:heat_fluc_newt1}
-  \tilde{\delta}_H(\mathbf{k})&=&  \frac{E_0}{\bar{2\dot{q}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}  \bar{\mathcal{E}}\sigma  e^{-\kappa r'}  \tilde{\delta}_E(k) e^{-ikr'\mu}  dr'\\ \nonumber
-&=&\tilde{\delta}_E(\mathbf{k})\frac{\sigma E_0}{\bar{\dot{q}}}\int_0^{r_{\mathrm{max}}} \frac{sin(kr')}{kr'}   \bar{\mathcal{E}}  e^{-\kappa r'}   dr'\\ \nonumber
-&=&\tilde{\delta}_E(\mathbf{k})\frac{\sigma E_0}{ \bar{\dot{q}}}\frac{\kappa}{k}  \arctan\left(\frac{k}{\kappa}\right)\\ \nonumber
-&=&\tilde{\delta}(\mathbf{k})\frac{\sigma E_0}{ \bar{\dot{q}}}\frac{\kappa}{k}  \arctan\left(\frac{k}{\kappa}\right).\\ 
+  \label{eq:heat_fluc_newt3}
+  \tilde{\delta}_H(k)&=&  
+  \frac{E_0}{\bar{2\dot{Q}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}dr'  \bar{\mathcal{E}}\sigma n_{\mathrm{EBL}} e^{-\kappa r'} \tilde{\delta}_E(k) e^{-ikr'\mu}
+  =\tilde{\delta}_E(k)\frac{  E_0 \bar{\mathcal{E}} \sigma n_{\mathrm{EBL}}}{\bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr')}{kr'} e^{-\kappa r'}   dr'\\ \nonumber
+  &=&\tilde{\delta}_E(k)\frac{  E_0 \bar{\mathcal{E}} \sigma n_{\mathrm{EBL}}}{ \bar{\dot{Q}}k} \arctan\left(\frac{k}{\kappa}\right)
+  =\tilde{\delta}(k)\frac{  E_0 \bar{\mathcal{E}} \sigma n_{\mathrm{EBL}}}{ \bar{\dot{Q}}k} \arctan\left(\frac{k}{\kappa}\right).\\ 
 \end{eqnarray}
-
-Fig.\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $\kappa=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low k) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
+Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $\kappa=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
 
 \begin{figure}
   \centering
@@ -397,20 +396,12 @@ Fig.\ref{fig:window_newt} shows  window functions with different absorption coef
 \end{figure}
 
 
-
 \section{Expanding universe}\label{sec:window_exp}
 
-We perform the same derivation as in the former section, replacing the integrals on the (comoving) distance by redshift integrals using
-\begin{equation}
-  \label{eq:proper_dist}
-  dr=\int \frac{c}{H(z)} dz'.
-\end{equation}
-where  $H(z)$ is the Hubble parameter.
-
-
+To account for the Hubble expansion, we express the (comoving) integration through a redshift integration and account for the Jacobian, $dr=c dz /H(z)$, where  $H(z)$ is the Hubble parameter.
 \begin{equation}
   \label{eq:int_exp_heat}
-  \dot{q}(\mathbf{z})=\frac{E_0(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}\frac{dl}{dz'}\sigma\mathcal{E}(E',z') e^{-\tau} dz'.
+  \dot{Q}(\mathbf{z})=\frac{E_0(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}\frac{dl}{dz'}\sigma n_{\mathrm{EBL}}\mathcal{E}(E',z') e^{-\tau} dz'.
 \end{equation}
  $z'=z+\Delta z$, with $\Delta z$ the difference in redshift between the emission and reception of the photons.
 
