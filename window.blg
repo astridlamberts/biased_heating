@@ -1,60 +1,60 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
 The top-level auxiliary file: window.aux
 The style file: apj.bst
 Database file #1: biblio_total.bib
-Repeated entry---line 8160 of file biblio_total.bib
+Repeated entry---line 8229 of file biblio_total.bib
  : @article{2009MNRAS.398L..26B
  :                             ,
 I'm skipping whatever remains of this entry
 Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
 while executing---line 1587 of file apj.bst
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty journal in 2014arXiv1410.0358A
 Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
 while executing---line 1671 of file apj.bst
 Name 2 in "{Chang}, P. and {Broderick}, A.~E., and {Pfrommer}, C. and {Puchwein},E. and {Lamberts}, A. and {Shalaby},M." has a comma at the end for entry Chang15
 while executing---line 1671 of file apj.bst
 Warning--empty publisher in 1981csup.book.....H
 Warning--can't use both author and editor fields in Peebles
-You've used 67 entries,
+You've used 71 entries,
             3085 wiz_defined-function locations,
-            1178 strings with 23584 characters,
-and the built_in function-call counts, 33416 in all, are:
-= -- 2689
-> -- 2655
+            1207 strings with 24503 characters,
+and the built_in function-call counts, 35446 in all, are:
+= -- 2863
+> -- 2809
 < -- 21
-+ -- 885
-- -- 956
-* -- 2944
-:= -- 6368
-add.period$ -- 67
-call.type$ -- 67
-change.case$ -- 457
-chr.to.int$ -- 67
-cite$ -- 69
-duplicate$ -- 1264
-empty$ -- 1890
-format.name$ -- 1046
-if$ -- 6556
++ -- 938
+- -- 1016
+* -- 3122
+:= -- 6746
+add.period$ -- 71
+call.type$ -- 71
+change.case$ -- 490
+chr.to.int$ -- 71
+cite$ -- 74
+duplicate$ -- 1341
+empty$ -- 2003
+format.name$ -- 1107
+if$ -- 6954
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 67
-newline$ -- 205
-num.names$ -- 269
-pop$ -- 499
+missing$ -- 71
+newline$ -- 217
+num.names$ -- 285
+pop$ -- 537
 preamble$ -- 1
-purify$ -- 457
+purify$ -- 490
 quote$ -- 0
-skip$ -- 1040
+skip$ -- 1100
 stack$ -- 0
-substring$ -- 1350
+substring$ -- 1430
 swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 597
-warning$ -- 2
-while$ -- 254
+type$ -- 633
+warning$ -- 3
+while$ -- 269
 width$ -- 0
-write$ -- 672
+write$ -- 711
 (There were 4 error messages)
