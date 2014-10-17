@@ -212,7 +212,7 @@ We detail the derivation of the window function of Eq.~\eqref{eq:window}. We sta
 \section {Newtonian case}\label{sec:windon_newt}
 \subsection {Fluctuations with respect to the mean heating rate}
 
-\Cc{[{\em I edited almost every equation below: some cosmetic changes to unify the notation, some streamlining and correction of typos. Please check carefully!}]}
+\Cc{[{\em I edited almost every equation in App. A: some were cosmetic changes to unify the notation, some to streamline the presentation and correcting typos. Please check carefully!}]}
 
 The TeV flux received (in photons s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$ is given by the sum over all the sources within a radius $r\leqslant r_{\mathrm{max}}$.
 \begin{equation}
@@ -314,7 +314,7 @@ E'=E\frac{1+z'}{1+z}.
 $\tau(E,z',z)$ is the optical depth of a TeV photon observed at redshift $z$ with energy $E$, which was emitted at redshift $z'$ with energy $E'$.
 \begin{equation}
 \label{eq:tau}
-\tau(E,z',z)=\int_z^{z'}dz''\frac{1}{D_{pp}}\frac{dl}{dz''}=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{pp}},
+\tau(E,z',z)=\int_z^{z'}dz''\frac{1}{D_{\mathrm{pp}}}\frac{dl}{dz''}=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
 \end{equation}
 Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
@@ -346,7 +346,7 @@ And Eq.~\eqref{eq:fluc_exp0} rewrites as
 The left hand side yields $\tilde{\delta}(\mathbf{k})$ while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:right}. As the power spectrum of density fluctuations is isotropic, this yields
 \begin{equation}
 \label{eq:heat_fluc_exp1}
-\tilde{\delta}_H(k)=\tilde{\delta}(k) \frac{E_0(1+z)^2\bar{\mathcal{E}}c\sigma}{4\pi\bar{\dot{q}}} \int_z^{z_{\mathrm{max}}} \frac{D(z')}{D(z)}\frac{sin(kr'(z'))}{kr'(z')} \frac{e^{-\kappa r'(z')}} {H(z')} dz'.
+\tilde{\delta}_H(k)=\tilde{\delta}(k) \frac{E_0(1+z)^2\bar{\mathcal{E}}c\sigma}{4\pi\bar{\dot{q}}} \int_z^{z_{\mathrm{max}}} \frac{D(z')}{D(z)}\frac{\sin(kr'(z'))}{kr'(z')} \frac{e^{-\kappa r'(z')}} {H(z')} dz'.
 \end{equation}
 \begin{figure}[h]
 \centering
@@ -411,13 +411,13 @@ Switching to $k$-space then yields
 With the spherical Bessel functions
 \begin{eqnarray}
 \label{eq:bessel}
-j_0(kr)&=& \frac{sin(kr)}{kr}\\
-j_2(kr)&=& \left(\frac{3}{x^2}-1\right)\frac{sin(x)}{x}-\frac{3 cos(x)}{x^2} .
+j_0(kr)&=& \frac{\sin(kr)}{kr}\\
+j_2(kr)&=& \left(\frac{3}{x^2}-1\right)\frac{\sin(x)}{x}-\frac{3 \cos(x)}{x^2} .
 \end{eqnarray}
 We have used
 \begin{equation}
 \label{eq:bes2}
-\int_{-1}^{1}\mu^2 e^{i k r \mu} d\mu=\frac{2 sin(kr)}{kr}+4\frac{cos(kr)}{(kr)^2}-4\frac{sin(kr)}{(kr)^3}.
+\int_{-1}^{1}\mu^2 e^{i k r \mu} d\mu=\frac{2 \sin(kr)}{kr}+4\frac{\cos(kr)}{(kr)^2}-4\frac{\sin(kr)}{(kr)^3}.
 \end{equation}
 The window function for the heating rate fluctuations is then given by
 \begin{equation}
