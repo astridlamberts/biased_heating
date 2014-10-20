@@ -356,7 +356,7 @@ To account for the Hubble expansion, we express the (comoving) integration throu
 % CP fixed until here
 \begin{equation}
   \label{eq:int_exp_heat}
-  \dot{Q}(z)=\frac{E(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\sigma n_{\mathrm{EBL}}\mathcal{E}(E',z') e^{-\tau}.
+  \dot{Q}(z)=\frac{(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}} e^{-\tau}.
 \end{equation}
 $z'=z+\Delta z$, with $\Delta z$ the difference in redshift between the emission and reception of the photons.
 $\mathcal{E}(E',z')$ is the blazar luminosity at the energy $E'$, which then redshifts to energy $E$ following %\Ec{[FIXED EQ. BELOW]}
@@ -372,14 +372,15 @@ $\tau(E,z',z)$ is the optical depth of a TeV photon observed at redshift $z$ wit
 Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
 \label{eq:mean_exp_heat}
-\bar{\dot{Q}}=\frac{E(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int dz' \frac{dr}{dz'}\sigma n_{\mathrm{EBL}}\bar{\mathcal{E}} e^{-\tau}.
+\bar{\dot{Q}}=\frac{(1+z)^2}{4\pi}\int_{\Omega}d\Omega\int dz' \frac{dr}{dz'}\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}}} e^{-\tau}.
 \end{equation}
-The resulting heating rate fluctuations are then given by
+\ALc{As the mean free path for pair production is much smaller than the Hubble length $c/H(z)$, we have} the resulting heating rate fluctuations \ALc{\sout{are then given by}}
 \begin{eqnarray}
 \label{eq:fluc_exp0}
-\delta_H(\mathbf{s})&=&\frac{\dot{Q}(\mathbf{s})-\bar{\dot{Q}}}{\bar{\dot{Q}}}=\frac{E(1+z)^2c\sigma n_{\mathrm{EBL}}}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{ ( \mathcal{E}(z')-\bar{\mathcal{E}}) e^{-\tau}}{H(z')} \\ \nonumber
-&=&\frac{E(1+z)^2\bar{\mathcal{E}} c\sigma n_{\mathrm{EBL}}}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_0^{z_{\mathrm{max}}} dz' \frac{\delta_E(z') e^{-\tau}}{H(z')}.
+\delta_H(\mathbf{s})&=&\frac{\dot{Q}(\mathbf{s})-\bar{\dot{Q}}}{\bar{\dot{Q}}}=\frac{(1+z)^2c}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{ ( \mathcal{E}(z')-\bar{\mathcal{E}}) e^{-\tau}}{H(z')} \\ \nonumber
+&=&\frac{(1+z)^2 c}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{z_{\mathrm{max}}} dz' \frac{\bar{\mathcal{E}}\delta_E(z') e^{-\tau}}{H(z')},
 \end{eqnarray}
+
 The TeV emission is related to the presence of supermassive black holes at the center of galaxies, which are located in collapsed dark matter halos. We can thus connect the fluctuations of the TeV emission, within a certain radius $r$, to the underlying dark matter fluctuations $\delta$.
 At this stage we assume the TeV fluctuations exactly match the dark matter fluctuations $\delta_E=\delta$. We explain in the next section that this is not exactly true and will take into account various corrections. The initial density fluctuations represent a Gaussian random field, which exact properties depend on the earliest stages of the Universe prior to recombination \citep{1986ApJ...304...15B,Peebles}. They grow linearly between $z'$ and $z$ following $\delta(z',r)=\delta_0(r)D(z')/D(z)$ \citep{ 1977MNRAS.179..351H}, where the linear growth factor is given by
 \begin{equation}
@@ -394,12 +395,12 @@ The linear approximation breaks down when the amplitude of the root mean square 
 And Eq.~\eqref{eq:fluc_exp0} rewrites as
 \begin{equation}
 \label{eq:heat_fluc_exp0}
-\delta_H(\mathbf{s})=\frac{ E(1+z)^2 \bar{\mathcal{E}} c\sigma n_{\mathrm{EBL}}}{4\pi\bar{\dot{Q}}} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}dz' \frac{D(z')}{D(z)} \frac{\delta(r') e^{-\tau}}{H(z')}.
+\delta_H(\mathbf{s})=\frac{(1+z)^2  c}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}dz' \frac{D(z')}{D(z)} \frac{\bar{\mathcal{E}}\delta(r') e^{-\tau}}{H(z')}.
 \end{equation}
-The left hand side yields $\tilde{\delta}(\mathbf{k})$ while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:right}. As the power spectrum of density fluctuations is isotropic, this yields
+The left hand side yields $\tilde{\delta}(\mathbf{k})$ while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:heat_fluc_newt3}. As the power spectrum of density fluctuations is isotropic, this yields
 \begin{equation}
 \label{eq:heat_fluc_exp1}
-\tilde{\delta}_H(k)=\tilde{\delta}(k) \frac{E(1+z)^2\bar{\mathcal{E}}c\sigma n_{\mathrm{EBL}}}{4\pi\bar{\dot{Q}}} \int_z^{z_{\mathrm{max}}} dz' \frac{D(z')}{D(z)}\frac{\sin(kr'(z'))}{kr'(z')} \frac{e^{-\kappa r'(z')}} {H(z')}.
+\tilde{\delta}_H(k)=\tilde{\delta}(k) \frac{(1+z)^2c}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_z^{z_{\mathrm{max}}} dz' \frac{D(z')}{D(z)}\frac{\sin(kr'(z'))}{kr'(z')} \frac{\bar{\mathcal{E}}e^{-\kappa r'(z')}} {H(z')}.
 \end{equation}
 \begin{figure}[h]
 \centering
@@ -426,7 +427,7 @@ A small density perturbation thus gives
 \label{eq:pert_area}
 dA\simeq 4\pi \left(1+\frac{2}{3}\delta\right)r^2.
 \end{equation}
-If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, galaxies bound to the central potential of a cluster have an infall velocity towards the central overdensity. The proper distance to a source (Eq.~\eqref{eq:proper_dist}) then becomes
+If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, galaxies bound to the central potential of a cluster have an infall velocity towards the central overdensity. The proper distance to a source then becomes
 \begin{equation}
 \label{eq:vel_perturb}
 dz'=dr\frac{H(z')}{c}\left(1-\frac{d\delta_{v_r}(z')}{dr}\right),
@@ -440,7 +441,7 @@ with $\mu$ the cosine of the angle between the wavenumber and the line of sight.
 Keeping only first order correction for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
 \begin{equation}
 \label{eq:mean_heat0}
-\dot{Q}(\mathbf{s})=\frac{E(1+z)^2c\sigma n_{\mathrm{EBL}}\mathcal{\bar{E}}}{4\pi}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{D(z')}{D(z)}\left(1+\left(b(z)+\frac{2}{3}\right) \delta(r) -\frac{d\delta_{v_r}}{dr}\right).
+\dot{Q}(\mathbf{s})=\frac{(1+z)^2c}{4\pi D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\mathcal{\bar{E}}\frac{D(z')}{D(z)}\left(1+\left(b(z)+\frac{2}{3}\right) \delta(r) -\frac{d\delta_{v_r}}{dr}\right).
 \end{equation}
 Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the fluctuations
 \begin{equation}
@@ -450,7 +451,7 @@ Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the
 where we introduced
 \begin{equation}
 \label{eq:def_X}
-\frac{dX}{dz'}=\frac{E(1+z)^2\mathcal{\bar{E}}c\sigma n_{\mathrm{EBL}}}{4\pi}\frac{e^{-\tau(z,z',E')}}{H(z')},
+\frac{dX}{dz'}=\frac{(1+z)^2c}{4\pi D_{\mathrm{pp}}}\frac{\mathcal{\bar{E}}e^{-\tau(z,z',E')}}{H(z')},
 \end{equation}
 for convenience reasons and to highlight the generality of the method.
 Switching to $k$-space then yields
@@ -475,8 +476,8 @@ We have used
 The window function for the heating rate fluctuations is then given by
 \begin{eqnarray}
 \label{eq:heat_fluc}
-\tilde{W}_H(k,z)&=&\frac{E(1+z)^2\sigma n_{\mathrm{EBL}} c \mathcal{\bar{E}}}{4\pi\bar{\dot{Q}}}\int_z^{z_{\mathrm{max}}} dz' \frac{e^{-\tau}}{H(z')}\frac{D(z')}{D(z)}\left((b(z)+1)j_0(kr)-\frac{2}{3}j_2(kr)\right)\\
-&=& \frac{\displaystyle \int_z^{z_{\mathrm{max}}} dz'  \mathcal{\bar{E}} \frac{e^{-\tau}}{H(z')}\frac{D(z')}{D(z)}\left((b(z)+1)j_0(kr)-\frac{2}{3}j_2(kr)\right)}{\displaystyle \int_z^{z_{\mathrm{max}}} dz'  \mathcal{\bar{E}} \frac{e^{-\tau}}{H(z')}}.
+\tilde{W}_H(k,z)&=&\frac{(1+z)^2c }{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_z^{z_{\mathrm{max}}} dz' \frac{\mathcal{\bar{E}}e^{-\tau}}{H(z')}\frac{D(z')}{D(z)}\left((b(z)+1)j_0(kr)-\frac{2}{3}j_2(kr)\right)\\
+&=& \frac{\displaystyle \int_z^{z_{\mathrm{max}}} dz'   \frac{\mathcal{\bar{E}}e^{-\tau}}{H(z')}\frac{D(z')}{D(z)}\left((b(z)+1)j_0(kr)-\frac{2}{3}j_2(kr)\right)}{\displaystyle \int_z^{z_{\mathrm{max}}} dz'  \mathcal{\bar{E}} \frac{e^{-\tau}}{H(z')}}.
 \end{eqnarray}
 Which is the same window function as \citet{2007MNRAS.376.1680P,2005ApJ...626....1B}.
 \bibliographystyle{apj}
