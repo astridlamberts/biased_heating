@@ -1,6 +1,10 @@
 \begin{thebibliography}{}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
+\bibitem[{{Abazajian} {et~al.}(2011){Abazajian}, {Blanchet}, \&
+  {Harding}}]{Abazajian:2011}
+{Abazajian}, K.~N., {Blanchet}, S., \& {Harding}, J.~P. 2011, \prd, 84, 103007
+
 \bibitem[{{Aleksi{\'c}} {et~al.}(2010){Aleksi{\'c}}, {Antonelli}, {Antoranz},
   {Backes}, {Baixeras}, {Barrio}, {Bastieri}, {Becerra Gonz{\'a}lez},
   {Bednarek}, {Berdyugin}, {Berger}, {Bernardini}, {Biland}, {Blanch}, {Bock},
@@ -90,9 +94,10 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Pfrommer}}]{2012ApJ...752...23C}
 {Chang}, P., {Broderick}, A.~E., \& {Pfrommer}, C. 2012, \apj, 752, 23
 
-\bibitem[{{Chang} {et~al.}(2015){Chang}, {Broderick}, {Pfrommer}, {Puchwein},
-  {Lamberts}, \& {Shalaby}}]{Chang15}
-{Chang}, P., {Broderick}, A.~E., {Pfrommer}, C., {et~al.} 2015, ApJL submitted
+\bibitem[{{Chang} {et~al.}(2014){Chang}, {Broderick}, {Pfrommer}, {Puchwein},
+  {Lamberts}, \& {Shalaby}}]{2014arXiv1410.3797C}
+{Chang}, P., {Broderick}, A.~E., {Pfrommer}, C., {et~al.} 2014, ArXiv e-prints,
+  arXiv:1410.3797
 
 \bibitem[{{Clowes} {et~al.}(2013){Clowes}, {Harris}, {Raghunathan},
   {Campusano}, {S{\"o}chting}, \& {Graham}}]{2013MNRAS.429.2910C}
@@ -163,13 +168,28 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 {Hyv{\"o}nen}, T., {Kotilainen}, J.~K., {Falomo}, R., {{\"O}rndahl}, E., \&
   {Pursimo}, T. 2007, \aap, 476, 723
 
+\bibitem[{{Inoue} \& {Ioka}(2012)}]{Inoue:2012}
+{Inoue}, Y., \& {Ioka}, K. 2012, \prd, 86, 023003
+
 \bibitem[{{Kaiser}(1987)}]{1987MNRAS.227....1K}
 {Kaiser}, N. 1987, \mnras, 227, 1
+
+\bibitem[{{Kashikawa} {et~al.}(2006){Kashikawa}, {Yoshida}, {Shimasaku},
+  {Nagashima}, {Yahagi}, {Ouchi}, {Matsuda}, {Malkan}, {Doi}, {Iye}, {Ajiki},
+  {Akiyama}, {Ando}, {Aoki}, {Furusawa}, {Hayashino}, {Iwamuro}, {Karoji},
+  {Kobayashi}, {Kodaira}, {Kodama}, {Komiyama}, {Miyazaki}, {Mizumoto},
+  {Morokuma}, {Motohara}, {Murayama}, {Nagao}, {Nariai}, {Ohta}, {Okamura},
+  {Sasaki}, {Sato}, {Sekiguchi}, {Shioya}, {Tamura}, {Taniguchi}, {Umemura},
+  {Yamada}, \& {Yasuda}}]{2006ApJ...637..631K}
+{Kashikawa}, N., {Yoshida}, M., {Shimasaku}, K., {et~al.} 2006, \apj, 637, 631
 
 \bibitem[{{Kneiske} {et~al.}(2004){Kneiske}, {Bretz}, {Mannheim}, \&
   {Hartmann}}]{2004A&A...413..807K}
 {Kneiske}, T.~M., {Bretz}, T., {Mannheim}, K., \& {Hartmann}, D.~H. 2004, \aap,
   413, 807
+
+\bibitem[{{Kneiske} \& {Mannheim}(2008)}]{Knei-Mann:08}
+{Kneiske}, T.~M., \& {Mannheim}, K. 2008, \aap, 479, 41
 
 \bibitem[{{Komatsu} {et~al.}(2011){Komatsu}, {Smith}, {Dunkley}, {Bennett},
   {Gold}, {Hinshaw}, {Jarosik}, {Larson}, {Nolta}, {Page}, {Spergel},
@@ -190,6 +210,17 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 {Mandelbaum}, R., {Li}, C., {Kauffmann}, G., \& {White}, S.~D.~M. 2009, \mnras,
   393, 377
 
+\bibitem[{{Marinoni} {et~al.}(2005){Marinoni}, {Le F{\`e}vre}, {Meneux},
+  {Iovino}, {Pollo}, {Ilbert}, {Zamorani}, {Guzzo}, {Mazure}, {Scaramella},
+  {Cappi}, {McCracken}, {Bottini}, {Garilli}, {Le Brun}, {Maccagni}, {Picat},
+  {Scodeggio}, {Tresse}, {Vettolani}, {Zanichelli}, {Adami}, {Arnouts},
+  {Bardelli}, {Blaizot}, {Bolzonella}, {Charlot}, {Ciliegi}, {Contini},
+  {Foucaud}, {Franzetti}, {Gavignaud}, {Marano}, {Mathez}, {Merighi},
+  {Paltani}, {Pell{\`o}}, {Pozzetti}, {Radovich}, {Zucca}, {Bondi},
+  {Bongiorno}, {Busarello}, {Colombi}, {Cucciati}, {Lamareille}, {Mellier},
+  {Merluzzi}, {Ripepi}, \& {Rizzo}}]{2005A&A...442..801M}
+{Marinoni}, C., {Le F{\`e}vre}, O., {Meneux}, B., {et~al.} 2005, \aap, 442, 801
+
 \bibitem[{{McQuinn} {et~al.}(2009){McQuinn}, {Lidz}, {Zaldarriaga},
   {Hernquist}, {Hopkins}, {Dutta}, \&
   {Faucher-Gigu{\`e}re}}]{2009ApJ...694..842M}
@@ -201,12 +232,20 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 \bibitem[{{Mo} \& {White}(1996)}]{1996MNRAS.282..347M}
 {Mo}, H.~J., \& {White}, S.~D.~M. 1996, \mnras, 282, 347
 
+\bibitem[{{Murase} {et~al.}(2012){Murase}, {Beacom}, \& {Takami}}]{Murase:2012}
+{Murase}, K., {Beacom}, J.~F., \& {Takami}, H. 2012, JCAP, 8, 30
+
 \bibitem[{{Myers} {et~al.}(2007){Myers}, {Brunner}, {Nichol}, {Richards},
   {Schneider}, \& {Bahcall}}]{2007ApJ...658...85M}
 {Myers}, A.~D., {Brunner}, R.~J., {Nichol}, R.~C., {et~al.} 2007, \apj, 658, 85
 
 \bibitem[{{Neronov} \& {Semikoz}(2009)}]{2009PhRvD..80l3012N}
 {Neronov}, A., \& {Semikoz}, D.~V. 2009, \prd, 80, 123012
+
+\bibitem[{{Papageorgiou} {et~al.}(2012){Papageorgiou}, {Plionis}, {Basilakos},
+  \& {Ragone-Figueroa}}]{2012MNRAS.422..106P}
+{Papageorgiou}, A., {Plionis}, M., {Basilakos}, S., \& {Ragone-Figueroa}, C.
+  2012, \mnras, 422, 106
 
 \bibitem[{{Peebles}(1982)}]{Peebles}
 {Peebles}, P. 1982, {Principles of Physical Cosmology}, ed. T.~Anderson,
@@ -301,6 +340,14 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 
 \bibitem[{{Stecker} \& {Salamon}(1996)}]{1996ApJ...464..600S}
 {Stecker}, F.~W., \& {Salamon}, M.~H. 1996, \apj, 464, 600
+
+\bibitem[{{Steidel} {et~al.}(1998){Steidel}, {Adelberger}, {Dickinson},
+  {Giavalisco}, {Pettini}, \& {Kellogg}}]{1998ApJ...492..428S}
+{Steidel}, C.~C., {Adelberger}, K.~L., {Dickinson}, M., {et~al.} 1998, \apj,
+  492, 428
+
+\bibitem[{{Venters}(2010)}]{Vent:10}
+{Venters}, T.~M. 2010, \apj, 710, 1530
 
 \bibitem[{{Viel} {et~al.}(2009){Viel}, {Bolton}, \&
   {Haehnelt}}]{2009MNRAS.399L..39V}
