@@ -346,26 +346,52 @@ Figure~\ref{fig:window_newt} shows  window functions with different absorption c
 
 \section{Expanding universe}\label{sec:window_exp}
 
-To account for the Hubble expansion, we express the (comoving) integration through a redshift integration and account for the Jacobian, $dr=c dz /H(z)$, where  $H(z)$ is the Hubble parameter.  The energy-integrated,  volume-integrated heating rate is then given by 
-
+\Pc{The heating rate of an arbitrary point defined as the origin at redshift $z$ is given by 
 \begin{equation}
-  \label{eq:int_exp_heat}
-  \dot{Q}(z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}(E',z')} e^{-\tau(E',z,z')},
+  \dot{Q}(z)= \int_{E_{\rm min}}^{E_{\rm max}} dE \frac{J_E(E, z)}{D_{\mathrm{pp}}(E, z)},
 \end{equation}
-where $z'$ is the redshift at which the photons are emitted. Switching to comoving distances yields $(1+z)^2$ for the dilution of the area and another $(1+z)$ to account for the shift in energy. $\mathcal{E}$ is the comoving emissivity and $D_{\mathrm{pp}}$ the comoving mean free path.  Both depend on the energy  and redshift  of the emitted photon. For convenience reasons, we do not explicit these dependencies in the following derivation.  We perform an integral over the energy $E$  at which pair production is possible, extending from $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$. To have an adequate energy $E$ at redshift $z$, a photon is emitted with energy $E'$ at redshift $z'$ such that
-
-%$\mathcal{E}(E',z')$ is the blazar luminosity at the energy $E'$, which then redshifts to energy $E$ following 
-\begin{equation}
-\label{eq:E_z}
-E'=E\frac{1+z'}{1+z}.
+where $J_E$ is the specific intensity at the origin, $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the range over which pair production is possible. Its evolution is dictated by the equation of radiative transfer in an expanding universe
+\begin{equation}\label{eq:radiative transfer}
+  \frac{\partial J_E}{\partial t} - E H \frac{\partial J_E}{\partial E} + 3 H J_E + c\kappa J_E  = \frac {c}{4\pi} \epsilon,
 \end{equation}
-Similarly, $\tau(E,z,z')$ is the optical depth of a TeV photon observed at redshift $z$ with energy $E$, which was emitted at redshift $z'$ with energy $E'$.
+where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, $\kappa$ is the , and $\epsilon$ is the proper emissivity.  Integrating equation (\ref{eq:radiative transfer}) over all lines of sight and averaging, we find 
+\begin{equation}\label{eq:expanding J}
+  J_E(E, z) = \frac {(1 + z)^3} {4\pi D_{\mathrm{pp}}} \int_z^{z_{\mathrm{max}}} \frac{dr}{dz'} dz' {\mathcal{E}(E',z')}e^{-\tau(E,z,z')},
+\end{equation}
+where $\mathcal{E} = \epsilon/(1+z')^3$ is the comoving emissivity, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
 \begin{equation}
 \label{eq:tau}
-\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{D_{\mathrm{pp}}}\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
+\tau(E,z,z')\equiv \tau=\frac{1}{D_{\mathrm{pp}}(E,z)}\int_z^{z'}dz''\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
 \end{equation}
+An alert reader will recognize that the true optical depth must include the effect of a changing $D_{\rm pp}$ as we integrate from $z$ to $z'$.  Here we make the assumption that $\tau(E',z,z') \propto r$, where $r(z,z')$ is the proper distance between the origin at $z$ and another point at $z'$ to 
+derive equation (\ref{eq:expanding J}). This assumption holds because the typical mean free paths for high energy photons are much smaller than the Hubble length.  Hence $E' \approx E$ as the redshift interval over which integrand is nontrivial is small compared to $z$.  
+}
 
-\ALc{[{\em Phil, this may be a good place to discuss that $\kappa \simeq $ constant}]}
+\Pc{\sout{
+To account for the Hubble expansion, we express the (comoving) integration through a redshift integration and account for the Jacobian, $dr=c dz /H(z)$, where  $H(z)$ is the Hubble parameter.  } We then find that the \sout{The}} energy-integrated,  volume-integrated heating rate is then given by 
+\Pc{
+\begin{equation}
+  \label{eq:int_exp_heat}
+  %\dot{Q}(z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}(E',z')} e^{-\tau(E',z,z')},
+  \dot{Q}(z)=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\mathcal{E}(E',z') e^{-\tau(E,z,z')},
+\end{equation}
+\sout{
+where $z'$ is the redshift at which the photons are emitted. Switching to comoving distances yields $(1+z)^2$ for the dilution of the area and another $(1+z)$ to account for the shift in energy. $\mathcal{E}$ is the comoving emissivity and $D_{\mathrm{pp}}$ the comoving mean free path.  
+Both depend on the energy  and redshift  of the emitted photon. For convenience reasons, we do not explicit these dependencies in the following derivation.  We perform an integral over the energy $E$  at which pair production is possible, extending from $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$. To have an adequate energy $E$ at redshift $z$, a photon is emitted with energy $E'$ at redshift $z'$ such that
+}
+%$\mathcal{E}(E',z')$ is the blazar luminosity at the energy $E'$, which then redshifts to energy $E$ following 
+%\begin{equation}
+%\label{eq:E_z}
+%E'=E\frac{1+z'}{1+z}.
+%\end{equation}
+\sout{Similarly, $\tau(E,z,z')$ is the optical depth of a TeV photon observed at redshift $z$ with energy $E$, which was emitted at redshift $z'$ with energy $E'$.}
+%\begin{equation}
+%\label{eq:tau}
+%\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{D_{\mathrm{pp}}}\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
+%\end{equation}
+
+}
+%\ALc{[{\em Phil, this may be a good place to discuss that $\kappa \simeq $ constant}]}
 
 Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
