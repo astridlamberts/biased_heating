@@ -50,8 +50,9 @@ Including TeV blazar heating in the thermal history of the IGM, \citet{2012ApJ..
 However, the low thermal broadening of certain Lyman $\alpha$ lines indicates the presence of cold gas \citep{2012ApJ...757L..30R}, which suggests TeV blazar heating does not uniformly heat the whole universe. It is natural to expect a larger TeV flux close to higher density regions where visible structures form. Conversely, in large underdense regions, far from massive black holes, heating is probably much lower. The goal of this paper is to go beyond the hypothesis of uniform heating and to link TeV blazar heating to the underlying clustered density field and take into account the bias of sources. This will lead to a more heterogeneous heating pattern and account for unheated regions while keeping the overall impact of blazar heating.
 
 Self-consistently studying the evolution of the IGM from first principles involves modeling both the formation and evolution of galaxies at the largest scales of the universe. As this is still far beyond reach of current computers, we have determined a filter function which relates the heating fluctuations to the dark matter structure similarly to \citet{2007MNRAS.376.1680P,2005ApJ...626....1B,2014PhRvD..89h3010P}. Based on the hierarchical structure formation in a $\Lambda$CDM universe, it naturally selects the relevant length scales for TeV blazar heating ($\S$2). We have implemented it in large scale cosmological simulations ($\S$3) in order to focus on the equation of state and thermal evolution of the IGM ($\S$4). We then discuss how inhomogeneous heating could reconcile different observations ($\S$5) and conclude ($\S$6).
-\subsection {Determining the window function}\label{window}
-\subsubsection{Intuitive understanding}
+
+\section {Determining the window function}\label{window}
+\subsection{Intuitive understanding}
 One zone models \citep{2012ApJ...752...23C,2012ApJ...752...24P} and numerical simulations \citep{2012MNRAS.423..149P} of blazar heating on the IGM assume that the heating is uniform. Because the heating rate depends on the local density of EBL and TeV photons, the assumption of uniform heating implies that the distributions of EBL and TeV photons are uniform. For EBL photons, this is likely the case, as the mean free path is larger than the Hubble length. However, for TeV photons the mean free path compares with the separation between TeV sources for $z\geqslant$ 1, so the {\it spatial} fluctuations in the heating rate are likely nontrivial. Moreover, the sources of TeV photons tend to be clustered and so the IGM near these clustered regions will get an increased flux of photons in comparison to low-density regions because of the increased number of sources and the $1/r^2$ flux dilution with increasing distance $r$ from the source.
 
 Our goal is to include a more realistic model for heating due to TeV blazars in numerical simulations.
@@ -158,7 +159,8 @@ Substituting Eqs.~\eqref{eq:mean_heat} and \eqref{eq:mean_free_path} into Eq.~\e
 \caption{Window function for TeV blazar heating from $z=1$ (solid lines), $z=2$ (dashed lines) and $z=4$ (dotted lines) for the galaxy bias model (red) and the quasar bias model (green).}
 \label{fig:window}
 \end{figure}
-The window function describes how density fluctuations translate into heating fluctuations. \ALc{[{ \em I haven't made the new figure yet, but the quasar window function is shifted towards smaller k and has a similar shape to the galaxy window function. The values used in gadget are the proper ones}]}.The quasar bias model has more power at all scales because of the larger bias. Comparison with Fig.~\ref{fig:window_nobiases} (in the Appendix), computed without bias, shows that bias is responsible for values above unity in the window function. For the galaxy model, at high redshift, most of the power resides on large scales, where blazar heating traces the density fluctuations. At smaller scales, density fluctuations have no impact and blazar heating is uniform. At the current epoch, TeV blazar heating in the galaxy bias model is close to uniform as there is power only at the largest scales (above 100 Mpc), where the Universe is essentially uniform (see \citet{2013MNRAS.429.2910C} and references therein). For the quasar model, there is much more power at small scales and small scale density fluctuations will lead to enhanced heating. In both models, the window function remains positive at all scales, underdense regions are the only areas where a lower than average heating rate is expected. Above average heating is possible in large scale overdensities but also at smaller scales when the overdensity is important. However, such regions should be analysed with caution as the linear theory for the dark matter evolution breaks down. \ALc{[{\em Christophe, please add some comments on the hypothesis of linear bias here, or anywhere else you find more appropriate}]} After these first analytic estimates, we include the window function to model TeV blazar heating in cosmological simulations.
+The window function describes how density fluctuations translate into heating fluctuations. \ALc{[{ \em I haven't made the new figure yet, but the quasar window function is shifted towards smaller k and has a similar shape to the galaxy window function. The values used in gadget are the proper ones}]}.The quasar bias model has more power at all scales because of the larger bias. Comparison with Fig.~\ref{fig:window_nobiases} (in the Appendix), computed without bias, shows that bias is responsible for values above unity in the window function. In the galaxy-bias model, at high redshift, most of the power resides on large scales, where blazar heating traces the density fluctuations. At smaller scales, density fluctuations have no impact and blazar heating is uniform. At the current epoch, TeV blazar heating in the galaxy-bias model is close to uniform as there is power only at the largest scales (above 100 Mpc), where the Universe is essentially uniform (see \citet{2013MNRAS.429.2910C} and references therein). In the quasar-bias model, there is \Cc{comparably\sout{much}} more power at small scales \Cc{due to the larger bias} and small-scale density fluctuations will lead to enhanced heating. In both models, the window function remains positive at all scales; thus, underdense regions are the only areas where a lower than average heating rate is expected. \Cc{Heating at rates larger than the average is possible for large-scale overdensities but also on small scales for highly non-linear objects with $\delta\gg1$. We caution that our simplified approach with a linear bias description starts to break down there and would have to be augmented with a non-linear description of bias. However, the gas in these regions experiences shock heating in addition to photoheating such that the influence of blazar heating becomes negligible there. Moreover, those densities have little influence on the statistics of the high-redshift Lyman-$\alpha$ forest and thus shall not be the subject of the present work.} After these first analytic estimates, we include the window function to model TeV blazar heating in cosmological simulations.
+
 \section{Numerical method}
 \subsection{Cosmological simulations}
 We perform simulations with the smoothed particle hydrodynamics (SPH) code \textsc{GADGET-3}, an upgraded version of the publicly available \textsc{GADGET-2} code \citep{2005MNRAS.364.1105S}. The code solves the gravitational evolution of both dark matter and gas particles following a TreePM N-body method. The hydrodynamical evolution of the gas is modeled using an entropy conserving scheme \citep{2002MNRAS.333..649S}.
@@ -239,7 +241,9 @@ The impact of inhomogeneous heating becomes especially important after $z=2.5$. 
 
 A good understanding of the IGM is crucial as it is the birthplace of the large scale structures we observe. TeV blazar heating increases its average temperature and entropy, even at early times, and will impact the formation and evolution of structures \citep{2012ApJ...752...24P}. Such heating occurs far away from the sources and is complimentary to other black hole feedback mechanisms directly impacting their host galaxies and clusters.
 
-Our model neglects important physical aspects of TeV blazars such as their duty cycle and beaming of the gamma-ray emission. The $\gamma$-ray duty cycle of BL Lac objects is of order of 10 $\%$ \citep{1996ApJ...464..600S}. As TeV blazars have low accretion rates, their lifetime is long $\simeq 5-7$ Gyr \citep{2002ApJ...571..226C}. The $\gamma$ ray sources are highly beamed, with observed opening angles peaking around 20$^{\circ}$ \citep{2009A&A...507L..33P}. Parsec scale VLBI observations of the inner parts of radio jets indicate variations of the position angle of around 20$^{\circ}$, up to 120$^{\circ}$ over more than a decade \citep{2013AJ....146..120L}. Assuming the gamma-ray emission follows the orientation of the radio jet, the rapid variability of the sources can potentially increase the scatter in the heating rate. Indeed, in the early universe, when few sources are present,  individual variability increases the inhomogeneity of blazar heating. In such case, our model is a lower limit for the associated heating rate fluctuations. However, later on, as the number of sources at a  given point is increases, the variability of the heating rate will be reduced.  On top of the intrinsic  variability  of the sources, shot noise, which becomes important when sources are rare, is not taken into account and will result in additional heating rate fluctuations.\ALc{[{ \em Phil, could you add a few sentences on the number of sources at difference redshifts here?}]}.
+Our model neglects important physical aspects of TeV blazars such as their duty cycle and beaming of the gamma-ray emission. The $\gamma$-ray duty cycle of BL Lac objects is of order of 10 $\%$ \citep{1996ApJ...464..600S}. As TeV blazars have low accretion rates, their lifetime is long $\simeq 5-7$ Gyr \citep{2002ApJ...571..226C}. The $\gamma$ ray sources are highly beamed, with observed opening angles peaking around 20$^{\circ}$ \citep{2009A&A...507L..33P}. Parsec scale VLBI observations of the inner parts of radio jets indicate variations of the position angle of around 20$^{\circ}$, up to 120$^{\circ}$ over more than a decade \citep{2013AJ....146..120L}. Assuming the gamma-ray emission follows the orientation of the radio jet, the rapid variability of the sources can potentially increase the scatter in the heating rate. Indeed, in the early universe, when few sources are present,  individual variability increases the inhomogeneity of blazar heating. In such case, our model is a lower limit for the associated heating rate fluctuations. However, later on, as the number of sources at a  given point is increases, the variability of the heating rate will be reduced.    On top of the intrinsic  variability  of the sources, shot noise, which becomes important when sources are rare, is not taken into account and will result in additional heating rate fluctuations. \Pc{For instance, at $z \sim 1-2$, the number of sources that contributes half the heating is $\approx 10$ whereas at $z = 3$, it dwindles to $\approx 1$ \citep{2012ApJ...752...23C}.   While this would suggest that the shot noise is potentially large, this is mitigated somewhat by the fact that the next 25\% of the heating is provided by $\approx 100$ sources between $z=1-2$ and $\approx 10$ source at $z=3$. } 
+%\ALc{[{ \em Phil, could you add a few sentences on the number of sources at difference redshifts here?}]}. 
+\Pc{Hence, the fluctuations that we calculate in this work are likely a lower limit.}
 
 Our model is based on quasar bias, which is likely lower than TeV-blazar bias \citep{2014arXiv1410.0358A}. Radio loud AGN are associated with red giant elliptical galaxies \citep{2007A&A...476..723H} and are often at the center of small clusters and groups. Quasars have a wider distribution of host galaxies and are rarely found at the center of clusters. Therefore, the scatter found in our simulations at low redshift is probably a lower limit to the exact scatter. In our simulations, any dense source emits TeV photons, regardless of the type of galaxy, and history of merger, accretion or star formation. However, a more detailed physical model, which comes at high computational cost, will likely give comparable results. The difference in the median temperature and standard deviation between the galaxy and quasar bias model is less than $5\%$ which is smaller than current observational precision.
 \section{Conclusions}
@@ -344,26 +348,52 @@ Figure~\ref{fig:window_newt} shows  window functions with different absorption c
 
 \section{Expanding universe}\label{sec:window_exp}
 
-To account for the Hubble expansion, we express the (comoving) integration through a redshift integration and account for the Jacobian, $dr=c dz /H(z)$, where  $H(z)$ is the Hubble parameter.  The energy-integrated,  volume-integrated heating rate is then given by 
-
+\Pc{The heating rate of an arbitrary point defined as the origin at redshift $z$ is given by 
 \begin{equation}
-  \label{eq:int_exp_heat}
-  \dot{Q}(z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}(E',z')} e^{-\tau(E',z,z')},
+  \dot{Q}(z)= \int_{E_{\rm min}}^{E_{\rm max}} dE \frac{J_E(E, z)}{D_{\mathrm{pp}}(E, z)},
 \end{equation}
-where $z'$ is the redshift at which the photons are emitted. Switching to comoving distances yields $(1+z)^2$ for the dilution of the area and another $(1+z)$ to account for the shift in energy. $\mathcal{E}$ is the comoving emissivity and $D_{\mathrm{pp}}$ the comoving mean free path.  Both depend on the energy  and redshift  of the emitted photon. For convenience reasons, we do not explicit these dependencies in the following derivation.  We perform an integral over the energy $E$  at which pair production is possible, extending from $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$. To have an adequate energy $E$ at redshift $z$, a photon is emitted with energy $E'$ at redshift $z'$ such that
-
-%$\mathcal{E}(E',z')$ is the blazar luminosity at the energy $E'$, which then redshifts to energy $E$ following 
-\begin{equation}
-\label{eq:E_z}
-E'=E\frac{1+z'}{1+z}.
+where $J_E$ is the specific intensity at the origin, $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the range over which pair production is possible. Its evolution is dictated by the equation of radiative transfer in an expanding universe
+\begin{equation}\label{eq:radiative transfer}
+  \frac{\partial J_E}{\partial t} - E H \frac{\partial J_E}{\partial E} + 3 H J_E + c\kappa J_E  = \frac {c}{4\pi} \epsilon,
 \end{equation}
-Similarly, $\tau(E,z,z')$ is the optical depth of a TeV photon observed at redshift $z$ with energy $E$, which was emitted at redshift $z'$ with energy $E'$.
+where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, $\kappa$ is the , and $\epsilon$ is the proper emissivity.  Integrating equation (\ref{eq:radiative transfer}) over all lines of sight and averaging, we find 
+\begin{equation}\label{eq:expanding J}
+  J_E(E, z) = \frac {(1 + z)^3} {4\pi D_{\mathrm{pp}}} \int_z^{z_{\mathrm{max}}} \frac{dr}{dz'} dz' {\mathcal{E}(E',z')}e^{-\tau(E,z,z')},
+\end{equation}
+where $\mathcal{E} = \epsilon/(1+z')^3$ is the comoving emissivity, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
 \begin{equation}
 \label{eq:tau}
-\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{D_{\mathrm{pp}}}\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
+\tau(E,z,z')\equiv \tau=\frac{1}{D_{\mathrm{pp}}(E,z)}\int_z^{z'}dz''\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
 \end{equation}
+An alert reader will recognize that the true optical depth must include the effect of a changing $D_{\rm pp}$ as we integrate from $z$ to $z'$.  Here we make the assumption that $\tau(E',z,z') \propto r$, where $r(z,z')$ is the proper distance between the origin at $z$ and another point at $z'$ to 
+derive equation (\ref{eq:expanding J}). This assumption holds because the typical mean free paths for high energy photons are much smaller than the Hubble length.  Hence $E' \approx E$ as the redshift interval over which integrand is nontrivial is small compared to $z$.  
+}
 
-\ALc{[{\em Phil, this may be a good place to discuss that $\kappa \simeq $ constant}]}
+\Pc{\sout{
+To account for the Hubble expansion, we express the (comoving) integration through a redshift integration and account for the Jacobian, $dr=c dz /H(z)$, where  $H(z)$ is the Hubble parameter.  } We then find that the \sout{The}} energy-integrated,  volume-integrated heating rate is then given by 
+\Pc{
+\begin{equation}
+  \label{eq:int_exp_heat}
+  %\dot{Q}(z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}(E',z')} e^{-\tau(E',z,z')},
+  \dot{Q}(z)=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\mathcal{E}(E',z') e^{-\tau(E,z,z')},
+\end{equation}
+\sout{
+where $z'$ is the redshift at which the photons are emitted. Switching to comoving distances yields $(1+z)^2$ for the dilution of the area and another $(1+z)$ to account for the shift in energy. $\mathcal{E}$ is the comoving emissivity and $D_{\mathrm{pp}}$ the comoving mean free path.  
+Both depend on the energy  and redshift  of the emitted photon. For convenience reasons, we do not explicit these dependencies in the following derivation.  We perform an integral over the energy $E$  at which pair production is possible, extending from $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$. To have an adequate energy $E$ at redshift $z$, a photon is emitted with energy $E'$ at redshift $z'$ such that
+}
+%$\mathcal{E}(E',z')$ is the blazar luminosity at the energy $E'$, which then redshifts to energy $E$ following 
+%\begin{equation}
+%\label{eq:E_z}
+%E'=E\frac{1+z'}{1+z}.
+%\end{equation}
+\sout{Similarly, $\tau(E,z,z')$ is the optical depth of a TeV photon observed at redshift $z$ with energy $E$, which was emitted at redshift $z'$ with energy $E'$.}
+%\begin{equation}
+%\label{eq:tau}
+%\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{D_{\mathrm{pp}}}\frac{dr}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
+%\end{equation}
+
+}
+%\ALc{[{\em Phil, this may be a good place to discuss that $\kappa \simeq $ constant}]}
 
 Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
