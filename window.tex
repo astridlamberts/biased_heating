@@ -35,7 +35,9 @@ TeV-blazars potentially heat the intergalactic medium (IGM) as their gamma rays 
 \section{Introduction}
 The intergalactic medium constitutes the bulk of the baryons forming the cosmic web \citep{1996Natur.380..603B} as well as the reservoir of baryons available for the formation of galaxies and clusters \citep{1997ApJ...489....7R}. Observations of metal-enriched gas link its evolution to the formation of galaxies and stars (see e.g. \citet{2009A&A...493..409S,2010MNRAS.407.2063W}). Therefore, the thermal history of the IGM plays a central role in determining the development of structure in the visible universe.
 
-The temperature of the IGM is mostly set by photoionization of hydrogen and helium, competing with adiabatic cooling. As a result, the universe is slowly cooling once reionization is completed. The IGM temperature is expected to increase with density because denser regions experience a lower amount of adiabatic cooling, as well as more recombination-induced photoheating. Gas in the IGM that has not been shock heated provides a lower envelope to the temperature-density distribution.  \ALc{Observations of Lyman $\alpha$ absorption lines with $4\leqslant z \leqslant 2$ show that lower column density gas presents a lower envelope for the linewidth distribution, which is commonly interpreted as an indication that lower density gas is colder than high density gas \citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R}. A temporary flattening of the slope of the inferred temperature-density relation around $z\sim 3$ indicates an additional source of heating at that redshift.}\ALc{\sout{Observations of Lyman $\alpha$ absorption lines in the spectra of background quasars due to neutral gas confirm the positive slope of the temperature-density relation \citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R} with only a temporary flattening around $z\sim 3$. }}
+The temperature of the IGM is mostly set by photoionization of hydrogen and helium, competing with adiabatic cooling. As a result, the universe is slowly cooling once reionization is completed. The IGM temperature is expected to increase with density because denser regions experience a lower amount of adiabatic cooling, as well as more recombination-induced photoheating. Gas in the IGM that has not been shock heated provides a lower envelope to the temperature-density distribution.  \ALc{Observations of Lyman $\alpha$ absorption lines with $4\leqslant z \leqslant 2$ show that lower column density gas presents a lower envelope for the linewidth distribution, which is commonly interpreted as an indication that lower density gas is colder than high density gas \citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R}. A temporary flattening of the slope of the inferred temperature-density relation around $z\sim 3$ indicates an additional source of heating at that redshift.}\ALc{\sout{Observations of Lyman $\alpha$ absorption lines in the spectra of background quasars due to neutral gas confirm the positive slope of the temperature-density relation 
+%\citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R} 
+with only a temporary flattening around $z\sim 3$. }}
 
 The latter is expected due to He\,\textsc{ii} reionization \citep[e.g.][]{2009ApJ...694..842M,2013MNRAS.435.3169C,2014arXiv1410.1531P}. However, recent measurements found that underdense regions may be warmer than predicted \citep{2009MNRAS.399L..39V,2008MNRAS.386.1131B}, as well as unexpectedly high temperatures at $z<2$ \citep{2014MNRAS.441.1916B}. Although an inverted temperature-density relation in underdense regions has not been firmly established yet \citep{2014MNRAS.438.2499B}, these observations suggest the thermal history of the IGM may be more complex than initially assumed.
 
@@ -98,29 +100,39 @@ To model cosmic distances, Eq.~\eqref{eq:heating_rate} is integrated in redshift
 with
 \begin{equation}
 \label{eq:define_X}
-X(E,z',z)=\frac{\mathcal{E}(E',z') e^{-\tau(z,z',E)}}{H(z') D_{\mathrm{pp}}(E',z')},
+X(E,z',z)=\frac{\mathcal{E}(E',z') e^{-\tau(E',z,z')}}{H(z') D_{\mathrm{pp}}(E',z')},
 \end{equation}
 with $r$ the comoving distance between the source and heated region, $\bar{X}$ its spectral average, $D$ denotes the linear growth factor defined in Eq.~\eqref{eq:growth_1}, $E$ is the energy of the received TeV photon, $E'$ its initial energy and $\mathcal{E}$ the (comoving) blazar luminosity density, $r$ the comoving distance between the source and heated region, $b$ is the bias and $j_0$ and $j_2$ are spherical Bessel functions.
 
-Assuming the TeV blazar distribution follows the redshift evolution of quasars, \citet{2012ApJ...752...23C} determined the blazar luminosity density in the TeV band based on a fit to \citet{2007ApJ...654..731H}
+Assuming the TeV blazar distribution follows the redshift evolution of quasars, \citet{2012ApJ...752...23C} determined the comoving blazar luminosity density in the TeV band based on a fit to \citet{2007ApJ...654..731H}
 \begin{eqnarray}
 \label{eq:mean_heat}
-\mathcal{E}(E',z)&=&\mathcal{E}(E',z=0)\Phi_{B}(z)\\ \nonumber
-&\simeq& \mathcal{E}(E',z=0)\zeta\Phi_{Q}(z),
-%&\simeq& \zeta\epsilon(E',z=0)10^{-.0037(1+z)^4+.085(1+z)^3-.0778(1+z)^2+2.795(1+z)-2.133}
+\hat{\mathcal{E}}(E',z)&=&\mathcal{E}(E',0)\hat\Phi_{B}(z)\\ \nonumber
+&\simeq& \mathcal{E}(E',0)\zeta\hat\Phi_{Q}(z),
 \end{eqnarray}
-with $\zeta=2.1\times 10^{-3}$ and
+with $\zeta=2.1\times 10^{-3}$ and \Cc{parametrized comoving quasar luminosity density is given by}
 \begin{equation}
 \label{eq:phi_quasar}
-\Phi_{Q}[x(z)]=10^{-0.0037x^4+0.085x^3-0.0778x^2+2.795x-2.133},
+\hat\Phi_{Q}[x(z)]=10^{-0.0037x^4+0.085x^3-0.0778x^2+2.795x-2.133},
 \end{equation}
-where $x=1+z$.
-As TeV blazars have power-law spectra with intrinsic (i.e. redshift corrected) spectral index $\alpha$, we get
+where $x=1+z$. TeV blazars have broken power-law spectra that are parametrized by
 \begin{equation}
 \label{eq:blaz_lum}
-\mathcal{E}(E',z=0)=\mathcal{E}(E_0,z=0)\left(\frac{E'}{E_0}\right)^{-\alpha}\equiv \mathcal{E}_0\left(\frac{E'}{E_0}\right)^{-\alpha},
+\mathcal{E}(E',0)=\mathcal{E}_0\,F_{E'},
 \end{equation}
-with $\mathcal{E}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the current blazar luminosity density. Using 28 TeV blazars, \citet{2012ApJ...752...23C} find that $\alpha\simeq 3$ and $E_0\simeq $ 1 TeV. Adopting typical parameters of nearby TeV blazar spectra yields $E_{\mathrm{min}}=100$ GeV, and $E_{\mathrm{max}}=10$ TeV. Assuming blazars follow a similar evolution to quasars, we use $z_\mathrm{max}=5$ \citep{2007ApJ...654..731H}.
+with $\mathcal{E}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the current blazar luminosity density \Cc{and $F_E$ denotes intrinsic TeV blazar spectrum \citep{2014ApJ...790..137B}
+\begin{equation}
+\label{eq:intrinsic_spectrum}
+F_E = \frac{f_0 E}{(E/E_b)^{\Gamma_l} + (E/E_b)^{\Gamma_h}},
+\end{equation}
+where $f_0$ is set by requiring $\int_{E_{\rm min}}^{E_{\rm max}} dE F_E = 1$ (all energies are measured in units of TeV) and $\Gamma_h=3$. We averaged $F_E$ over the Gaussian distribution in $\Gamma_l$ (low-energy photon spectral index) from \citet{2014ApJ...790..137B}. Fitting the resulting distribution by the broken power law flux model, allowing both $\Gamma_l$ and $E_b$ to vary, we minimized the chi-squared for $E F_E$ to emphasize the regions that dominate the energy flux. The resulting values are  $\Gamma_l=1.80$ and $E_b=1.057$, with an $L_1$ norm of 0.0048.Adopting typical parameters of nearby TeV blazar spectra yields $E_{\mathrm{min}}=100$ GeV, and $E_{\mathrm{max}}=10$ TeV. The spectral shape of the EBL selects $E_{\mathrm{min}}=100$ GeV and $E_{\mathrm{max}}=10$ TeV and the limiting $\gamma$-ray energies for pair production.}
+%As TeV blazars have power-law spectra with intrinsic (i.e. redshift corrected) spectral index $\alpha$, we get
+%\begin{equation}
+%\label{eq:blaz_lum}
+%\mathcal{E}(E',z=0)=\mathcal{E}(E_0,z=0)\left(\frac{E'}{E_0}\right)^{-\alpha}\equiv \mathcal{E}_0\left(\frac{E'}{E_0}\right)^{-\alpha},
+%\end{equation}
+%with $\mathcal{E}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the current blazar luminosity density. Using 28 TeV blazars, \citet{2012ApJ...752...23C} find that $\alpha\simeq 3$ and $E_0\simeq $ 1 TeV. Adopting typical parameters of nearby TeV blazar spectra yields $E_{\mathrm{min}}=100$ GeV, and $E_{\mathrm{max}}=10$ TeV. 
+\Cc{{\em [CP: this needs to be changed]}} Assuming blazars follow a similar evolution to quasars, we use $z_\mathrm{max}=5$ \citep{2007ApJ...654..731H}.
 
 The optical depth is set by the mean free path $D_\mathrm{pp}(E',z)$ of TeV photons before they interact with an EBL photon to produce an electron-positron pair. Its redshift evolution is set by the EBL. Despite careful work that aims at constraining it, there remain uncertainties in the star formation history of the universe as well as its metallicity and dust contents \citep[see, e.g.][]{2008A&A...487..837F,2006ApJ...648..774S}. Following \citet{2012ApJ...752...23C} we use a prescription
 \begin{equation}
@@ -285,16 +297,16 @@ The TeV flux received (in erg s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$, at a
 \begin{equation}
   \label{eq:flux_recu0}
   J(\mathbf{x})=
-  \int_{0}^{2\pi}d\phi\int_{0}^{\pi}\sin\theta d\theta\int_0^{r_{\mathrm{max}}}|\mathbf{x}'-\mathbf{x}|^2 d(\mathbf{x}'-\mathbf{x})
+  \int_{0}^{2\pi}d\phi\int_{0}^{\pi}\sin\theta d\theta\int_0^{r_{\mathrm{max}}}|\mathbf{x}'-\mathbf{x}|^2 d^3|\mathbf{x}'-\mathbf{x}|
   \frac{\mathcal{E}(\mathbf{x}') }{4\pi |\mathbf{x}'-\mathbf{x}|^2} e^{-\tau}
-  =\int_{\Omega} d\Omega\int_0^{r_{\mathrm{max}}} dr' \frac{\mathcal{E}(\mathbf{r}'+\mathbf{x}) }{4\pi } e^{-\kappa r},
+  =\int_{\Omega} d\Omega\int_0^{r_{\mathrm{max}}} dr' \frac{\mathcal{E}(\mathbf{r}'+\mathbf{x}) }{4\pi } e^{- r'/D_{\mathrm{pp}}},
 \end{equation}
-where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, $\tau=\kappa (\mathbf{x}'-\mathbf{x})$ is the optical depth along the line of sight. In the last step, we introduced $\mathbf{r'}=\mathbf{x}'-\mathbf{x}$, $d\Omega=\sin\theta d\theta d\phi$  and $\kappa$ the absorption coefficient. The differential heating rate is defined as $d\dot{Q}(\mathbf{x})\equiv dJ(\mathbf{x})/D_{\mathrm{pp}}$ such that the volume-integrated heating rate $\dot{Q}$ and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
+where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, $\tau=|\mathbf{x}'-\mathbf{x}|/D_{\mathrm{pp}}$ is the optical depth along the line of sight and $D_{\mathrm{pp}}$ is the mean free path for pair production. In the last step, we introduced $\mathbf{r'}=\mathbf{x}'-\mathbf{x}$, $d\Omega=\sin\theta d\theta d\phi$. The differential heating rate is defined as $d\dot{Q}(\mathbf{x})\equiv dJ(\mathbf{x})/D_{\mathrm{pp}}$ such that the volume-integrated heating rate $\dot{Q}$ and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
 \begin{equation}
   \label{eq:heating_rate0}
   \dot{Q}(\mathbf{x})=
-  \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \mathcal{E}(\mathbf{r}'+\mathbf{x}) \frac{1}{D_{\mathrm{pp}}} e^{-\kappa r},\quad\mbox{and}\quad
-  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \bar{\mathcal{E}} \frac{1}{D_{\mathrm{pp}}} e^{-\kappa r},
+  \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \mathcal{E}(\mathbf{r}'+\mathbf{x})\, \frac{e^{-r'/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}},\quad\mbox{and}\quad
+  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \bar{\mathcal{E}} \,\frac{e^{-r'/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}} ,
 \end{equation}
 where $D_{\mathrm{pp}}$ is the mean free path before the gamma-rays pair-produce, which is constant over the volume.
 The heating rate fluctuations at a given point $\mathbf{x}$ are then given by 
@@ -302,8 +314,8 @@ The heating rate fluctuations at a given point $\mathbf{x}$ are then given by
   \label{eq:heat_fluc_newt0}
   \delta_H(\mathbf{x})&=&\frac{\dot{Q}(\mathbf{x})-\bar{\dot{Q}}}{\bar{\dot{Q}}}=
   \frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' 
-  [\mathcal{E}(\mathbf{r}'+\mathbf{x})-\bar{\mathcal{E}}]e^{-\tau} \nonumber\\
-  &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \delta_E(\mathbf{r}'+\mathbf{x})\bar{\mathcal{E}}\,e^{-\kappa r'} ,
+  [\mathcal{E}(\mathbf{r}'+\mathbf{x})-\bar{\mathcal{E}}]e^{-r'/D_{\mathrm{pp}}} \nonumber\\
+  &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr' \delta_E(\mathbf{r}'+\mathbf{x})\bar{\mathcal{E}}\,e^{-r'/D_{\mathrm{pp}}} ,
 \end{eqnarray}
 where $\delta_E$ are the fluctuations of the TeV photon emissivity. Finally we assume that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This is justified by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy\citep{2004ApJ...604L..89H}.
 
@@ -318,14 +330,13 @@ As the universe is infinite and asymptotically flat, we can expand the fluctuati
   \delta_H(\mathbf{x})&=&\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_H(\mathbf{k'}) e^{-i\mathbf{k'}\cdot\mathbf{x}},\\ \nonumber
   \delta_E(\mathbf{r}'+\mathbf{x})&=&\frac{1}{(2\pi)^3}\int_{-\infty}^{\infty} d^3\mathbf{k'} \tilde{\delta}_E(\mathbf{k'}) e^{-i\mathbf{k'}\cdot(\mathbf{r'}+\mathbf{x})}.
 \end{eqnarray}
-\ALc{Performing a convolution of the density fluctuations with the kernel $C r^{-2} e^{-r/D_{\mathrm{pp}}}$ (with C an arbitrary constant), and using the Fourier convolution theorem, Eq. \ref{eq:heat_fluc_newt0} rewrites}
+\ALc{Performing a convolution of the density fluctuations with the kernel $C r^{-2} e^{-r/D_{\mathrm{pp}}}$ (with $C$ an arbitrary constant), and using the Fourier convolution theorem, Eq.~\eqref{eq:heat_fluc_newt0} rewrites}
 %Eq. (A4) is simply a convolution of the density fluctuations with the kernel $C exp^{(-r/Dpp)}/r^2$, and thus via the Fourier convolution theorem (Bracewell) this implies
  \begin{equation}
    \label{eq:1}
-\tilde{\delta}_H(k) = \tilde{\delta}_E(k) \tilde{W}(k)   ,
+\tilde{\delta}_H(k) = \tilde{\delta}_E(k) \tilde{W}(k),
  \end{equation}
-
-where $\tilde{W}(k)$ is the Fourier transform of $C  r^{-2} e^{(-r/D_{\mathrm{pp}})}$. This yields
+where $\tilde{W}(k)$ is the Fourier transform of $C r^{-2} e^{-r/D_{\mathrm{pp}}}$. This yields
 
 
 % Eq.~\eqref{eq:heat_fluc_newt0} then gives
@@ -345,26 +356,26 @@ where $\tilde{W}(k)$ is the Fourier transform of $C  r^{-2} e^{(-r/D_{\mathrm{pp
 
 \begin{equation}
   \label{eq:heat_fluc_newt2}
-  \tilde{\delta}_H(\mathbf{k})=\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{ \mathcal{E}} e^{-\kappa r'}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}'}}  ,
+  \tilde{\delta}_H(\mathbf{k})=\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr' \bar{ \mathcal{E}} e^{- r'/D_{\mathrm{pp}}}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}'}}  ,
 \end{equation}
 
 where $\delta^{(0)}$ denotes the Dirac delta distribution. Introducing $\mu=\cos\theta$, where $\theta$ is the angle between the wave vector and the line of sight, and assuming statistical isotropy and homogeneity, Eq.~\eqref{eq:heat_fluc_newt2} can be simplified as follows,
 \begin{eqnarray}
   \label{eq:heat_fluc_newt3}
   \tilde{\delta}_H(k)&=&  
-  \frac{1}{2\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}dr'  \bar{\mathcal{E}} e^{-\kappa r'} \tilde{\delta}_E(k) e^{-ikr'\mu}
-  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}}} {\bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr')}{kr'} e^{-\kappa r'}   dr'\\ \nonumber
- &=&\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{ D_{\mathrm{pp}}\bar{\dot{Q}}k} \arctan\left(\frac{k}{\kappa}\right)
-  =\tilde{\delta}(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}} \bar{\dot{Q}}k} \arctan\left(\frac{k}{\kappa}\right).\\ 
+  \frac{1}{2\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}dr'  \bar{\mathcal{E}} e^{-r'/D_{\mathrm{pp}}} \tilde{\delta}_E(k) e^{-ikr'\mu}
+  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}}} {\bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr')}{kr'} e^{-r'/D_{\mathrm{pp}}}   dr'\\ \nonumber
+ &=&\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}}\bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right)
+  =\tilde{\delta}(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}} \bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right).\\ 
 \end{eqnarray}
 %In the last step, we have assumed that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. 
-Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $\kappa=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
+Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $D_{\mathrm{pp}}^{-1}=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
 
 \begin{figure}
 \centering
 % \includegraphics[width = .45\textwidth ]{newtonian_window}
 \includegraphics[width = .45\textwidth ]{newtonian_window}
-\caption{Window function for a non-expanding universe. The solid red line has very little absorption ($\kappa=10^{-2}$ Mpc$^{-1}$), the dashed green line has $\kappa=10 $ Mpc$^{-1}$ .}
+\caption{Window function for a non-expanding universe. The solid red line has very little absorption, i.e. a large mean free path ($D_{\mathrm{pp}}^{-1}=10^{-2}$ Mpc$^{-1}$), the dashed green line has $D_{\mathrm{pp}}^{-1}=10 $ Mpc$^{-1}$ .\Cc{{\em [CP: I exchanged $\kappa$ for $D_{\mathrm{pp}}^{-1}$; can you please do the same in the figure legend and add units?]}}}
 \label{fig:window_newt}
 \end{figure}
 
@@ -375,22 +386,24 @@ The heating rate of an arbitrary point defined as the origin at redshift $z$ is 
 \begin{equation}
   \dot{Q}(z)= \int_{E_{\rm min}}^{E_{\rm max}} dE \frac{J_E(E, z)}{D_{\mathrm{pp}}(E, z)},
 \end{equation}
-where $J_E$ is the specific intensity at the origin (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$), $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the range over which pair production is possible. Its evolution is dictated by the equation of radiative transfer in an expanding universe
+where $J_E$ is the specific intensity at the origin (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$), $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the range over which pair production is possible\Cc{, and $F_E$ denotes intrinsic TeV blazar spectrum of Eq.~\eqref{eq:intrinsic_spectrum}.} The evolution of $J_E$ is dictated by the equation of radiative transfer in an expanding universe
 \begin{equation}\label{eq:radiative transfer}
-  \frac{\partial J_E}{\partial t} - E H \frac{\partial J_E}{\partial E} + 3 H J_E + c\kappa J_E  = \frac {c}{4\pi} \epsilon_E,
+%  \frac{\partial J_E}{\partial t} - E H \frac{\partial J_E}{\partial E} + 3 H J_E + c\kappa J_E/D_{\mathrm{pp}}  = \frac {c}{4\pi} \epsilon_E,
+  \frac{\partial J_E}{\partial t} - H J_E\left(3 - \frac{\partial\ln J_E}{\partial\ln E} + \frac{c}{H D_{\mathrm{pp}}}\right)
+  = \frac {c}{4\pi} \epsilon_E,
 \end{equation}
-where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, $\kappa$ is the , and $\epsilon_E$ is the specific proper emissivity.  Quantities with a \textasciicircum are measured in the comoving frame.
+where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, and $\epsilon_E$ is the specific proper emissivity.  Quantities indicated by a hat are measured in the comoving frame.
 Integrating equation (\ref{eq:radiative transfer}) over all lines of sight, we find 
 \begin{equation}\label{eq:expanding J}
   J_E(E, z) = \frac {(1 + z)^3} {4\pi} \int_{\Omega} d\Omega \int_z^{z_{\mathrm{max}}} \frac{d\hat r}{dz'} dz' {\hat{\mathcal{E}}_E(E',z')}e^{-\tau(E,z,z')},
 \end{equation}
-where $\hat r$ is the comoving distance, $\hat{\mathcal{E}}_E = \epsilon_E/(1+z')^3$ is the comoving specific emissivity, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
+where $\hat r$ is the comoving distance, $\hat{\mathcal{E}}_E = \epsilon_E/(1+z')^3$ is the comoving specific emissivity defined in Eq.~\eqref{eq:mean_heat}, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
 \begin{equation}
 \label{eq:tau}
-\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{\hat D_{\mathrm{pp}}(E,z'')}\frac{d\hat r}{dz''}.%=\int_z^{z'}dz''\frac{c}{H(z'')}\frac{1}{D_{\mathrm{pp}}},
+\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{\hat D_{\mathrm{pp}}(E,z'')}\frac{d\hat r}{dz''}.
 \end{equation}
 An alert reader will recognize that the true optical depth must include the effect of a changing $\hat D_{\rm pp}$ as we integrate from $z$ to $z'$.  Here we make the assumption that $\tau(E',z,z') \propto \hat r$ to derive equation (\ref{eq:expanding J}). This assumption holds because the typical mean free paths for high energy photons are much smaller than the Hubble length.  Hence $E' \approx E$ as the redshift interval over which integrand is nontrivial is small compared to $z$.  
-We then find that the energy-integrated,  volume-integrated heating rate is then given by 
+We then find that the energy-integrated and volume-integrated heating rate is then given by 
 \begin{equation}
   \label{eq:int_exp_heat}
   %\dot{Q}(z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{dr}{dz'}\frac{\mathcal{E}(E',z')}{D_{\mathrm{pp}}(E',z')} e^{-\tau(E',z,z')},
@@ -417,17 +430,16 @@ We then find that the energy-integrated,  volume-integrated heating rate is then
 Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
 \label{eq:mean_exp_heat}
-\bar{\dot{Q}}=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz' \frac{d\hat r}{dz'}\bar{\hat{\mathcal{E}}}(z') e^{-\tau(z,z')}.
+\bar{\dot{Q}}=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(E, z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz' \frac{d\hat r}{dz'}\bar{\hat{\mathcal{E}}}(E',z') e^{-\tau(E,z,z')}.
 \end{equation}
 
 \begin{eqnarray}
 \label{eq:fluc_exp0}
-\delta_H(z)&=&\frac{\dot{Q}(z)-\bar{\dot{Q}}}{\bar{\dot{Q}}}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{ ( \mathcal{\hat E}(z')-\bar{\hat{\mathcal{E}}}(z')) e^{-\tau(z,z')}}{H(z')} \\ \nonumber
-&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_{\Omega}d\Omega\int_0^{z_{\mathrm{max}}} dz' \frac{\bar{\hat{\mathcal{E}}}(z')\delta_E(z') e^{-\tau(z,z')}}{H(z')},
+\delta_H(z)&=&\frac{\dot{Q}(z)-\bar{\dot{Q}}}{\bar{\dot{Q}}}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{\hat D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{ \left[ \mathcal{\hat E}(E',z')-\bar{\hat{\mathcal{E}}}(E',z')\right] e^{-\tau(E,z,z')}}{H(z')} \\ \nonumber
+&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz' \frac{\bar{\hat{\mathcal{E}}}(E',z')\delta_E(z') e^{-\tau(E,z,z')}}{H(z')},
 \end{eqnarray}
-where we have removed the energy dependencies for more clarity.
 The TeV emission is related to the presence of supermassive black holes at the center of galaxies, which are located in collapsed dark matter halos. We can thus connect the fluctuations of the TeV emission, within a certain radius $\hat r$, to the underlying dark matter fluctuations $\delta$.
-At this stage we assume the TeV fluctuations, which mathc the baryonic density fluctuations exactlty match the dark matter fluctuations $\delta_E=\delta$. We explain in the next section that this is not exactly true and will take into account various corrections. The initial density fluctuations represent a Gaussian random field, which exact properties depend on the earliest stages of the universe prior to recombination \citep{1986ApJ...304...15B,Peebles}. They grow linearly between $z'$ and $z$ following  \citep{ 1977MNRAS.179..351H}
+At this stage we assume that TeV fluctuations exactly match the dark matter fluctuations $\delta_E=\delta$. We explain in the next section that this is not exactly true and will take into account various corrections. The initial density fluctuations represent a Gaussian random field, which exact properties depend on the earliest stages of the universe prior to recombination \citep{1986ApJ...304...15B,Peebles}. They grow linearly between $z'$ and $z$ following  \citep{ 1977MNRAS.179..351H}
 \begin{equation}
   \label{eq:growth}
 \delta(z,\hat r)=\delta(z',\hat r)D(z)/D(z'),
@@ -445,12 +457,12 @@ The linear approximation breaks down when the amplitude of the root mean square 
 And Eq.~\eqref{eq:fluc_exp0} rewrites as
 \begin{equation}
 \label{eq:heat_fluc_exp0}
-\delta_H(z,\hat r)=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(z)} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}(z')\delta(z',\hat r) e^{-\tau(z,z')}}{H(z')}.
+\delta_H(z,\hat r)=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(E,z)} \int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}(E',z')\delta(z',\hat r) e^{-\tau(E,z,z')}}{H(z')}.
 \end{equation}
 The left hand side yields $\tilde{\delta}(\mathbf{\hat k})$ while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:heat_fluc_newt3}. As the power spectrum of density fluctuations is isotropic, this yields
 \begin{equation}
 \label{eq:heat_fluc_exp1}
-\tilde{\delta}_H(z,\hat k)=\tilde{\delta}(z,\hat k) \frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_z^{z_{\mathrm{max}}} dz' \frac{D(z')}{D(z)}\frac{\sin(\hat k\hat r'(z'))}{\hat k \hat \hat r'(z')} \frac{\bar{\hat{\mathcal{E}}}(z') e^{-\tau(z,z')}} {H(z')}.
+\tilde{\delta}_H(z,\hat k)=\tilde{\delta}(z,\hat k) \frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(E,z)}\int_z^{z_{\mathrm{max}}} dz' \frac{D(z')}{D(z)}\frac{\sin(\hat k\hat r'(z'))}{\hat k \hat r'(z')} \frac{\bar{\hat{\mathcal{E}}}(E',z') e^{-\tau(E,z,z')}} {H(z')}.
 \end{equation}
 \begin{figure}[h]
 \centering
@@ -459,7 +471,7 @@ The left hand side yields $\tilde{\delta}(\mathbf{\hat k})$ while the right hand
 \caption{Window function in an expanding universe.}
 \label{fig:window_nobiases}
 \end{figure}
-Fig. \ref{fig:window_nobiases} shows the window function in an expanding universe at different redshifts. %Comparing with non-expanding case in Fig. \ref{fig:window_newt} \textit{ blabla}
+Fig.~\ref{fig:window_nobiases} shows the window function in an expanding universe at different redshifts. %Comparing with non-expanding case in Fig. \ref{fig:window_newt} \textit{ blabla}
 The TeV emission fluctuations are not exactly equal to the dark matter density fluctuations. In the next section we will account for the various corrections that have to be taken into account to determine a more accurate window function.
 \section{Complete window function}
 The TeV fluctuations are biased with respect to the dark matter fluctuations, as we detail in $\S$\ref{sec:window}, yielding
@@ -488,11 +500,10 @@ where $\delta_{v_r}$ are the velocity perturbations along the line of sight. The
 \label{eq:kaiser2}
 \mathcal{F}\left(\frac{d\delta_{v_r}}{d\hat r}\right)=-\mu^2 f \tilde{\delta}(\mathbf{\hat k}),
 \end{equation}
-with $\mu$ the cosine of the angle between the wavenumber and the line of sight.  $f\equiv f(\Omega)\equiv d\log\delta/d\log a$, with $\Omega$ the cosmological density parameter.
-Keeping only first order correction for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
+with $\mu$ the cosine of the angle between the wavenumber and the line of sight and $f\equiv d\log\delta/d\log a$. Keeping only first order correction for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
 \begin{equation}
 \label{eq:mean_heat0}
-\dot{Q}(z)=\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{\mathcal{\bar{\hat E}}(z')e^{-\tau(z,z')}}{H(z')}\left[1+\left(\frac{D(z')}{D(z)}b(z)\delta(z,\hat r) -\frac{d\delta_{v_r}}{d\hat r}f\right)\right].
+\dot{Q}(z)=\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{\hat D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{z_{\mathrm{max}}} dz'\frac{\mathcal{\bar{\hat E}}(E',z')e^{-\tau(E,z,z')}}{H(z')}\left[1+\left(\frac{D(z')}{D(z)}b(z)\delta(z,\hat r) -\frac{d\delta_{v_r}}{d\hat r}f\right)\right].
 \end{equation}
 Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the fluctuations
 \begin{equation}
@@ -502,7 +513,7 @@ Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the
 where we introduced
 \begin{equation}
 \label{eq:def_X}
-\frac{dX}{dz'}=\frac{(1+z)^3c}{4\pi \hat D_{\mathrm{pp}}(z)}\frac{\mathcal{\bar{\hat E}}(z')e^{-\tau(z,z')}}{H(z')},
+\frac{dX}{dz'}=\frac{(1+z)^3c}{4\pi \hat D_{\mathrm{pp}}(E,z)}\frac{\mathcal{\bar{\hat E}}(E',z')e^{-\tau(E,z,z')}}{H(z')},
 \end{equation}
 for convenience reasons and to highlight the generality of the method.
 
@@ -529,8 +540,8 @@ We have used
 The window function for the heating rate fluctuations is then given by
 \begin{eqnarray}
 \label{eq:heat_fluc}
-\tilde{W}_H(z,\hat k)&=&\frac{(1+z)^3c }{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(z)}\int_z^{z_{\mathrm{max}}} dz' \frac{\mathcal{\bar{\hat E}}(z')e^{-\tau(z,z')}}{H(z')}\frac{D(z')}{D(z)}\left[\left(b(z)+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2}{3}fj_2(\hat k \hat r)\right]\\
-&=& \frac{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{\hat D_{\mathrm{pp}}}(z)}\int_z^{z_{\mathrm{max}}} dz'   \frac{\mathcal{\bar{\hat E}}(z')e^{-\tau(z,z')}}{H(z')}\frac{D(z')}{D(z)}\left[\left(b(z)+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2f}{3}j_2(\hat k \hat r)\right]}{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{\hat D_{\mathrm{pp}}}(z)}\int_z^{z_{\mathrm{max}}} dz'  \mathcal{\bar{\hat E}}(z') \frac{e^{-\tau(z,z')}}{H(z')}}.
+\tilde{W}_H(z,\hat k)&=&\frac{(1+z)^3c }{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{\hat D_{\mathrm{pp}}(E,z)}\int_z^{z_{\mathrm{max}}} dz' \frac{\mathcal{\bar{\hat E}}(E',z')e^{-\tau(E,z,z')}}{H(z')}\frac{D(z')}{D(z)}\left[\left(b(z)+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2}{3}fj_2(\hat k \hat r)\right]\\
+&=& \frac{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{\hat D_{\mathrm{pp}}}(E,z)}\int_z^{z_{\mathrm{max}}} dz'   \frac{\mathcal{\bar{\hat E}}(E',z')e^{-\tau(E,z,z')}}{H(z')}\frac{D(z')}{D(z)}\left[\left(b(z)+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2f}{3}j_2(\hat k \hat r)\right]}{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{\hat D_{\mathrm{pp}}}(E,z)}\int_z^{z_{\mathrm{max}}} dz'  \mathcal{\bar{\hat E}}(E',z') \frac{e^{-\tau(E,z,z')}}{H(z')}}.
 \end{eqnarray}
 \ALc{This equation is similar to \citet{2007MNRAS.376.1680P,2005ApJ...626....1B} but does not contain the unnecessary area correction factor.}
 %\ALc{compare with Barkana loeb}
