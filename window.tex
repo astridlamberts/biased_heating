@@ -347,7 +347,7 @@ The heating rate fluctuations at a given point $\mathbf{x}$ are then given by
   [\mathcal{E}(\mathbf{r}+\mathbf{x})-\bar{\mathcal{E}}]e^{-r/D_{\mathrm{pp}}} \nonumber\\
   &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr \delta_E(\mathbf{r}+\mathbf{x})\bar{\mathcal{E}}\,e^{-r/D_{\mathrm{pp}}} ,
 \end{eqnarray}
-where $\delta_E$ are the fluctuations of the TeV photon emissivity. Finally we assume that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This is justified by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy\citep{2004ApJ...604L..89H}.
+where $\delta_E$ are the fluctuations of the TeV photon emissivity. \Pc{\sout{Finally we assume that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This is justified by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy.}}
 
 
 
@@ -392,11 +392,11 @@ Introducing $\mu=\cos\theta$, where $\theta$ is the angle between the wave vecto
   \label{eq:heat_fluc_newt3}
   \tilde{\delta}_H(k)&=&  
   \frac{1}{2\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}dr  \bar{\mathcal{E}} e^{-r/D_{\mathrm{pp}}} \tilde{\delta}_E(k) e^{-ikr\mu}
-  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}}} {\bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr)}{kr} e^{-r/D_{\mathrm{pp}}}   dr\\ \nonumber
+  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}} \bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr)}{kr} e^{-r/D_{\mathrm{pp}}}   dr\\ \nonumber
  &=&\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}}\bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right)
   =\tilde{\delta}(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}} \bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right).
 \end{eqnarray}
-In the last step, we have assumed for simplicity that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This will be generalized in Appendix~\ref{sec:window_complete}. Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $D_{\mathrm{pp}}^{-1}=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
+In the last step, we have assumed for simplicity that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. \Pc{While we may justify this by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy\citep{2004ApJ...604L..89H}, we generalize the mapping between emissivity and DM fluctuations} in Appendix~\ref{sec:window_complete}. Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $D_{\mathrm{pp}}^{-1}=10$ Mpc$^{-1}$.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
 
 \begin{figure}
 \centering
@@ -409,11 +409,11 @@ In the last step, we have assumed for simplicity that the fluctuations in the Te
 
 \section{Expanding universe}\label{sec:window_exp}
 
-The heating rate in an expanding universe at point $\mathbf{\hat{x}}$ is given by
+The heating rate in an expanding universe at a comoving point $\mathbf{\hat{x}}$ at redshift $z$ is given by
 \begin{equation}
   \dot{Q}(\mathbf{\hat{x}})= \int_{E_{\rm min}}^{E_{\rm max}} dE \frac{J_E(\mathbf{\hat{x}})}{D_{\mathrm{pp}}(E, z)},
 \end{equation}
-where $z$ is the redshift at $\mathbf{\hat{x}}$ and the interval
+where \Pc{\sout{$z$ is the redshift at $\mathbf{\hat{x}}$ and}} the interval
 $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the energy range over which pair
 production is possible. Quantities indicated by a hat are measured in the
 comoving frame.
@@ -425,20 +425,20 @@ comoving frame.
 %where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, and $\epsilon_E$ is the specific proper emissivity.
 $J_E$ is the specific intensity per unit energy (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$) and given by
 \begin{equation}\label{eq:expanding J}
-  J_E(E, \mathbf{\hat{x}}) = \frac {(1 + z)^3} {4\pi} \int_{\Omega(\btheta)} d\Omega \int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat{r}}{dz'}\, {\hat{\mathcal{E}}_{E'}(\mathbf{\hat{r}}+\mathbf{\hat{x}})}e^{-\tau(E,z,z')},
+  J_E(E, \mathbf{\hat{x}}) = \frac {(1 + z)^3} {4\pi} \int_{\Omega} d\Omega \int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat{r}}{dz'}\, {\hat{\mathcal{E}}_{E'}(\mathbf{\hat{r}}+\mathbf{\hat{x}}, z')}e^{-\tau(E,z,z')},
 \end{equation}
-where the vector $\mathbf{\hat{r}} = [\hat{r}(z'), \mathbf{\hat{r}}_\perp(\btheta)]$ contains the radial comoving distance $\hat r$ and comoving perpendicular distance $\mathbf{\hat{r}}_\perp$, $z$ is the absorption redshift, $\hat{\mathcal{E}}_E = \epsilon_E/(1+z')^3$ is the comoving specific emissivity defined in Eq.~\eqref{eq:mean_heat}, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
+where the vector \Pc{\sout{$\mathbf{\hat{r}} = [\hat{r}(z'), \mathbf{\hat{r}}_\perp(\btheta)]$} $\mathbf{\hat{r}}(\hat{r}(z,z'), \theta, \phi)$ \sout{contains the radial comoving distance $\hat r$ and comoving perpendicular distance $\mathbf{\hat{r}}_\perp$} is a function of the radial comoving distance $\hat{r}$ and position angles, $\theta$ and $\phi$}, $z$ is the absorption redshift, $\hat{\mathcal{E}}_E = \epsilon_E/(1+z')^3$ is the comoving specific emissivity defined in Eq.~\eqref{eq:mean_heat}, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
 \begin{equation}
 \label{eq:tau}
 \tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{\hat D_{\mathrm{pp}}(E,z'')}\frac{d\hat r}{dz''}.
 \end{equation}
-An alert reader will recognize that the true optical depth must include the effect of a changing $\hat D_{\rm pp}$ as we integrate from $z$ to $z'$.  Here we make the assumption that $\tau(E',z,z') \propto \hat r$ to derive equation (\ref{eq:expanding J}). This assumption holds because the typical mean free paths for high energy photons are much smaller than the Hubble length.  Hence $E' \approx E$ as the redshift interval over which integrand is nontrivial is small compared to $z$.  
+An alert reader will recognize that the true optical depth must include the effect of a changing \Pc{\sout{$\hat D_{\rm pp}$} $E'$} as we integrate from $z$ to $z'$.  Here we \Pc{ assume \sout{make the assumption that $\tau(E',z,z') \propto \hat r$ to derive equation (\ref{eq:expanding J}). This assumption holds  because}} the typical mean free paths for high energy photons are much smaller than the Hubble length\Pc{\sout{.  Hence} so that } $E' \approx E$ \Pc{\sout{as} over} the redshift interval \Pc{ is small compared to $z$ \sout{over which} where integrand is nontrivial \sout {is small compared to $z$}}.  
 We then find that the energy-integrated and volume-integrated heating rate is then given by 
 \begin{equation}
   \label{eq:int_exp_heat}
-  \dot{Q}[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat r}{dz'}\mathcal{\hat E}_{E'}(z',\btheta) e^{-\tau(E,z,z')}.
+  \dot{Q}[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat r}{dz'}\mathcal{\hat E}_{E'}(\mathbf{\hat{\mathcal{R}}}, z') e^{-\tau(E,z,z')},
 \end{equation}
-For clarity, we omit here and in the following the explicit dependencies of the specific emissivity $\hat{\mathcal{E}}_{E'}[\mathbf{\hat{r}}(z',\btheta)+\mathbf{\hat{x}}]$ and only show the implicite ones that are being integrated over. Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
+\Pc{where $\mathbf{\hat{\mathcal{R}}} = \mathbf{\hat{x}} + \mathbf{\hat{r}}$.  \sout{For clarity, we omit here and in the following the explicit dependencies of the specific emissivity $\hat{\mathcal{E}}_{E'}[\mathbf{\hat{r}}(z',\btheta)+\mathbf{\hat{x}}]$ and only show the implicite ones that are being integrated over.}} Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
 \label{eq:mean_exp_heat}
 \bar{\dot{Q}} (z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E, z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\, \frac{d\hat r}{dz'}\bar{\hat{\mathcal{E}}}_{E'}(z') e^{-\tau(E,z,z')}.
@@ -447,14 +447,14 @@ For clarity, we omit here and in the following the explicit dependencies of the 
 This enables us to define the heating rate fluctuations
 \begin{eqnarray}
 \label{eq:fluc_exp0}
-\delta_H[\mathbf{\hat{x}}(z)]&=&\frac{\dot{Q}[\mathbf{\hat{x}}(z)]-\bar{\dot{Q}}(z)}{\bar{\dot{Q}}(z)}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\,\frac{ \left[ \mathcal{\hat E}_{E'}(z',\btheta)-\bar{\hat{\mathcal{E}}}_{E'}(z')\right] e^{-\tau(E,z,z')}}{(1+z')\,H(z')} \nonumber\\ 
-&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\, \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta_E(z',\btheta) e^{-\tau(E,z,z')}}{(1+z')\,H(z')},
+\delta_H[\mathbf{\hat{x}}(z)]&=&\frac{\dot{Q}[\mathbf{\hat{x}}(z)]-\bar{\dot{Q}}(z)}{\bar{\dot{Q}}(z)}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\,\frac{ \left[ \mathcal{\hat E}_{E'}(\mathbf{\hat{\mathcal{R}}}, z')-\bar{\hat{\mathcal{E}}}_{E'}(z')\right] e^{-\tau(E,z,z')}}{(1+z')\,H(z')} \nonumber\\ 
+&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\, \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta_E(\mathbf{\hat{\mathcal{R}}}, z') e^{-\tau(E,z,z')}}{(1+z')\,H(z')},
 \end{eqnarray}
 The TeV emission is related to the presence of supermassive black holes at the center of galaxies, which are located in collapsed dark matter halos. We can thus connect the fluctuations of the TeV emission, within a certain radius $\hat r$, to the underlying dark matter fluctuations $\delta$.
 At this stage we assume that TeV fluctuations exactly match the dark matter fluctuations $\delta_E=\delta$. We explain in the next section that this is not exactly true and will take into account various corrections. The initial density fluctuations represent a Gaussian random field, whose exact properties depend on the earliest stages of the universe prior to recombination \citep{1986ApJ...304...15B,Peebles}. They grow linearly between $z'$ and $z$ following  \citep{ 1977MNRAS.179..351H}
 \begin{equation}
   \label{eq:growth}
-\delta(z,\btheta)=\delta(z',\btheta)D(z)/D(z'),
+\delta(\mathbf{\hat{\mathcal{R}}}, z)=\delta(\mathbf{\hat{\mathcal{R}}}, z')D(z)/D(z'),
 \end{equation}
 where the linear growth factor is given by
 \begin{equation}
@@ -464,19 +464,19 @@ D(z)=D_0H(z)\int_z^{\infty}dz'\frac{1+z'}{H^3(z')}.
 The linear approximation breaks down when the amplitude of the root mean square of the perturbations approaches unity. The evolution of the density field is then determined by the spherical collapse \citep{1972ApJ...176....1G} and the virialization of halos. In the linear regime, the growth of the modes is independent of the wavenumber and we have
 \begin{equation}
 \label{eq:FT_delta}
-\delta_E[\mathbf{\hat{r}}(z',\btheta)]=\delta[\mathbf{\hat{r}}(z',\btheta)]
-=\delta[\mathbf{\hat{r}}(z,\btheta)]\frac{D(z')}{D(z)}
+\delta_E(\mathbf{\hat{r}}, z')=\delta(\mathbf{\hat{r}}, z')
+=\delta(\mathbf{\hat{r}}, z)\frac{D(z')}{D(z)}
 =\frac{D(z')}{D(z)}\frac{1}{(2\pi)^3}\int d^3\mathbf{\hat k'} \tilde{\delta}(\mathbf{\hat k'}) e^{-i\mathbf{\hat k'}\cdot\mathbf{\hat r}}.
 \end{equation}
 And Eq.~\eqref{eq:fluc_exp0} rewrites to
 \begin{equation}
 \label{eq:heat_fluc_exp0}
-\delta_H[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)} \int_{\Omega}d\Omega\int_z^{\infty}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta(z,\btheta) e^{-\tau(E,z,z')}}{(1+z')\,H(z')}.
+\delta_H[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)} \int_{\Omega}d\Omega\int_z^{\infty}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta(\mathbf{\hat{\mathcal{R}}}, z) e^{-\tau(E,z,z')}}{(1+z')\,H(z')}.
 \end{equation}
 Fourier transforming yields $\tilde{\delta}(\mathbf{\hat k})$ on the left hand side while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:heat_fluc_newt3}. As the power spectrum of density fluctuations is statistically isotropic and homogeneous, this simplifies to
 \begin{equation}
 \label{eq:heat_fluc_exp1}
-\tilde{\delta}_H(z,\hat k)=\tilde{\delta}(z,\hat k) \frac{(1+z)^3c}{\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_z^{\infty} dz' \frac{D(z')}{D(z)}\frac{\sin\left(\hat k\hat r(z')\right)}{\hat k \hat r(z')} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z') e^{-\tau(E,z,z')}} {(1+z')\,H(z')}.
+\tilde{\delta}_H(\hat k, z)=\tilde{\delta}(\hat k, z) \frac{(1+z)^3c}{\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_z^{\infty} dz' \frac{D(z')}{D(z)}\frac{\sin\left(\hat k\hat r(z,z')\right)}{\hat k \hat r(z, z')} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z') e^{-\tau(E,z,z')}} {(1+z')\,H(z')}.
 \end{equation}
 \begin{figure}[h]
 \centering
@@ -493,7 +493,7 @@ The TeV emission fluctuations are not exactly equal to the dark matter density f
 \label{sec:window_complete}
 The TeV fluctuations are biased with respect to the dark matter fluctuations, as we detail in $\S$\ref{sec:window}, yielding
 \begin{equation}
-\delta_E[\mathbf{\hat{x}}(z)]=b(z)\delta[\mathbf{\hat{x}}(z)],
+\delta_E(\mathbf{\hat{x}},z)=b(z)\delta(\mathbf{\hat{x}},z),
 \label{eq:bias}
 \end{equation}
 with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, structures falling towards a central potential of a cluster have an infall velocity towards the central overdensity. This yields the following redshift correction
@@ -509,31 +509,31 @@ where $\delta_{v_r}$ are the velocity perturbations along the line of sight. The
 with $\mu$ the cosine of the angle between the wavenumber and the line of sight and $f\equiv d\log\delta/d\log a$. Keeping only first order correction for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
 \begin{equation}
 \label{eq:mean_heat0}
-\dot{Q}[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega(\btheta)}d\Omega\int_z^{\infty} dz'\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\left[1+\frac{D(z')}{D(z)}b(z')\delta[\mathbf{\hat{r}}(z',\btheta)+\mathbf{\hat{x}}] -\frac{d\delta_{v_r}}{d\hat r}f\right].
+\dot{Q}(\mathbf{\hat{x}},z)=\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} dz'\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\left[1+\frac{D(z')}{D(z)}b(z')\delta(\mathbf{\hat{\mathcal{R}}}, z') -\frac{d\delta_{v_r}}{d\hat r}f\right].
 \end{equation}
 Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the fluctuations
 \begin{equation}
 \label{eq:heat_fluc0}
-\delta_H[\mathbf{\hat{x}}(z)]=\frac{1}{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')\left[\frac{D(z')}{D(z)}b(z')\delta[\mathbf{\hat{r}}(z',\btheta)+\mathbf{\hat{x}}] -\frac{d\delta_{v_r}}{d\hat r}f\right],
+\delta_H(\mathbf{\hat{x}}, z)=\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')\left[\frac{D(z')}{D(z)}b(z')\delta(\mathbf{\hat{\mathcal{R}}}, z') -\frac{d\delta_{v_r}}{d\hat r}f\right],
 \end{equation}
 where we introduced
 \begin{equation}
 \label{eq:def_X}
-X(E,z,z')=\frac{(1+z)^3c}{4\pi D_{\mathrm{pp}}(E,z)}\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}
+X(E,z,z')=\frac{(1+z)^3c}{D_{\mathrm{pp}}(E,z)}\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}
 \end{equation}
 for convenience. Transforming to Fourier space yields
 \begin{eqnarray}
 \label{eq:heat_fluc0}
-\tilde{\delta}_H(z,\mathbf{\hat k})&=&\frac{1}{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}
+\tilde{\delta}_H(\mathbf{\hat k}, z)&=&\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}
 \!d\Omega\int_z^{\infty}\! dz'X(E,z,z')
 \frac{1}{(2\pi)^3}\!\int d^3\mathbf{\hat x}e^{i\mathbf{\hat k \cdot \hat x}}
 \int\! d^3 \mathbf{\hat k'}e^{-i\mathbf {\hat k'} \cdot (\mathbf{\hat r} +\mathbf{ \hat x})} 
-\tilde\delta(z,\mathbf {\hat k'})\left[\frac{D(z')}{D(z)}b(z') + f \mu^2\right].
+\tilde\delta(\mathbf {\hat k'}, z)\left[\frac{D(z')}{D(z)}b(z') + f \mu^2\right].
 \end{eqnarray}
 Assuming statistical isotropy and homogeneity allows us to simplify this expression, and we arrive at
 \begin{eqnarray}
-\tilde{\delta}_H(z,\hat k)&=&\frac{2\pi\tilde{\delta}(z,\hat k)}{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE \int_{\Omega}d\Omega\int_z^{\infty} dz'X(E,z,z')\frac{D(z')}{D(z)}\int_{-1}^{1}d\mu\left[e^{-i\hat k \hat r\mu} (b +f \mu^2)\right]\\ \nonumber
-&=&\frac{4\pi\tilde{\delta}(z,\hat k)}{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_z^{\infty}dz'X(E,z,z')\frac{D(z')}{D(z)}\left[\left(b(z')+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2}{3}f j_2(\hat k \hat r)\right],
+\tilde{\delta}_H(z,\hat k)&=&\frac{\tilde{\delta}(z,\hat k)}{2\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE \int_{\Omega}d\Omega\int_z^{\infty} dz'X(E,z,z')\frac{D(z')}{D(z)}\int_{-1}^{1}d\mu\left[e^{-i\hat k \hat r\mu} (b +f \mu^2)\right]\\ \nonumber
+&=&\frac{\tilde{\delta}(z,\hat k)}{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_z^{\infty}dz'X(E,z,z')\frac{D(z')}{D(z)}\left[\left(b(z')+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2}{3}f j_2(\hat k \hat r)\right],
 \end{eqnarray}
 where we used the spherical Bessel functions
 \begin{eqnarray}
