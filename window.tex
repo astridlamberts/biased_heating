@@ -139,31 +139,126 @@ with
 N=\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{D_{\mathrm{pp}}}(E,z)}
 \int_z^{\infty} dz'   \frac{\mathcal{\bar{\hat E}}_{E'}(z') e^{-\tau}}{(1+z')\,H(z')}.
 \end{eqnarray}
-Here, $\hat{r}$ is the comoving distance between the source and heated region, $D$ denotes the linear growth factor defined in Eq.~\eqref{eq:growth_1}, $f\equiv d\log \delta/d \log a$, $E$ is the energy of the received TeV photon, $E'$ its initial energy and $\mathcal{E}$ the (comoving) blazar luminosity density, $b$ is the Eulerian bias and $j_0$ and $j_2$ are spherical Bessel functions. \Cc{Is $\mathcal{\bar{\hat E}}_{E'} = \mathcal{\bar{\hat E}} (E')/E'$?}
+Here, $\hat{r}$ is the comoving distance between the source and heated
+region, $D$ denotes the linear growth factor defined in
+Eq.~\eqref{eq:growth_1}, $f\equiv d\log \delta/d \log a$, $E$ is the
+energy of the received TeV photon, $E'$ its initial energy and
+$\mathcal{E}_E$ the (comoving) blazar spectral luminosity density, $b$
+is the Eulerian bias and $j_0$ and $j_2$ are spherical Bessel
+functions.
 
-Assuming the TeV blazar distribution follows the redshift evolution of quasars, \citet{2012ApJ...752...23C} determined the comoving blazar luminosity density in the TeV band based on a fit to \citet{2007ApJ...654..731H}
-\begin{eqnarray}
+\Ac{
+The blazar spectral luminosity density is determined by both the
+intrinsic source spectra and the luminosity function of TeV blazars.
+Here we adopt the model described in \citet{2014ApJ...790..137B}, in
+which the spectra are assumed to be well described by a set of broken
+power laws and a luminosity function that depends on redshift,
+luminosity from 100~GeV to 10~TeV ($L_{\rm TeV}$), and the low energy
+spectral index ($\Gamma_l$).  The assumed source spectral luminosity
+density is given by 
+$L_E(L_{\rm TeV},\Gamma_l)=\tilde{L}_E(\Gamma_l) L_{\rm TeV}$ where
+\begin{equation}
+\label{eq:intrinsic_spectrum}
+\tilde{L}_E(\Gamma_l) = \frac{f_0 E}{(E/E_b)^{\Gamma_l} + (E/E_b)^{\Gamma_h}}\,,
+\end{equation}
+where the normalization $f_0$ is chosen such that 
+$\int_{0.1~GeV}^{10~TeV} \tilde{L}_E dE = 1$, $E_b=1~{\rm TeV}$, and
+$\Gamma_h=3$.  The luminosity function is based on the spectral
+properties of the Fermi population of hard gamma-ray blazars and the
+quasar luminosity function reported by \citet{2007ApJ...654..731H}.
+In terms of these, the blazar spectral luminosity density is
+\begin{equation}
+\mathcal{E}_E(z)
+=
+\int d\log_{10}L_{\rm TeV}\,d\Gamma_l\, L_E(L_{\rm TeV},\Gamma_l)
+\hat{\phi}(z,L_{\rm Tev},\Gamma_l)\,,
+\end{equation}
+where $\hat{\phi}(z,L_{\rm Tev},\Gamma_l)$ is the comoving analog of
+by Eq.~6 in \citet{2014ApJ...790..137B}.  This may be simplified
+further using the separability of $\hat{\phi}$ in $\Gamma_l$, i.e.,
+\begin{equation}
+\hat{\phi}(z,L_{\rm TeV},\Gamma_l)
+=
+\hat{\phi}(z,L_{\rm TeV})
+\chi(\Gamma_l)\,,
+\end{equation}
+where $\int d\Gamma_l \chi(\Gamma_l) = 1$.  As a result,
+\begin{equation}
 \label{eq:mean_heat}
-\hat{\mathcal{E}}(E',z)&=&\hat{\mathcal{E}}(E',0)\hat\Phi_{B}(z)\\ \nonumber
-&\simeq& \hat{\mathcal{E}}(E',0)\zeta\hat\Phi_{Q}(z),
-\end{eqnarray}
+\mathcal{E}_E(z)
+=
+\left< \tilde{L}_E \right>
+\hat{\Lambda}(z)\,,
+\end{equation}
+where
+\begin{equation}
+\left< \tilde{L}_E \right>
+=
+\int d\Gamma_l\,\tilde{L}_E(\Gamma_l) \chi(\Gamma_l)
+\end{equation}
+which is now a function of energy alone, and
+\begin{equation}
+\hat{\Lambda}(z) = 
+\int d\log_{10}L_{\rm TeV}\,\hat{\phi}(z,L_{\rm TeV})
+\end{equation}
+is the TeV luminosity density of TeV blazars.  
+
+In practice, for the TeV blazar luminosity function in
+\citet{2014ApJ...790..137B} $\left< \tilde{L}_E \right>$ is well fit
+over the energy range of interest, 100~GeV to 10~TeV, by
+Eq. \ref{eq:intrinsic_spectrum} with $\Gamma_l=1.80$ and $E_b=1.057$,
+with an $L_1$ norm of 0.0048.  This spectral shape peaks near 1~TeV
+and thus sets a characteristic $\gamma$-ray energy.
+
+Since the TeV blazar luminosity function in
+\citet{2014ApJ...790..137B} is simply the quasar luminosity function
+in \citet{2007ApJ...654..731H} rescaled in energy and luminosity, the
+comoving luminosity densities are also proportional.  That is,
+\begin{equation}
+\hat{\Lambda}(z) = \zeta \hat{\Lambda}_Q(z)\,,
+\end{equation}
 with $\zeta=2.1\times 10^{-3}$ and the scale-free comoving quasar luminosity density is given by
 \begin{equation}
 \label{eq:phi_quasar}
-\hat\Phi_{Q}[x(z)]=10^{-0.0037x^4+0.085x^3-0.0778x^2+2.795x-2.133},
+\hat{\Lambda}_Q(z)=10^{-0.0037x^4+0.085x^3-0.778x^2+2.795x-2.133}\,,
 \end{equation}
+\begin{equation}
+\label{eq:phi_quasar}
+\hat{\Lambda}_Q(z)=10^{-0.035+1.48z-0.545z^2+0.070z^3-0.0037z^4}
+\end{equation}
+where $x=1+z$. [The latter is more directly useful, and as you can see
+  directly, is not quite normalized correctly as Christoph noted.]
+
+
+\sout{
+Assuming the TeV blazar distribution follows the redshift evolution of
+quasars, citet{2012ApJ...752...23C} determined the comoving blazar
+luminosity density in the TeV band based on a fit to
+citet{2007ApJ...654..731H}
+%\begin{eqnarray}
+%\label{eq:mean_heat}
+%\hat{\mathcal{E}}(E',z)&=&\hat{\mathcal{E}}(E',0)\hat\Phi_{B}(z)\\ \nonumber
+%&\simeq& \hat{\mathcal{E}}(E',0)\zeta\hat\Phi_{Q}(z),
+%\end{eqnarray}
+with $\zeta=2.1\times 10^{-3}$ and the scale-free comoving quasar luminosity density is given by
+%\begin{equation}
+%\label{eq:phi_quasar}
+%\hat\Phi_{Q}[x(z)]=10^{-0.0037x^4+0.085x^3-0.0778x^2+2.795x-2.133},
+%\end{equation}
 where $x=1+z$. TeV blazars have broken power-law spectra that are parametrized by
-\begin{equation}
-\label{eq:blaz_lum}
-\hat{\mathcal{E}}(E',0)=\hat{\mathcal{E}}_0\,F(E'),
-\end{equation}
-with $\hat{\mathcal{E}}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the blazar luminosity density at the current epoch and $F(E)$ denotes intrinsic TeV blazar spectrum \citep{2014ApJ...790..137B}
-\begin{equation}
-\label{eq:intrinsic_spectrum}
-F(E) = \frac{f_0 E}{(E/E_b)^{\Gamma_l} + (E/E_b)^{\Gamma_h}},
-\end{equation}
-where $f_0$ is set by requiring $\int_{E_{\rm min}}^{E_{\rm max}} dE F(E) = 1$ (all energies are measured in units of TeV) and $\Gamma_h=3$. We averaged $F(E)$ over the Gaussian distribution in $\Gamma_l$ (low-energy photon spectral index) from \citet{2014ApJ...790..137B}. Fitting the resulting distribution by the broken power law flux model, allowing both $\Gamma_l$ and $E_b$ to vary, we minimized the chi-squared for $E F(E)$ to emphasize the regions that dominate the energy flux. The resulting values are  $\Gamma_l=1.80$ and $E_b=1.057$, with an $L_1$ norm of 0.0048.Adopting typical parameters of nearby TeV blazar spectra yields $E_{\mathrm{min}}=100$ GeV, and $E_{\mathrm{max}}=10$ TeV. The spectral shape of the EBL selects $E_{\mathrm{min}}=100$ GeV and $E_{\mathrm{max}}=10$ TeV and the limiting $\gamma$-ray energies for pair production.
-%Assuming blazars follow a similar evolution to quasars, we use $z_\mathrm{max}=5$ \citep{2007ApJ...654..731H}.
+%\begin{equation}
+%\label{eq:blaz_lum}
+%\hat{\mathcal{E}}(E',0)=\hat{\mathcal{E}}_0\,F(E'),
+%\end{equation}
+with $\hat{\mathcal{E}}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the blazar luminosity density at the current epoch and $F(E)$ denotes intrinsic TeV blazar spectrum citep{2014ApJ...790..137B}
+%\begin{equation}
+%\label{eq:intrinsic_spectrum}
+%F(E) = \frac{f_0 E}{(E/E_b)^{\Gamma_l} + (E/E_b)^{\Gamma_h}},
+%\end{equation}
+where $f_0$ is set by requiring $\int_{E_{\rm min}}^{E_{\rm max}} dE F(E) = 1$ (all energies are measured in units of TeV) and $\Gamma_h=3$. We averaged $F(E)$ over the Gaussian distribution in $\Gamma_l$ (low-energy photon spectral index) from citet{2014ApJ...790..137B}. Fitting the resulting distribution by the broken power law flux model, allowing both $\Gamma_l$ and $E_b$ to vary, we minimized the chi-squared for $E F(E)$ to emphasize the regions that dominate the energy flux. The resulting values are  $\Gamma_l=1.80$ and $E_b=1.057$, with an $L_1$ norm of 0.0048.Adopting typical parameters of nearby TeV blazar spectra yields $E_{\mathrm{min}}=100$ GeV, and $E_{\mathrm{max}}=10$ TeV. The spectral shape of the EBL selects $E_{\mathrm{min}}=100$ GeV and $E_{\mathrm{max}}=10$ TeV and the limiting $\gamma$-ray energies for pair production.
+%Assuming blazars follow a similar evolution to quasars, we use
+%$z_\mathrm{max}=5$ \citep{2007ApJ...654..731H}.
+}}
 
 The optical depth is set by the mean free path $D_\mathrm{pp}(E',z)$ of TeV photons before they interact with an EBL photon to produce an electron-positron pair. Its redshift evolution is set by the EBL. Despite careful work that aims at constraining it, there remain uncertainties in the star formation history of the universe as well as its metallicity and dust contents \citep[see, e.g.][]{2008A&A...487..837F,2006ApJ...648..774S}. Following \citet{2012ApJ...752...23C} we use a prescription
 \begin{equation}
