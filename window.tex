@@ -301,8 +301,8 @@ Substituting Eqs.~\eqref{eq:mean_heat} and \eqref{eq:mean_free_path} into Eq.~\e
 
 \begin{figure}[h]
 \centering
-% \includegraphics[width = .45\textwidth ]{window_gal_qso}
-\includegraphics[width = .45\textwidth ]{window_gal_qso}
+ \includegraphics[width = .45\textwidth ]{window_gal_qso}
+
 \caption{Window function for TeV blazar heating from $z=1$ (solid lines), $z=2$ (dashed lines) and $z=4$ (dotted lines) for the galaxy bias model (red) and the quasar bias model (blue).  The arrows indicate the minimal and maximal \ALc{comoving} wavenumber modeled in the simulation.}
 \label{fig:window}
 \end{figure}
@@ -365,17 +365,17 @@ The probability distribution function clearly highlights the impact of clusterin
 % \includegraphics[width = .42\textwidth ]{T_rho_z1_gal2_ok.png}
 % \includegraphics[width = .42\textwidth ]{T_rho_z1_qso4_ok.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_noheat_z4.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z4_256.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z4_256.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z4_512.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z4_512.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_noheat_z3.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z3_256.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z3_256.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z3_512.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z3_512.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_noheat_z2.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z2_256.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z2_256.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z2_512.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_noheat_z1.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z1_256.png}
-\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z1_256.png}
+\includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z1_512.png}
 \caption{Mass weighted temperature - density relation at $z=4,3,2,1$ (from top to bottom) for the simulations with \ALc{no heating (left) inhomogeneous heating following galaxy bias (middle) and the quasar bias (right)}. The overlying grey contours show the corresponding $T-\rho_{\mathrm{gas}}$ relation for uniform blazar heating \citep{2012MNRAS.423..149P} for the same mass range. \ALc{The color scheme follows is logarithmic. This is the medium resolution simulation}}
 \label{fig:T_rho}
 \end{figure*}
@@ -438,29 +438,29 @@ We detail the derivation of the window function of Eq.~\eqref{eq:window}. We sta
 \section {Newtonian case}\label{sec:windon_newt}
 \subsection {Fluctuations with respect to the mean heating rate}
 
-The TeV flux received (in erg s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$, at a given energy, is given by the sum over all the sources within a radius $r\leqslant r_{\mathrm{max}}$.
+The TeV flux received (in erg s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$, at a given energy, is given by the sum over all the sources \ALc{\sout{within a radius $r\leqslant r_{\mathrm{max}}$}}.
 \begin{equation}
   \label{eq:flux_recu0}
   J(\mathbf{x})=
-  \int_{0}^{2\pi}d\phi\int_{0}^{\pi}\sin\theta d\theta\int_0^{r_{\mathrm{max}}}|\mathbf{x}'-\mathbf{x}|^2 d^3|\mathbf{x}'-\mathbf{x}|
+  \int_{0}^{2\pi}d\phi\int_{0}^{\pi}\sin\theta d\theta\int_0^{\infty}|\mathbf{x}'-\mathbf{x}|^2 d^3|\mathbf{x}'-\mathbf{x}|
   \frac{\mathcal{E}(\mathbf{x}') }{4\pi |\mathbf{x}'-\mathbf{x}|^2} e^{-\tau}
-  =\int_{\Omega} d\Omega\int_0^{r_{\mathrm{max}}} dr \frac{\mathcal{E}(\mathbf{r}+\mathbf{x}) }{4\pi } e^{- r/D_{\mathrm{pp}}},
+  =\int_{\Omega} d\Omega\int_0^{\infty} dr \frac{\mathcal{E}(\mathbf{r}+\mathbf{x}) }{4\pi } e^{- r/D_{\mathrm{pp}}},
 \end{equation}
 where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, $\tau=|\mathbf{x}'-\mathbf{x}|/D_{\mathrm{pp}}$ is the optical depth along the line of sight and $D_{\mathrm{pp}}$ is the mean free path for pair production, \ALc{which is constant over the volume}. In the last step, we introduced $\mathbf{r}=\mathbf{x}'-\mathbf{x}$, $d\Omega=\sin\theta d\theta d\phi$. The differential heating rate is defined as $d\dot{Q}(\mathbf{x})\equiv dJ(\mathbf{x})/D_{\mathrm{pp}}$ such that the volume-integrated heating rate $\dot{Q}$ and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
 \begin{equation}
   \label{eq:heating_rate0}
   \dot{Q}(\mathbf{x})=
-  \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr \mathcal{E}(\mathbf{r}+\mathbf{x})\, \frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}},\quad\mbox{and}\quad
-  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr \bar{\mathcal{E}} \,\frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}} ,
+  \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{\infty} dr \mathcal{E}(\mathbf{r}+\mathbf{x})\, \frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}},\quad\mbox{and}\quad
+  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{\infty} dr \bar{\mathcal{E}} \,\frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}} ,
 \end{equation}
 \ALc{\sout{where $D_{\mathrm{pp}}$ is the mean free path before the gamma-rays pair-produce, which is constant over the volume.}}
 The heating rate fluctuations at a given point $\mathbf{x}$ are then given by 
 \begin{eqnarray}
   \label{eq:heat_fluc_newt0}
   \delta_H(\mathbf{x})&=&\frac{\dot{Q}(\mathbf{x})-\bar{\dot{Q}}}{\bar{\dot{Q}}}=
-  \frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr 
+  \frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{\infty} dr 
   [\mathcal{E}(\mathbf{r}+\mathbf{x})-\bar{\mathcal{E}}]e^{-r/D_{\mathrm{pp}}} \nonumber\\
-  &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}} dr \delta_E(\mathbf{r}+\mathbf{x})\bar{\mathcal{E}}\,e^{-r/D_{\mathrm{pp}}} ,
+  &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{\infty} dr \delta_E(\mathbf{r}+\mathbf{x})\bar{\mathcal{E}}\,e^{-r/D_{\mathrm{pp}}} ,
 \end{eqnarray}
 where $\delta_E$ are the fluctuations of the TeV photon emissivity. %\Pc{\sout{Finally we assume that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This is justified by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy.}}
 
@@ -500,19 +500,19 @@ where $\tilde{W}(k)$ is the Fourier transform of $C r^{-2} e^{-r/D_{\mathrm{pp}}
 
 \begin{equation}
   \label{eq:heat_fluc_newt2}
-  \tilde{\delta}_H(\mathbf{k})=\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{r_{\mathrm{max}}}  dr \bar{ \mathcal{E}} e^{- r/D_{\mathrm{pp}}}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}}}.
+  \tilde{\delta}_H(\mathbf{k})=\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{\Omega}d\Omega\int_0^{\infty}  dr \bar{ \mathcal{E}} e^{- r/D_{\mathrm{pp}}}  \tilde{\delta}_E(\mathbf{k}) e^{-i\mathbf{k}\cdot{\mathbf{r}}}.
 \end{equation}
 Introducing $\mu=\cos\theta$, where $\theta$ is the angle between the wave vector and the line of sight, and assuming statistical isotropy and homogeneity, Eq.~\eqref{eq:heat_fluc_newt2} can be simplified as follows,
 \begin{eqnarray}
   \label{eq:heat_fluc_newt3}
   \tilde{\delta}_H(k)&=&  
-  \frac{1}{2\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{-1}^{1} d\mu \int_0^{r_{\mathrm{max}}}dr  \bar{\mathcal{E}} e^{-r/D_{\mathrm{pp}}} \tilde{\delta}_E(k) e^{-ikr\mu}
-  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}} \bar{\dot{Q}}}\int_0^{r_{\mathrm{max}}} \frac{\sin(kr)}{kr} e^{-r/D_{\mathrm{pp}}}   dr\\ \nonumber
+  \frac{1}{2\bar{\dot{Q}}D_{\mathrm{pp}}} \int_{-1}^{1} d\mu \int_0^{\infty}dr  \bar{\mathcal{E}} e^{-r/D_{\mathrm{pp}}} \tilde{\delta}_E(k) e^{-ikr\mu}
+  =\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{D_{\mathrm{pp}} \bar{\dot{Q}}}\int_0^{\infty} \frac{\sin(kr)}{kr} e^{-r/D_{\mathrm{pp}}}   dr\\ \nonumber
  &=&\tilde{\delta}_E(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}}\bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right)
   =\tilde{\delta}(k)\frac{\bar{\mathcal{E}}}{k D_{\mathrm{pp}} \bar{\dot{Q}}} \arctan\left(k D_{\mathrm{pp}}\right)
   = \tilde{\delta}(k)\frac{\arctan\left(k D_{\mathrm{pp}}\right)}{k D_{\mathrm{pp}}} .
 \end{eqnarray}
-In the last step, we have assumed for simplicity that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. While we may justify this by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy\citep{2004ApJ...604L..89H}, we generalize the mapping between emissivity and DM fluctuations in Appendix~\ref{sec:window_complete}. Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $D_{\mathrm{pp}}=10$ Mpc.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
+In the last step, we have assumed for simplicity that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. While we may justify this by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy \citep{2004ApJ...604L..89H}, we generalize the mapping between emissivity and DM fluctuations in Appendix~\ref{sec:window_complete}. Figure~\ref{fig:window_newt} shows  window functions with different absorption coefficients in a purely Newtonian universe. The solid red line shows a case with no absorption, the dashed green line shows a case with $D_{\mathrm{pp}}=10$ Mpc.  In the former case, large scale structure has the strongest impact on heating, as larger regions have more sources. When absorption is present,  the impact of large scale structure (i.e. low wave numbers $k$) remains constant as distant sources are absorbed. For scales equal to or larger than the cutoff, heating fluctuations follow density fluctuations and overdense regions get more heat. At smaller scales, the density structure has less impact on the heating, unless a strong overdensity is present.  
 
 \begin{figure}
 \centering
