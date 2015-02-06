@@ -112,15 +112,15 @@ One can then express the resulting heating rate as a mean value $\bar{\dot{Q}}$ 
 \label{eq:delta_h}
 \dot{Q}(\mathbf{x},z)=\bar{\dot{Q}}(\mathbf{x},z)\left[1+\delta_H(\mathbf{x},z)\right].
 \end{equation}
-The method is based on a Taylor expansion of the quantities describing the TeV sources and keeping only the first order corrections. Transforming to Fourier space yields for the fluctuation amplitude
+The method is based on a Taylor expansion of the quantities describing the TeV sources and keeping only the first order corrections. Transforming to Fourier space yields the fluctuation amplitude
 \begin{equation}
 \label{eq:use_window}
 \tilde{\delta}_H(k,z)=\tilde{W}_H(k,z)\tilde{\delta}(k,z),
 \end{equation}
-where $\tilde{W}_H$ is defined as the window function and maps the Fourier transform of the dark matter overdensity, $\tilde{\delta}$, to the Fourier transform of the heating fluctuations, $\tilde{\delta}_H$. This naturally yields the relevant length scale for heating rate fluctuations. %\Cc{[{\em Does $\delta$ refer to gas or DM overdensity? In Sect 3.1, you talk about a gas overdensity\ldots}]}
-The detailed exposition of this method, in the Newtonian limit and in an expanding universe, is given in Appendix A. In the following section, we present the general method and highlight the underlying hypotheses of our work.
+where $\tilde{W}_H$ is defined as the window function and maps the Fourier transform of the dark matter overdensity, $\tilde{\delta}$, to the Fourier transform of the heating fluctuations, $\tilde{\delta}_H$. This naturally yields the relevant length scale for heating rate fluctuations. The detailed exposition of this method, in the Newtonian limit and in an expanding universe, is given in the Appendices~\ref{sec:windon_newt} to \ref{sec:window_complete}. In the following section, we present the general method and highlight the underlying hypotheses of our work.
+
 \subsection{Window function for TeV blazar heating}\label{sec:window}
-To determine the heating rate fluctuations we express the TeV emissivity in Eq.~\eqref{eq:heating_rate} as a mean value and a first order correction. The heating rate at a given point is set by the received TeV flux from all the sources within a certain radius. We assume that the pairs lose their energy to the IGM at the point where they are created. As stated in \citet{2012ApJ...752...22B}, this is a reasonable assumption as the plasma instability length scales are many orders of magnitude smaller than the mean free path of these TeV photons.
+To determine the heating rate fluctuations we express the TeV emissivity in Eq.~\eqref{eq:heating_rate} as a mean value and a first order correction. The heating rate at a given point is set by the received TeV flux from all the sources within a certain radius. We assume that the pairs lose their energy to the IGM at the point where they are created. As stated in \citet{2012ApJ...752...22B} and \citet{2014arXiv1410.3797C}, this is a reasonable assumption as the plasma instability length scales are many orders of magnitude smaller than the mean free path of these TeV photons.
 
 The TeV gamma rays are emitted by accreting supermassive black holes at centers of galaxies, which cluster in overdense regions. Matter is tightly coupled to the underlying dark matter, the evolution of which is straight forward to model analytically within the linear approximation. The linear approximation is valid as long as the overdensity is small, which is true in the early universe and then breaks down at small scales as very dense structures form. Our computation takes into account the bias between baryonic matter and dark matter \citep{1996MNRAS.282..347M}, as we detail below.
 
@@ -159,7 +159,7 @@ $L_E(L_{\rm TeV},\Gamma_l)=\tilde{L}_E(\Gamma_l) L_{\rm TeV}$ where
 \tilde{L}_E(\Gamma_l) = \frac{f_0 E}{(E/E_b)^{\Gamma_l} + (E/E_b)^{\Gamma_h}}\,,
 \end{equation}
 where the normalization $f_0$ is chosen such that 
-$\int_{0.1~GeV}^{10~TeV} \tilde{L}_E dE = 1$, $E_b=1~{\rm TeV}$, and
+$\int_{0.1~\mathrm{GeV}}^{10~\mathrm{TeV}} \tilde{L}_E dE = 1$, $E_b=1~{\rm TeV}$, and
 $\Gamma_h=3$.  The luminosity function is based on the spectral
 properties of the Fermi population of hard gamma-ray blazars and the
 quasar luminosity function reported by \citet{2007ApJ...654..731H}.
@@ -213,8 +213,8 @@ comoving luminosity densities are also proportional.  That is,
 \begin{equation}
 \hat{\Lambda}(z) = \zeta \hat{\Lambda}_Q(z)\,,
 \end{equation}
-with $\zeta=2.1\times 10^{-3}$ and the scale-free comoving quasar
-luminosity density.  The corresponding comoving TeV luminosity
+with $\zeta=2.1\times 10^{-3}$ and the comoving quasar luminosity
+density $\hat{\Lambda}_Q$. The corresponding comoving TeV luminosity
 density, found by \citet{2012ApJ...752...23C} based on a fit to the
 comoving quasar luminosity density in \citet{2007ApJ...654..731H}, is
 given by
@@ -300,7 +300,7 @@ Modeling fluctuations by implementing a filtering function in a large scale simu
 \includegraphics[width = .45\textwidth ]{data_delta_z1_gal2.png}
 \includegraphics[width = .45\textwidth ]{data_delta_z3_qso4.png}
 \includegraphics[width = .45\textwidth ]{data_delta_z1_qso4.png}
-\caption{ Slices through the midplane of the box, for $z=3$ (left column) and $z=1$ (right column) : logarithm of the density with respect to the mean value (upper row), heating rate fluctuations with the galaxy (middle row) and quasar model (lower row). \ALc{[{ figure needs cosmetic changes. Text needs some adjustments}]}}
+\caption{ Slices through the midplane of the box, for $z=3$ (left column) and $z=1$ (right column): logarithm of the density with respect to the mean value (upper row), heating rate fluctuations with the galaxy (middle row) and quasar bias model (lower row). \ALc{[{ figure needs cosmetic changes. Text needs some adjustments}]}}
 \label{fig:slice}
 \end{figure*}
 \begin{figure*}
@@ -310,7 +310,7 @@ Modeling fluctuations by implementing a filtering function in a large scale simu
 \includegraphics[width = .45\textwidth ]{data_U_z3_qso4.png}
 \includegraphics[width = .45\textwidth ]{data_U_z1_qso4.png}
 
-\caption{Ratio between the internal energy when blazar heating is included and when it is not, as a function of overdensity. The plots show the galaxy bias model (top) and the quasar bias model (bottom) for $z=3$ (left) and $z=1$ (right). \ALc{The colorsheme is linear}.\ALc{[{ needs cosmetic changes +text adjustments}]}}
+\caption{Ratio between the internal energy when blazar heating is included and when it is not, as a function of overdensity. The plots show the galaxy bias model (top) and the quasar bias model (bottom) for $z=3$ (left) and $z=1$ (right). \ALc{The color scale is linear}.\ALc{[{ needs cosmetic changes +text adjustments}]}}
 \label{fig:heating_ratio}
 \end{figure*}
 Figure~\ref{fig:slice} shows the heating rate fluctuations in the midplane of the $L_x=100h^{-1}$ Mpc simulation for $z=3,1$ for both the galaxy and quasar bias model. Both simulation models are started from identical initial condition such that any visible difference is solely due to the different bias assumptions in the blazar heating model. The corresponding density field is shown in the upper column and shows increasing structure formation as the redshift decreases. The heating map has a linear scale while the density scale is logarithmic. The heating rate fluctuations are, on average, much smaller than the density fluctuations. This is because the window function filters out small scales, which correspond to collapsed regions, where density fluctuations are the highest. To the zeroth order, one can thus consider TeV blazar heating to be uniform, as was assumed in \citet{2012ApJ...752...23C}.
@@ -345,7 +345,7 @@ The probability distribution function clearly highlights the impact of clusterin
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_noheat_z1.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_gal_z1_256.png}
 \includegraphics[trim=.5cm 0cm 3cm .5cm, clip ,width = .32\textwidth ]{T_rho_qso_z1_512.png}
-\caption{Mass weighted temperature - density relation at $z=4,3,2,1$ (from top to bottom) for the simulations with \ALc{no heating (left) inhomogeneous heating following galaxy bias (middle) and the quasar bias (right)}. The overlying grey contours show the corresponding $T-\rho_{\mathrm{gas}}$ relation for uniform blazar heating \citep{2012MNRAS.423..149P} for the same mass range. \ALc{The color scheme follows is logarithmic.}\ALc{[{ Needs cosmetic changes+update from 512 (galaxy and no blazar heating case) and text adjustments}]}}
+\caption{Mass weighted temperature - density relation at $z=4,3,2,1$ (from top to bottom) for the simulations with \ALc{no blazar heating (left) inhomogeneous heating following galaxy bias (middle) and the quasar bias (right)}. The overlying grey contours show the corresponding $T-\rho_{\mathrm{gas}}$ relation for uniform blazar heating \citep{2012MNRAS.423..149P} for the same redshift range. \ALc{The color scale is logarithmic.}\ALc{[{ Needs cosmetic changes+update from 512 (galaxy and no blazar heating case) and text adjustments}]}}
 \label{fig:T_rho}
 \end{figure*}
 
@@ -362,7 +362,7 @@ To have a better understanding of the heating fluctuations with respect to densi
 \includegraphics[width = .45\textwidth ]{delta_deltah_z1_gal2_ok.png}\\
 \includegraphics[width = .45\textwidth ]{delta_deltah_z3_qso4_512b.png}
 \includegraphics[width = .45\textwidth ]{delta_deltah_z1_qso4_512b.png}
-\caption{Volume-weighted distribution of heating rate fluctuations $(1+\delta_H)$ with respect to the density fluctuations $(1+\delta_{\mathrm{gas}})$ for the galaxy bias model (upper row) and the quasar bias model (lower row) at $z=3$ and $z=1$. The black dashed line represents the case of uniform blazar heating. \ALc{The color scheme follows a logarithmic scale.}. \ALc{[{ Needs cosmetic changes+text adaptations}]}}
+\caption{Volume-weighted distribution of heating rate fluctuations $(1+\delta_H)$ with respect to the density fluctuations $(1+\delta_{\mathrm{gas}})$ for the galaxy bias model (upper row) and the quasar bias model (lower row) at $z=3$ and $z=1$. The black dashed line represents the case of uniform blazar heating. \ALc{The color scale is logarithmic.} \ALc{[{ Needs cosmetic changes+text adaptations}]}}
 \label{fig:deltas}
 \end{figure*}
 \section{Discussion}
@@ -402,7 +402,7 @@ The authors acknowledge the Texas Advanced Computing Center (TACC) at The Univer
 \end{acknowledgements}
 
 \appendix
-We detail the derivation of the window function of Eq.~\eqref{eq:window}. We start from a purely Newtonian universe, then include the impact of expansion and finally various first order corrections to the received TeV flux. \ALc{[{ Needs explanation about all the hypotheses of different sections and how we build up towards the window function.}]}\\
+We detail the derivation of the window function of Eq.~\eqref{eq:window}. \Cc{To present a transparent derivation of the window function (and to clarify some confusion in the literature), we start with a simple toy model to which we add progressively more physics. In Appendix~\ref{sec:windon_newt}, we start from a purely Newtonian universe and assume that heating rate fluctuation perfecty trace density fluctuations. Then in Appendix\ref{sec:window_exp}, we include the impact of cosmological expansion and a spectral energy distribution of TeV blazars that evolve with redshift as quasars, albeit with a a significantly smaller normalization in the luminosity density. This impacts on the energy-dependent mean free path of TeV photons. Finally, in Appendix~\ref{sec:window_complete} we also account for the clustering of sources (which we model through the linear bias factor) and redshift distorsions as a result of peculiar infall velocities onto cluster potentials.}\\
 
 \section {Newtonian case}\label{sec:windon_newt}
 \subsection {Fluctuations with respect to the mean heating rate}
@@ -420,7 +420,7 @@ where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, 
   \label{eq:heating_rate0}
   \dot{Q}(\mathbf{x})=
   \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{\infty} dr \mathcal{E}(\mathbf{r}+\mathbf{x})\, \frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}},\quad\mbox{and}\quad
-  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{\infty} dr \bar{\mathcal{E}} \,\frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}} ,
+  \bar{\dot{Q}}= \frac{1}{4\pi}   \int_{\Omega}d\Omega\int_0^{\infty} dr \bar{\mathcal{E}} \,\frac{e^{-r/D_{\mathrm{pp}}}}{D_{\mathrm{pp}}} \Cc{= \bar{\mathcal{E}}},
 \end{equation}
 \ALc{\sout{where $D_{\mathrm{pp}}$ is the mean free path before the gamma-rays pair-produce, which is constant over the volume.}}
 The heating rate fluctuations at a given point $\mathbf{x}$ are then given by 
@@ -431,6 +431,7 @@ The heating rate fluctuations at a given point $\mathbf{x}$ are then given by
   [\mathcal{E}(\mathbf{r}+\mathbf{x})-\bar{\mathcal{E}}]e^{-r/D_{\mathrm{pp}}} \nonumber\\
   &=&\frac{1}{4\pi\bar{\dot{Q}}D_{\mathrm{pp}}}\int_{\Omega}d\Omega\int_0^{\infty} dr \delta_E(\mathbf{r}+\mathbf{x})\bar{\mathcal{E}}\,e^{-r/D_{\mathrm{pp}}} ,
 \end{eqnarray}
+\Cc{{\em [Here and in the following in App. A we could cancel $\bar{\dot{Q}}$ with $\bar{\mathcal{E}}$. Should we do this or leave it as it is for similarity reasons with App. B and C?]}}
 where $\delta_E$ are the fluctuations of the TeV photon emissivity. %\Pc{\sout{Finally we assume that the fluctuations in the TeV emissivity follow the DM density fluctuations, i.e., $\delta_E=\delta$. This is justified by the tight relation between the mass of the central black hole and the stellar mass of the bulge of the host galaxy.}}
 
 
@@ -486,7 +487,13 @@ In the last step, we have assumed for simplicity that the fluctuations in the Te
 \centering
 % \includegraphics[width = .45\textwidth ]{newtonian_window}
 \includegraphics[width = .45\textwidth ]{newtonian_window}
-\caption{Window function for a non-expanding universe. The solid red line has very little absorption, i.e. a large mean free path ($D_{\mathrm{pp}}=10^{-2}$ Mpc), the dashed green line has $D_{\mathrm{pp}}=10 $ Mpc.\ALc{[{Cosmetic changes needed}]}}
+\caption{Window function for a non-expanding universe. \Cc{The solid red line
+    shows strong absorption, i.e.{\ }a small mean free path
+    ($D_{\mathrm{pp}}=10^{-2}$ Mpc), the dashed blue line has
+    $D_{\mathrm{pp}}=10 $ Mpc.\sout{The solid red line has very little
+      absorption, i.e. a large mean free path ($D_{\mathrm{pp}}=10^{-2}$ Mpc),
+      the dashed green line has $D_{\mathrm{pp}}=10 $ Mpc.}}\ALc{[{Cosmetic
+      changes needed}]}}
 \label{fig:window_newt}
 \end{figure}
 
@@ -584,7 +591,7 @@ with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow
 \label{eq:vel_perturb}
 dz'=d\hat r\frac{H(z')}{c}\left(1+\frac{dv_r(z')}{d\hat r}\right),
 \end{equation}
-where $\delta_{v_r}$ are the velocity perturbations along the line of sight. The Fourier transform of $v_r$ gives \citep{1987MNRAS.227....1K}.\ALc{[{ The $f$ needs to be checked}]}
+where $dv_r$ are the velocity perturbations along the line of sight. The Fourier transform of $v_r$ gives \citep{1987MNRAS.227....1K}.\ALc{[{ The $f$ needs to be checked}]}
 \begin{equation}
 \label{eq:kaiser2}
 \mathcal{F}\left(\frac{dv_r}{d\hat r}\right)=\mu^2 f \tilde{\delta}(\mathbf{\hat k}),
@@ -635,7 +642,7 @@ The window function for the heating rate fluctuations is then given by
 \tilde{W}_H(z,\hat k)&=&\frac{(1+z)^3c }{\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_z^{\infty} dz' \frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\frac{D(z')}{D(z)}\left[\left(b(z')+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2}{3}fj_2(\hat k \hat r)\right]\\
 &=& \frac{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{D_{\mathrm{pp}}}(E,z)}\int_z^{\infty} dz'   \frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\frac{D(z')}{D(z)}\left[\left(b(z')+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2f}{3}j_2(\hat k \hat r)\right]}{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{D_{\mathrm{pp}}}(E,z)}\int_z^{\infty} dz'  \mathcal{\bar{\hat E}}_{E'}(z') \frac{e^{-\tau(E,z,z')}}{(1+z')\,H(z')}}.
 \end{eqnarray}
-This equation is similar to \citet{2007MNRAS.376.1680P} and \citet{2005ApJ...626....1B} but does not contain the unnecessary area correction factor.
+This equation is similar to \citet{2007MNRAS.376.1680P} and \citet{2005ApJ...626....1B} but does not contain the unnecessary area correction factor\Cc{, which would be present only for a Lagrangian description of bias}.
 %\ALc{compare with Barkana loeb}
 %Which is the consisted with the window  function in \citet{2007MNRAS.376.1680P,2005ApJ...626....1B}.
 \bibliographystyle{apj}
