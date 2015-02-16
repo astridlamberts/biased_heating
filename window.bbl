@@ -34,8 +34,8 @@
   524, A77
 
 \bibitem[{{Allevato} {et~al.}(2014){Allevato}, {Finoguenov}, \&
-  {Cappelluti}}]{2014arXiv1410.0358A}
-{Allevato}, V., {Finoguenov}, A., \& {Cappelluti}, N. 2014, arXiv:1410.0358
+  {Cappelluti}}]{2014ApJ...797...96A}
+{Allevato}, V., {Finoguenov}, A., \& {Cappelluti}, N. 2014, \apj, 797, 96
 
 \bibitem[{{Bardeen} {et~al.}(1986){Bardeen}, {Bond}, {Kaiser}, \&
   {Szalay}}]{1986ApJ...304...15B}
@@ -78,14 +78,15 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Pfrommer}}]{2012ApJ...752...22B}
 {Broderick}, A.~E., {Chang}, P., \& {Pfrommer}, C. 2012, \apj, 752, 22
 
-\bibitem[{{Broderick} {et~al.}(2013){Broderick}, {Pfrommer}, {Puchwein}, \&
-  {Chang}}]{2013arXiv1308.0015B}
-{Broderick}, A.~E., {Pfrommer}, C., {Puchwein}, E., \& {Chang}, P. 2013, ApJ,
-  in print, arXiv:1308.0015
+\bibitem[{{Broderick} {et~al.}(2014{\natexlab{a}}){Broderick}, {Pfrommer},
+  {Puchwein}, \& {Chang}}]{2014ApJ...790..137B}
+{Broderick}, A.~E., {Pfrommer}, C., {Puchwein}, E., \& {Chang}, P.
+  2014{\natexlab{a}}, \apj, 790, 137
 
-\bibitem[{{Broderick} {et~al.}(2014){Broderick}, {Pfrommer}, {Puchwein}, \&
-  {Chang}}]{2014ApJ...790..137B}
----. 2014, \apj, 790, 137
+\bibitem[{{Broderick} {et~al.}(2014{\natexlab{b}}){Broderick}, {Pfrommer},
+  {Puchwein}, {Chang}, \& {Smith}}]{2014ApJ...796...12B}
+{Broderick}, A.~E., {Pfrommer}, C., {Puchwein}, E., {Chang}, P., \& {Smith},
+  K.~M. 2014{\natexlab{b}}, \apj, 796, 12
 
 \bibitem[{{Cavaliere} \& {D'Elia}(2002)}]{2002ApJ...571..226C}
 {Cavaliere}, A., \& {D'Elia}, V. 2002, \apj, 571, 226
@@ -95,9 +96,8 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 {Chang}, P., {Broderick}, A.~E., \& {Pfrommer}, C. 2012, \apj, 752, 23
 
 \bibitem[{{Chang} {et~al.}(2014){Chang}, {Broderick}, {Pfrommer}, {Puchwein},
-  {Lamberts}, \& {Shalaby}}]{2014arXiv1410.3797C}
-{Chang}, P., {Broderick}, A.~E., {Pfrommer}, C., {et~al.} 2014, ArXiv e-prints,
-  arXiv:1410.3797
+  {Lamberts}, \& {Shalaby}}]{2014ApJ...797..110C}
+{Chang}, P., {Broderick}, A.~E., {Pfrommer}, C., {et~al.} 2014, \apj, 797, 110
 
 \bibitem[{{Clowes} {et~al.}(2013){Clowes}, {Harris}, {Raghunathan},
   {Campusano}, {S{\"o}chting}, \& {Graham}}]{2013MNRAS.429.2910C}
@@ -131,10 +131,10 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Vaccari}}]{2008A&A...487..837F}
 {Franceschini}, A., {Rodighiero}, G., \& {Vaccari}, M. 2008, \aap, 487, 837
 
-\bibitem[{{Furniss} {et~al.}(2014){Furniss}, {Sutter}, {Primack}, \&
-  {Dominguez}}]{2014arXiv1407.6370F}
-{Furniss}, A., {Sutter}, P.~M., {Primack}, J.~R., \& {Dominguez}, A. 2014,
-  ArXiv e-prints, arXiv:1407.6370
+\bibitem[{{Furniss} {et~al.}(2015){Furniss}, {Sutter}, {Primack}, \&
+  {Dom{\'{\i}}nguez}}]{2015MNRAS.446.2267F}
+{Furniss}, A., {Sutter}, P.~M., {Primack}, J.~R., \& {Dom{\'{\i}}nguez}, A.
+  2015, \mnras, 446, 2267
 
 \bibitem[{{Giommi} {et~al.}(2013){Giommi}, {Padovani}, \&
   {Polenta}}]{Giommi:2013}
@@ -236,6 +236,10 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 
 \bibitem[{{Miniati} \& {Elyiv}(2013)}]{2013ApJ...770...54M}
 {Miniati}, F., \& {Elyiv}, A. 2013, \apj, 770, 54
+
+\bibitem[{{Mo} {et~al.}(2011){Mo}, {Van den Bosch}, \& {White}}]{MFW}
+{Mo}, H., {Van den Bosch}, F., \& {White}, S. 2011, {Galaxy formation and
+  evolution}, ed. {Cambridge University Press}
 
 \bibitem[{{Mo} \& {White}(1996)}]{1996MNRAS.282..347M}
 {Mo}, H.~J., \& {White}, S.~D.~M. 1996, \mnras, 282, 347
