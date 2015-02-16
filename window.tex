@@ -220,7 +220,8 @@ given by
 % \end{equation}
 \begin{equation}
 \label{eq:phi_quasar}
-\hat{\Lambda}(z)=\hat{\Lambda}_0 10^{-0.037z+1.47z^2-0.53z^3+0.064z^4-0.003z^5}
+%\hat{\Lambda}(z)=\hat{\Lambda}_0 10^{-0.037z+1.47z^2-0.53z^3+0.064z^4-0.003z^5}
+\hat{\Lambda}(z)=\hat{\Lambda}_0 10^{1.18 z - 0.0812 z^2 - 0.182 z^3 + 0.0515 z^4 - 0.00418 z^5} 
 \end{equation}
 where 
 $\hat{\Lambda}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the
@@ -271,7 +272,7 @@ Substituting Eqs.~\eqref{eq:mean_heat} and \eqref{eq:mean_free_path} into Eq.~\e
 \caption{Window function for TeV blazar heating from $z=1$ (solid lines), $z=2$ (dashed lines) and $z=4$ (dotted lines) for the galaxy bias model (red) and the quasar bias model (blue).  The vertical dashed lines indicate the minimal and maximal comoving wavenumber modeled in the simulation. }
 \label{fig:window}
 \end{figure}
-The window function describes how density fluctuations translate into heating fluctuations.  The $\hat{k}^{-1}$ slope for large wavenumbers results from the $r^{-2}$ decrease in the TeV-flux. The position of the break is set by a combination between the mean free path and the redshift evolution of the blazar luminosity density. As the redshift \ALc{\sout{decreases} increases}, the comoving mean free path \ALc{\sout{decreases}increases}, which yields breaks at smaller wavenumbers. This decrease is \ALc{over}compensated by the \ALc{\sout{increasing} decreasing} blazar luminosity density \Cc{for $z\gtrsim 2$\sout{towards $z=2$}: the luminosity density drops too steeply so that more distant sources within the photon mean free path do not contribute as much as sources more close by}. As the normalization is set  by the bias, the quasar bias model has more power at all scales and density fluctuations will lead to more enhanced heating.  In  both models, at high redshift, most of the power resides on large scales, where blazar heating traces the density fluctuations. At smaller scales, density fluctuations have no impact and blazar heating is uniform. At the current epoch, TeV blazar heating is close to uniform because there is power only at the largest scales (above 100 Mpc) where the universe is essentially uniform (see \citet{2013MNRAS.429.2910C} and references therein).
+The window function describes how density fluctuations translate into heating fluctuations.  The $\hat{k}^{-1}$ slope for large wavenumbers results from the $r^{-2}$ decrease in the TeV-flux. The position of the break is set by a combination between the mean free path and the redshift evolution of the blazar luminosity density. \Pc{\sout{As the redshift \ALc{\sout{decreases} increases},} On one hand,  } the comoving mean free path \ALc{\sout{decreases}increases} \Pc{for increasing redshift}, which \Pc{\sout{yields} moves the} break \Pc{\sout{s at} to} smaller wavenumbers. \Pc{\sout{This decrease is \ALc{over}compensated by} On the other hand, the rapidly} \ALc{\sout{increasing} decreasing} blazar luminosity density \Cc{for $z\gtrsim 2$\sout{towards $z=2$}}\Pc{moves the break to larger wavenumber}\Cc{: the luminosity density drops too steeply so that more distant sources within the photon mean free path do not contribute as much as sources more close by}. \Pc{This latter effect dominates moving the break to larger wavenumber for increasing redshift.} As the normalization is set  by the bias, the quasar bias model has more power at all scales and density fluctuations will lead to more enhanced heating.  In  both models, at high redshift, most of the power resides on large scales, where blazar heating traces the density fluctuations. At smaller scales, density fluctuations have no impact and blazar heating is uniform. At the current epoch, TeV blazar heating is close to uniform because there is power only at the largest scales (above 100 Mpc) where the universe is essentially uniform (see \citet{2013MNRAS.429.2910C} and references therein).
 
 In both models, the window function remains positive at all scales; thus, underdense regions are the only areas where a lower than average heating rate is expected. Heating at rates larger than the average is possible for large-scale overdensities but also on small scales for highly non-linear objects with $\delta\gg1$. We caution that our simplified approach with a linear bias description starts to break down there and would have to be augmented with a non-linear description of bias. However, the gas in these regions experiences shock heating in addition to photoheating such that the influence of blazar heating becomes negligible there. Moreover, those densities have little influence on the statistics of the high-redshift Lyman $\alpha$ forest and thus shall not be the subject of the present work. After these first analytic estimates, we include the window function to model TeV blazar heating in cosmological simulations.
 
@@ -386,7 +387,7 @@ The authors acknowledge the Texas Advanced Computing Center (TACC) at The Univer
 \end{acknowledgements}
 
 \appendix
-We detail the derivation of the window function of Eq.~\eqref{eq:window}. To present a transparent derivation of the window function (and to clarify some confusion in the literature), we start with a simple toy model to which we add progressively more physics. In Appendix~\ref{sec:windon_newt}, we start from a purely Newtonian universe and assume that heating rate fluctuations perfectly trace density fluctuations. Then in Appendix~\ref{sec:window_exp}, we include the impact of cosmological expansion and a spectral energy distribution of TeV blazars that evolve with redshift as quasars, albeit with a significantly smaller normalization in the luminosity density. This impacts on the energy-dependent mean free path of TeV photons. Finally, in Appendix~\ref{sec:window_complete} we also account for the clustering of sources (which we model through the linear bias factor) and redshift distortions as a result of peculiar infall velocities onto cluster potentials.\\
+We detail the derivation of the window function of Eq.~\eqref{eq:window}. To present a transparent derivation of the window function (and to clarify some confusion in the literature), we start with a simple toy model to which we add progressively more physics. In Appendix~\ref{sec:windon_newt}, we start from a purely Newtonian universe and assume that heating rate fluctuations perfectly trace density fluctuations \Pc{ and a monochromatic source of very high gamma-rays}. Then in Appendix~\ref{sec:window_exp}, we include the impact of cosmological expansion and a spectral energy distribution of TeV blazars that evolve with redshift as quasars, albeit with a significantly smaller normalization in the luminosity density. This impacts on the energy-dependent mean free path of TeV photons. Finally, in Appendix~\ref{sec:window_complete} we also account for the clustering of sources (which we model through the linear bias factor) and redshift distortions as a result of peculiar infall velocities onto cluster potentials.\\
 
 \section {Newtonian case}\label{sec:windon_newt}
 \subsection {Fluctuations with respect to the mean heating rate}
@@ -399,7 +400,17 @@ The TeV flux received (in erg s$^{-1}$ cm$^{-2}$) at position $\mathbf{x}$, at a
   \frac{\mathcal{E}(\mathbf{x}') }{4\pi |\mathbf{x}'-\mathbf{x}|^2} e^{-\tau}
   =\int_{\Omega} d\Omega\int_0^{\infty} dr \frac{\mathcal{E}(\mathbf{r}+\mathbf{x}) }{4\pi } e^{- r/D_{\mathrm{pp}}},
 \end{equation}
-where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, $\tau=|\mathbf{x}'-\mathbf{x}|/D_{\mathrm{pp}}$ is the optical depth along the line of sight and $D_{\mathrm{pp}}$ is the mean free path for pair production, which is constant over the volume. In the last step, we introduced $\mathbf{r}=\mathbf{x}'-\mathbf{x}$, $d\Omega=\sin\theta d\theta d\phi$. The differential heating rate is defined as $d\dot{Q}(\mathbf{x})\equiv dJ(\mathbf{x})/D_{\mathrm{pp}}$ such that the volume-integrated heating rate $\dot{Q}$ and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
+where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, $\tau=|\mathbf{x}'-\mathbf{x}|/D_{\mathrm{pp}}$ is the optical depth along the line of sight and $D_{\mathrm{pp}}$ is the mean free path for pair production, which is constant over the volume. In the last step, we introduced $\mathbf{r}=\mathbf{x}'-\mathbf{x}$, $d\Omega=\sin\theta d\theta d\phi$. \Pc{We have further assumed that emissivity is monochromatic such that:
+\begin{equation}
+\mathcal{E}_E(\mathbf{x}) = \mathcal{E}(\mathbf{x}) \delta(E-E_0),
+\end{equation}
+where $\delta$ is the kronecker delta function and $E_0$ is the energy of the monochromatic photons. Similarly the spectral flux is 
+\begin{equation}
+J_E(\mathbf{x}) = J(\mathbf{x}) \delta(E-E_0).
+\end{equation}
+For simplicity, we have integrated equation (\ref{eq:flux_recu0}) over the monochromatic source.
+}
+ The differential heating rate is defined as $d\dot{Q}(\mathbf{x})\equiv dJ(\mathbf{x})/D_{\mathrm{pp}}$ such that the volume-integrated heating rate $\dot{Q}$ and its average (in units of erg cm$^{-3}$ s$^{-1}$) are given by 
 \begin{equation}
   \label{eq:heating_rate0}
   \dot{Q}(\mathbf{x})=
@@ -540,6 +551,7 @@ Fourier transforming yields $\tilde{\delta}(\mathbf{\hat k})$ on the left hand s
 \label{fig:window_nobiases}
 \end{figure}
 Figure~\ref{fig:window_nobiases} shows the window function in an expanding universe at different redshifts.  The position of the breaks results from a combination between the value of the mean free path and the redshift evolution of the blazar luminosity density. %Comparing with non-expanding case in Fig. \ref{fig:window_newt} \textit{ blabla}
+\Pc{As discussed in the main text, the rapidly decreasing blazer luminosity density with increasing redshift for $z\gtrsim 2$, which move the break toward larger wave vector dominates the comoving mean free path, which move the break toward smaller wave vectors.  The net effect is that the break moves toward smaller wave vectors with increasing redshift.}
 The TeV emission fluctuations are not exactly equal to the dark matter density fluctuations. In the next section we will account for the various corrections that have to be taken into account to determine a more accurate window function.
 
 
