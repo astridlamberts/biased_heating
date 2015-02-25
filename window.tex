@@ -575,55 +575,56 @@ with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow
 \calR + \frac{\hat{v}_{\mathcal{R}}}{H(z)} \mathbf{e}_\mathcal{R},
 \label{eq:s_redshift}
 \end{equation}
-which is given in units of length, $a=1/(1+z)$ is the cosmological scale factor, $\hat{v}_\mathcal{R}$ is the radial component of the comoving peculiar velocity, and $\mathbf{e}_\mathcal{R}$ is the unit vector along the line of sight. The conservation of particle number then implies
+which is given in units of length, $a=1/(1+z)$ is the cosmological scale factor, $\hat{v}_\mathcal{R}$ is the radial component of the comoving peculiar velocity ($\mathbf{\hat{v}} = \mathbf{v}/a$ with $\mathbf{v}$ denoting the physical peculiar velocity), and $\mathbf{e}_\mathcal{R}$ is the unit vector along the line of sight. The conservation of TeV blazar number then implies
 \begin{equation}
-\hat n^{(\hat s)}(\mathbf{\hat s}) d^3\mathbf{\hat s} = \hat n(\calR) d^3\calR,
+\hat n_E^{(\hat s)}(\mathbf{\hat s}) d^3\mathbf{\hat s} = \hat n_E(\calR) d^3\calR,
 \qquad\mbox{or}\qquad
-\left[1+\delta^{(\hat s)}(\mathbf{\hat s})\right] d^3\mathbf{\hat s} = 
-\left[1+\delta(\calR)\right] d^3\calR,
+\left[1+\delta_E^{(\hat s)}(\mathbf{\hat s})\right] d^3\mathbf{\hat s} = 
+\left[1+\delta_E(\calR)\right] d^3\calR,
 \label{eq:conservation}
 \end{equation}
 where we employed the fact that the mean number density is the same in both spaces. Assuming statistical isotropy, we find
 \begin{equation}
-1+\delta^{(\hat s)}(\mathbf{\hat s}) = 
-\left[1+\delta(\calR)\right] \frac{\magcalR^2}{\left(\magcalR +v_{\mathcal{R}}/H(z)\right)^2}
+1+\delta_E^{(\hat s)}(\mathbf{\hat s}) = 
+\left[1+\delta_E(\calR)\right] \frac{\magcalR^2}{\left(\magcalR +\hat{v}_{\mathcal{R}}/H(z)\right)^2}
 \left(1+\frac{1}{H(z)}\frac{\partial \hat{v}_{\mathcal{R}}}{\partial\magcalR}\right)^{-1},
 \label{eq:conservation2}
 \end{equation}
 Assuming $\left|v_{\mathcal{R}}\right|\ll \magcalR H(z)$ and keeping only terms up to lowest non-trivial order, we obtain
 \begin{equation}
   \label{eq:real_vs_z}
-  \delta^{(\hat s)}\left[\mathbf{\hat s}(\calR) \right]=
-  \delta(\calR)-\frac{1}{H(z)}\left(\frac{\partial}{\partial \magcalR} + 
+  \delta_E^{(\hat s)}\left[\mathbf{\hat s}(\calR) \right]=
+  \delta_E(\calR)-\frac{1}{H(z)}\left(\frac{\partial}{\partial \magcalR} + 
     \frac{2}{\magcalR}\right)\hat{v}_{\mathcal{R}}\approx
-  \delta(\calR)-\frac{1}{H(z)}\frac{\partial \hat{v}_{\mathcal{R}}}{\partial \magcalR},
+  \delta_E(\calR)-\frac{1}{H(z)}\frac{\partial \hat{v}_{\mathcal{R}}}{\partial \magcalR},
 \end{equation}
-where we assumed in the second step that the scale of the fluctuations is small compared to the distance to the sources (i.e., we used the plane-parallel approximation according to \citealt{1987MNRAS.227....1K}). In the linear regime ($\delta(\calR)\ll 1$), the peculiar velocity field is related to the density field via the Zel'dovich approximation \citep{MFW},
+where we assumed in the second step that the scale of the fluctuations is small compared to the distance to the sources (i.e., we used the plane-parallel approximation according to \citealt{1987MNRAS.227....1K}). In the linear regime ($\delta_E(\calR)\ll 1$), the peculiar velocity field is related to the density field via the Zel'dovich approximation \citep{MFW},
 \begin{equation}
   \label{eq:Zeldovich}
-  \delta^{(\hat s)}(\calR) = -\frac{f}{b H(z)}\frac{\partial \hat{\mathbf{v}}}{\partial \calR},
+  \delta_E(\calR) = -\frac{b}{f H(z)}\frac{\partial \bm\hat{\mathbf{v}}}{\partial \calR},
 \end{equation}
 where $f\equiv d\log\delta/d\log a$. It can be shown in the linear regime that non-trivial solutions of the velocity field must be irrotational so that $\mathbf{v} = \boldsymbol{\nabla}_{\calR} \Phi_v$. Using this property, we can rewrite Eq.~\eqref{eq:Zeldovich} to yield
 \begin{equation}
   \label{eq:Zeldovich2}
-  v_{\mathcal{R}} = - \frac{f}{b} \frac{\partial}{\partial \magcalR} \boldsymbol{\nabla}_{\calR}^{-2}\delta(\calR),
+  v_{\mathcal{R}} = - \frac{f H(z)}{b} \frac{\partial}{\partial \magcalR} \boldsymbol{\nabla}_{\calR}^{-2}\delta_E(\calR),
 \end{equation}
 where $\boldsymbol{\nabla}_{\calR}^{-2}$ represents the inverse Laplacian. It follows that
 \begin{equation}
   \label{eq:Zeldovich3}
-  \delta^{(\hat s)}[\calR(\bm\hat{\mathbf{r}})] = 
+  \delta_E^{(\hat s)}[\calR(\bm\hat{\mathbf{r}})] = 
   \left[1+\frac{f}{b}\frac{\partial^2}{\partial \magcalR^2}
     \boldsymbol{\nabla}_{\calR}^{-2}
-\right]\delta[\calR(\bm\hat{\mathbf{r}})] =
+\right]\delta_E[\calR(\bm\hat{\mathbf{r}})] =
   \left[1+\frac{f}{b}\frac{\partial^2}{\partial \hat{r}^2}
     \boldsymbol{\nabla}_{\bm\hat{\mathbf{r}}}^{-2}
-\right]\delta[\calR(\bm\hat{\mathbf{r}})].
+\right]\delta_E[\calR(\bm\hat{\mathbf{r}})].
 \end{equation}
 This demonstrates that redshift space distortions do not depend on the line-of-sight distance from the observer to the source but {\em only} on the shape of the local gravitational potential of the source! This property enables us to treat redshift space distortions locally by performing a Fourier decomposition of the density field into plane waves, which yields
 \begin{equation}
   \label{eq:real_vs_z2}
-  \tilde{\delta}^{(\hat s)}[\mathbf{\hat{k}}_{\hat s}(\mathbf{\hat{k}})]=
-  \left(1+\frac{f}{b}\mu^2\right) \tilde{\delta}(\mathbf{\hat{k}}),
+  \tilde{\delta}_E^{(\hat s)}[\mathbf{\hat{k}}_{\hat s}(\mathbf{\hat{k}})]=
+  \left(1+\frac{f}{b}\mu^2\right) \tilde{\delta}_E(\mathbf{\hat{k}})=
+  \left(b+f\mu^2\right) \tilde{\delta}(\mathbf{\hat{k}}),
 \end{equation}
 where $\mu\equiv k_z/k$. Keeping only first order corrections for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
 \begin{equation}
@@ -631,16 +632,13 @@ where $\mu\equiv k_z/k$. Keeping only first order corrections for density fluctu
 \dot{Q}(\mathbf{\hat{x}},z)=
 \frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}
 \int_{\Omega}d\Omega\int_z^{\infty} dz'\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}
-\left[1+b(z')\left(\delta(\calR, z') -\frac{1}{H(z')}
-\frac{\partial v_{\mathcal{R}}}{\partial \magcalR}\right)\right].
+\left[1+\delta_E^{(\hat s)}(\calR,z')\right].
 \end{equation}
 Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the fluctuations
 \begin{equation}
 \label{eq:heat_fluc0}
 \delta_H(\mathbf{\hat{x}}, z)=\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE
-\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')
-b(z')\left[\delta(\calR, z') -\frac{1}{H(z')}
-\frac{\partial v_{\mathcal{R}}}{\partial \magcalR}\right],
+\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')\delta_E^{(\hat s)}(\calR,z'),
 \end{equation}
 where we introduced
 \begin{equation}
