@@ -12,6 +12,8 @@
 \usepackage{aas_macros}
 \usepackage[normalem]{ulem}
 \usepackage[usenames]{color}
+\usepackage{bm}
+
 \definecolor{DarkGreen}{rgb}{0.64,0.80,0.35}
 \newcommand\ALc[1]{{\color{red} \bf #1}} %Astrid
 \newcommand\Ac[1]{{\color{green} \bf #1}} %% Avery
@@ -19,7 +21,9 @@
 \newcommand\Cc[1]{{\color{blue} \bf #1}} %% Christoph
 \newcommand\Ec[1]{{\color{magenta} \bf #1}} %% Ewald
 
-\newcommand{\calR}{\ensuremath{\mathbf{\hat{\mathcal{R}}}}}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\newcommand{\calR}{\ensuremath{\bm\hat{\mathbfcal{R}}}}
+\newcommand{\magcalR}{\ensuremath{\hat{\mathcal{R}}}}
 
 \SetSymbolFont{symbols}{bold}{OMS}{cmsy}{b}{n}
 %
@@ -72,7 +76,7 @@ TeV-blazars potentially heat the intergalactic medium (IGM) as their gamma rays 
 \section{Introduction}
 The intergalactic medium constitutes the bulk of the baryons forming the cosmic web \citep{1996Natur.380..603B} as well as the reservoir of baryons available for the formation of galaxies and clusters \citep{1997ApJ...489....7R}. Observations of metal-enriched gas link its evolution to the formation of galaxies and stars (see e.g. \citet{2009A&A...493..409S,2010MNRAS.407.2063W}). Therefore, the thermal history of the IGM plays a central role in determining the development of structure in the visible universe.
 
-The temperature of the IGM is mostly set by photoionization of hydrogen and helium, competing with adiabatic cooling. As a result, the universe is slowly cooling once reionization is completed. The IGM temperature is expected to increase with density because denser regions experience a lower amount of adiabatic cooling, as well as more recombination-induced photoheating. Gas in the IGM that has not been shock heated provides a lower envelope to the temperature-density distribution.  Observations of Lyman $\alpha$ absorption lines with $4\leqslant z \leqslant 2$ show that lower column density gas \Ec{\sout{presents a lower envelope for the linewidth distribution} exhibits the lowest line widhts}, which is commonly interpreted as an indication that lower density gas is colder than high density gas \citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R}. A temporary flattening of the slope of the inferred temperature-density relation around $z\sim 3$ indicates an additional source of heating at that redshift.
+The temperature of the IGM is mostly set by photoionization of hydrogen and helium, competing with adiabatic cooling. As a result, the universe is slowly cooling once reionization is completed. The IGM temperature is expected to increase with density because denser regions experience a lower amount of adiabatic cooling, as well as more recombination-induced photoheating. Gas in the IGM that has not been shock heated provides a lower envelope to the temperature-density distribution.  Observations of Lyman $\alpha$ absorption lines with $4\leqslant z \leqslant 2$ show that lower column density gas \Ec{\sout{presents a lower envelope for the linewidth distribution} exhibits the lowest line widths}, which is commonly interpreted as an indication that lower density gas is colder than high density gas \citep{2000MNRAS.318..817S,2000ApJ...534...41R,2012ApJ...757L..30R}. A temporary flattening of the slope of the inferred temperature-density relation around $z\sim 3$ indicates an additional source of heating at that redshift.
 
 The latter is expected due to He\,\textsc{ii} reionization \citep[e.g.][]{2009ApJ...694..842M,2013MNRAS.435.3169C,2014arXiv1410.1531P}. However, recent measurements found that underdense regions may be warmer than predicted \citep{2009MNRAS.399L..39V,2008MNRAS.386.1131B}, as well as to exhibit unexpectedly high temperatures at $z<2$ \citep{2014MNRAS.441.1916B}. Although an inverted temperature-density relation in underdense regions has not been firmly established yet \citep{2014MNRAS.438.2499B}, these observations suggest that the thermal history of the IGM may be more complex than initially assumed.
 
@@ -406,7 +410,7 @@ where the emissivity $\mathcal{E}$ is an energy per unit time, per unit volume, 
 \begin{equation}
 \mathcal{E}_E(\mathbf{x}) = \mathcal{E}(\mathbf{x}) \delta(E-E_0),
 \end{equation}
-where $\delta$ is the \Ec{\sout{kronecker} Dirac} delta function and $E_0$ is the energy of the monochromatic photons. Similarly the spectral flux is 
+where $\delta$ is the \Ec{\sout{Kronecker} Dirac} delta function and $E_0$ is the energy of the monochromatic photons. Similarly the spectral flux is 
 \begin{equation}
 J_E(\mathbf{x}) = J(\mathbf{x}) \delta(E-E_0).
 \end{equation}
@@ -490,7 +494,7 @@ comoving frame.
 %  = \frac {c}{4\pi} \epsilon_E,
 %\end{equation}
 %where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, and $\epsilon_E$ is the specific proper emissivity.
-$J_E$ is the specific intensity per unit energy (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$). \ALc{Assuming flatness, $J_E$ is} given by
+$J_E$ is the specific intensity per unit energy (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$). \ALc{Assuming a flat geometry on spatial hypersurfaces of the Friedmann-Robertson-Walker metric, $J_E$ is} given by
 \begin{equation}\label{eq:expanding J}
   J_E(E, \mathbf{\hat{x}}) = \frac {(1 + z)^3} {4\pi} \int_{\Omega} d\Omega \int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat{r}}{dz'}\, {\hat{\mathcal{E}}_{E'}(\mathbf{\hat{r}}+\mathbf{\hat{x}}, z')}e^{-\tau(E,z,z')},
 \end{equation}
@@ -503,9 +507,10 @@ An alert reader will recognize that the true optical depth must include the effe
 We then find that the energy-integrated and volume-integrated heating rate is then given by 
 \begin{equation}
   \label{eq:int_exp_heat}
-  \dot{Q}[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat r}{dz'}\mathcal{\hat E}_{E'}(\mathbf{\hat{\mathcal{R}}}, z') e^{-\tau(E,z,z')},
+  \dot{Q}[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat r}{dz'}
+\mathcal{\hat E}_{E'}(\calR, z') e^{-\tau(E,z,z')},
 \end{equation}
-where $\mathbf{\hat{\mathcal{R}}} = \mathbf{\hat{x}} + \mathbf{\hat{r}}$. Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
+where $\calR = \mathbf{\hat{x}} + \mathbf{\hat{r}}$. Similarly to Eq.~\eqref{eq:heating_rate0}, the mean heating rate is given by
 \begin{equation}
 \label{eq:mean_exp_heat}
 \bar{\dot{Q}} (z)=\frac{(1+z)^3}{4\pi}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E, z)}\int_{\Omega}d\Omega\int_z^{\infty} \frac{d z'}{1+z'}\, \frac{d\hat r}{dz'}\bar{\hat{\mathcal{E}}}_{E'}(z') e^{-\tau(E,z,z')}.
@@ -514,14 +519,14 @@ where $\mathbf{\hat{\mathcal{R}}} = \mathbf{\hat{x}} + \mathbf{\hat{r}}$. Simila
 This enables us to define the heating rate fluctuations
 \begin{eqnarray}
 \label{eq:fluc_exp0}
-\delta_H[\mathbf{\hat{x}}(z)]&=&\frac{\dot{Q}[\mathbf{\hat{x}}(z)]-\bar{\dot{Q}}(z)}{\bar{\dot{Q}}(z)}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\,\frac{ \left[ \mathcal{\hat E}_{E'}(\mathbf{\hat{\mathcal{R}}}, z')-\bar{\hat{\mathcal{E}}}_{E'}(z')\right] e^{-\tau(E,z,z')}}{(1+z')\,H(z')} \nonumber\\ 
-&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\, \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta_E(\mathbf{\hat{\mathcal{R}}}, z') e^{-\tau(E,z,z')}}{(1+z')\,H(z')},
+\delta_H[\mathbf{\hat{x}}(z)]&=&\frac{\dot{Q}[\mathbf{\hat{x}}(z)]-\bar{\dot{Q}}(z)}{\bar{\dot{Q}}(z)}=\frac{(1+z)^3c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\,\frac{ \left[ \mathcal{\hat E}_{E'}(\calR, z')-\bar{\hat{\mathcal{E}}}_{E'}(z')\right] e^{-\tau(E,z,z')}}{(1+z')\,H(z')} \nonumber\\ 
+&=&\frac{(1+z)^3 c}{4\pi\bar{\dot{Q}}} \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} d z'\, \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta_E(\calR, z') e^{-\tau(E,z,z')}}{(1+z')\,H(z')},
 \end{eqnarray}
 The TeV emission is related to the presence of supermassive black holes at the center of galaxies, which are located in collapsed dark matter halos. We can thus connect the fluctuations of the TeV emission, within a certain radius $\hat r$, to the underlying dark matter fluctuations $\delta$.
 At this stage we assume that TeV fluctuations exactly match the dark matter fluctuations $\delta_E=\delta$. We explain in the next section that this is not exactly true and will take into account various corrections. The initial density fluctuations represent a Gaussian random field, whose exact properties depend on the earliest stages of the universe prior to recombination \citep{1986ApJ...304...15B,Peebles}. They grow linearly between $z'$ and $z$ following  \citep{ 1977MNRAS.179..351H}
 \begin{equation}
   \label{eq:growth}
-\delta(\mathbf{\hat{\mathcal{R}}}, z)=\delta(\mathbf{\hat{\mathcal{R}}}, z')D(z)/D(z'),
+\delta(\calR, z)=\delta(\calR, z')D(z)/D(z'),
 \end{equation}
 where the linear growth factor is given by
 \begin{equation}
@@ -538,7 +543,7 @@ The linear approximation breaks down when the amplitude of the root mean square 
 And Eq.~\eqref{eq:fluc_exp0} rewrites to
 \begin{equation}
 \label{eq:heat_fluc_exp0}
-\delta_H[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)} \int_{\Omega}d\Omega\int_z^{\infty}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta(\mathbf{\hat{\mathcal{R}}}, z) e^{-\tau(E,z,z')}}{(1+z')\,H(z')}.
+\delta_H[\mathbf{\hat{x}}(z)]=\frac{(1+z)^3  c}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{D_{\mathrm{pp}}(E,z)} \int_{\Omega}d\Omega\int_z^{\infty}dz' \frac{D(z')}{D(z)} \frac{\bar{\hat{\mathcal{E}}}_{E'}(z')\delta(\calR, z) e^{-\tau(E,z,z')}}{(1+z')\,H(z')}.
 \end{equation}
 Fourier transforming yields $\tilde{\delta}(\mathbf{\hat k})$ on the left hand side while the right hand side transforms in a similar fashion to Eq.~\eqref{eq:heat_fluc_newt3}. As the power spectrum of density fluctuations is statistically isotropic and homogeneous, this simplifies to
 \begin{equation}
@@ -556,63 +561,86 @@ Figure~\ref{fig:window_nobiases} shows the window function in an expanding unive
 As discussed in the main text, the rapidly decreasing blazar luminosity density with increasing redshift for $z\gtrsim 2$, which moves the break toward larger wave vectors, dominates \Ec{over the increasing} comoving mean free path, which moves the break toward smaller wave vectors.  This is due to the fact that the integration over the energy of the photons, which includes lower energy photons with larger mean free paths, allows the former effect to dominate and moves the break toward smaller wave vectors with increasing redshift.
 The TeV emission fluctuations are not exactly equal to the dark matter density fluctuations. In the next section we will account for the various corrections that have to be taken into account to determine a more accurate window function.
 
-
 \section{Complete window function}
 \label{sec:window_complete}
+\Cc{{\em [CP, PC: major parts rewritten to clarify the nature of redshift space distortions]}}
 The TeV fluctuations are biased with respect to the dark matter fluctuations, as we detail in $\S$\ref{sec:window}, yielding
 \begin{equation}
 \delta_E(\mathbf{\hat{x}},z)=b(z)\delta(\mathbf{\hat{x}},z),
 \label{eq:bias}
 \end{equation}
-with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, structures falling towards a central potential of a cluster have an infall velocity  towards the central overdensity, yielding different overdensities in redshift space $\delta_s$ and real space. \Cc{In our case, the blazar luminosity density evolution, the mean free path, and the bias as a function of redshift are all subject to this redshift space distortions as measured by the $z=0$ observer. We follow the derivation of the redshift space distortions of density fluctuations of \citet{MFW}. The key difference that we encounter is that redshift space distortions impact on $\mathbf{\mathcal{R}}=\mathbf{x}+\mathbf{r}$, whereas our computation involves the displacements $\mathbf{r}$ between the heated point and a distance source. To this end, we define a comoving redshift space distance}
+with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, structures falling towards a central potential of a cluster have an infall velocity  towards the central overdensity, yielding different overdensities in redshift space $\delta_s$ and real space. In our case, the blazar luminosity density evolution, the mean free path, and the bias as a function of redshift are all subject to this redshift space distortions as measured by the $z=0$ observer. We follow the derivation of the redshift space distortions of density fluctuations of \citet{MFW}. The key difference that we encounter is that redshift space distortions impact on $\calR=\bm\hat{\mathbf{x}}+\bm\hat{\mathbf{r}}$, whereas our computation involves the displacements $\bm\hat{\mathbf{r}}$ between the heated point and a distant source. To this end, we define a comoving redshift space distance
 \begin{equation}
-\mathbf{\hat{s}} \equiv\frac{\mathbf{\dot{\hat{\mathcal{R}}}}}{a H(z)} = 
-\mathbf{\hat{\mathcal{R}}} + \frac{\hat{v}_{\mathcal{R}}}{H(z)} \mathbf{e}_\mathcal{R},
+\mathbf{\hat{s}} \equiv\frac{\dot{\calR}}{a H(z)} = 
+\calR + \frac{\hat{v}_{\mathcal{R}}}{H(z)} \mathbf{e}_\mathcal{R},
 \label{eq:s_redshift}
 \end{equation}
 which is given in units of length, $a=1/(1+z)$ is the cosmological scale factor, $\hat{v}_\mathcal{R}$ is the radial component of the comoving peculiar velocity, and $\mathbf{e}_\mathcal{R}$ is the unit vector along the line of sight. The conservation of particle number then implies
 \begin{equation}
-\hat n^{(\hat s)}(\hat s) d^3\mathbf{\hat s} = \hat n(\hat{\mathcal{R}}) d^3\mathbf{\hat{\mathcal{R}}},
+\hat n^{(\hat s)}(\mathbf{\hat s}) d^3\mathbf{\hat s} = \hat n(\calR) d^3\calR,
 \qquad\mbox{or}\qquad
-\left[1+\delta^{(\hat s)}(\hat s)\right] d^3\mathbf{\hat s} = 
-\left[1+\delta(\hat{\mathcal{R}})\right] d^3\mathbf{\hat{\mathcal{R}}},
+\left[1+\delta^{(\hat s)}(\mathbf{\hat s})\right] d^3\mathbf{\hat s} = 
+\left[1+\delta(\calR)\right] d^3\calR,
 \label{eq:conservation}
 \end{equation}
-where we employed the factor that the mean number density is the same in both spaces. Assuming statistical isotropy and homogeneity, we find
+where we employed the fact that the mean number density is the same in both spaces. Assuming statistical isotropy, we find
 \begin{equation}
-1+\delta^{(\hat s)}(\hat s) = \left[1+\delta(\calR)\right] \frac{\calR^2}{\left(\calR^+v_\calR/H(z)\right)^2}
-\left(1+\frac{1}{H(z)}\frac{\partial \hat{v}_\calR}{\partial\calR}\right)^{-1},
+1+\delta^{(\hat s)}(\mathbf{\hat s}) = 
+\left[1+\delta(\calR)\right] \frac{\magcalR^2}{\left(\magcalR +v_{\mathcal{R}}/H(z)\right)^2}
+\left(1+\frac{1}{H(z)}\frac{\partial \hat{v}_{\mathcal{R}}}{\partial\magcalR}\right)^{-1},
 \label{eq:conservation2}
 \end{equation}
-Assuming $\left|v_\calR\right|\ll \calR H(z)$ and keeping only terms up to lowest non-trivial order, we obtain
+Assuming $\left|v_{\mathcal{R}}\right|\ll \magcalR H(z)$ and keeping only terms up to lowest non-trivial order, we obtain
 \begin{equation}
   \label{eq:real_vs_z}
-  \delta_s[\mathbf{s}(\calR)=
-  \delta(\calR)-\frac{1}{H(z)}\left(\frac{\partial}{\partial \calR} + \frac{2}{\calR}\right)\hat{v}_\calR\approx
-  \delta(\calR)-\frac{1}{H(z)}\frac{\partial \hat{v}_\calR}{\partial \calR},
+  \delta^{(\hat s)}\left[\mathbf{\hat s}(\calR) \right]=
+  \delta(\calR)-\frac{1}{H(z)}\left(\frac{\partial}{\partial \magcalR} + 
+    \frac{2}{\magcalR}\right)\hat{v}_{\mathcal{R}}\approx
+  \delta(\calR)-\frac{1}{H(z)}\frac{\partial \hat{v}_{\mathcal{R}}}{\partial \magcalR},
 \end{equation}
 where we assumed in the second step that the scale of the fluctuations is small compared to the distance to the sources (i.e., we used the plane-parallel approximation according to \citealt{1987MNRAS.227....1K}). In the linear regime ($\delta(\calR)\ll 1$), the peculiar velocity field is related to the density field via the Zel'dovich approximation \citep{MFW},
 \begin{equation}
   \label{eq:Zeldovich}
-  \delta(\calR) = -\frac{f}{b H(z)}\frac{\partial \hat{\mathbf{v}}}{\partial \calR}.
+  \delta^{(\hat s)}(\calR) = -\frac{f}{b H(z)}\frac{\partial \hat{\mathbf{v}}}{\partial \calR},
 \end{equation}
-
-
-
-where $v_r$ is the radial component of the peculiar velocity \citep{MFW}. In Fourier space, this gives
+where $f\equiv d\log\delta/d\log a$. It can be shown in the linear regime that non-trivial solutions of the velocity field must be irrotational so that $\mathbf{v} = \boldsymbol{\nabla}_{\calR} \Phi_v$. Using this property, we can rewrite Eq.~\eqref{eq:Zeldovich} to yield
 \begin{equation}
-  \label{eq:real_vs_z}
-  \delta_s(\mathbf{\hat{k}})=\delta(\mathbf{\hat{k}})(1+f\mu^2).
+  \label{eq:Zeldovich2}
+  v_{\mathcal{R}} = - \frac{f}{b} \frac{\partial}{\partial \magcalR} \boldsymbol{\nabla}_{\calR}^{-2}\delta(\calR),
 \end{equation}
-with $\mu$ the cosine of the angle between the wavenumber and the line of sight and $f\equiv d\log\delta/d\log a$. Keeping only first order correction for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
+where $\boldsymbol{\nabla}_{\calR}^{-2}$ represents the inverse Laplacian. It follows that
+\begin{equation}
+  \label{eq:Zeldovich3}
+  \delta^{(\hat s)}[\calR(\bm\hat{\mathbf{r}})] = 
+  \left[1+\frac{f}{b}\frac{\partial^2}{\partial \magcalR^2}
+    \boldsymbol{\nabla}_{\calR}^{-2}
+\right]\delta[\calR(\bm\hat{\mathbf{r}})] =
+  \left[1+\frac{f}{b}\frac{\partial^2}{\partial \hat{r}^2}
+    \boldsymbol{\nabla}_{\bm\hat{\mathbf{r}}}^{-2}
+\right]\delta[\calR(\bm\hat{\mathbf{r}})].
+\end{equation}
+This demonstrates that redshift space distortions do not depend on the line-of-sight distance from the observer to the source but {\em only} on the shape of the local gravitational potential of the source! This property enables us to treat redshift space distortions locally by performing a Fourier decomposition of the density field into plane waves, which yields
+\begin{equation}
+  \label{eq:real_vs_z2}
+  \tilde{\delta}^{(\hat s)}[\mathbf{\hat{k}}_{\hat s}(\mathbf{\hat{k}})]=
+  \left(1+\frac{f}{b}\mu^2\right) \tilde{\delta}(\mathbf{\hat{k}}),
+\end{equation}
+where $\mu\equiv k_z/k$. Keeping only first order corrections for density fluctuations, Eq.~\eqref{eq:int_exp_heat} yields
 \begin{equation}
 \label{eq:mean_heat0}
-\dot{Q}(\mathbf{\hat{x}},z)=\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}\int_{\Omega}d\Omega\int_z^{\infty} dz'\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\left[1+\frac{D(z')}{D(z)}\left(b(z')\delta(\mathbf{\hat{\mathcal{R}}}, z') -\frac{1}{H_0(z)}\frac{dv_r}{d\hat r}\right)\right].
+\dot{Q}(\mathbf{\hat{x}},z)=
+\frac{(1+z)^3c}{4\pi }\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}}\frac{dE}{D_{\mathrm{pp}}(E,z)}
+\int_{\Omega}d\Omega\int_z^{\infty} dz'\frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}
+\left[1+b(z')\left(\delta(\calR, z') -\frac{1}{H(z')}
+\frac{\partial v_{\mathcal{R}}}{\partial \magcalR}\right)\right].
 \end{equation}
 Subtracting the mean heating rate (Eq.~\eqref{eq:mean_exp_heat}) then yields the fluctuations
 \begin{equation}
 \label{eq:heat_fluc0}
-\delta_H(\mathbf{\hat{x}}, z)=\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')\left[\frac{D(z')}{D(z)}\left(b(z')\delta(\mathbf{\hat{\mathcal{R}}}, z') -\frac{1}{H_0}\frac{dv_r}{d\hat r}\right)\right],
+\delta_H(\mathbf{\hat{x}}, z)=\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE
+\int_{\Omega}d\Omega\int_z^{\infty}dz'X(E,z,z')
+b(z')\left[\delta(\calR, z') -\frac{1}{H(z')}
+\frac{\partial v_{\mathcal{R}}}{\partial \magcalR}\right],
 \end{equation}
 where we introduced
 \begin{equation}
@@ -623,10 +651,10 @@ for convenience. Transforming to Fourier space yields
 \begin{eqnarray}
 \label{eq:heat_fluc0}
 \tilde{\delta}_H(\mathbf{\hat k}, z)&=&\frac{1}{4\pi\bar{\dot{Q}}}\int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} dE\int_{\Omega}
-\!d\Omega\int_z^{\infty}\! dz'X(E,z,z')
-\frac{1}{(2\pi)^3}\!\int d^3\mathbf{\hat x}e^{i\mathbf{\hat k \cdot \hat x}}
+\!d\Omega\int_z^{\infty}\! dz'
+\frac{X(E,z,z')}{(2\pi)^3}\!\int d^3\mathbf{\hat x}e^{i\mathbf{\hat k \cdot \hat x}}
 \int\! d^3 \mathbf{\hat k'}e^{-i\mathbf {\hat k'} \cdot (\mathbf{\hat r} +\mathbf{ \hat x})} 
-\tilde\delta(\mathbf {\hat k'}, z)\left[\frac{D(z')}{D(z)}b(z') + f \mu^2\right].
+\tilde\delta(\mathbf {\hat k'}, z)\frac{D(z')}{D(z)}\left[b(z') + f \mu^2\right].
 \end{eqnarray}
 Assuming statistical isotropy and homogeneity allows us to simplify this expression, and we arrive at
 \begin{eqnarray}
@@ -651,8 +679,6 @@ The window function for the heating rate fluctuations is then given by
 &=& \frac{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{D_{\mathrm{pp}}}(E,z)}\int_z^{\infty} dz'   \frac{\mathcal{\bar{\hat E}}_{E'}(z')e^{-\tau(E,z,z')}}{(1+z')\,H(z')}\frac{D(z')}{D(z)}\left[\left(b(z')+\frac{f}{3}\right)j_0(\hat k \hat r)-\frac{2f}{3}j_2(\hat k \hat r)\right]}{\displaystyle \int_{E_{\mathrm{min}}}^{E_{\mathrm{max}}} \frac{dE}{{D_{\mathrm{pp}}}(E,z)}\int_z^{\infty} dz'  \mathcal{\bar{\hat E}}_{E'}(z') \frac{e^{-\tau(E,z,z')}}{(1+z')\,H(z')}}.
 \end{eqnarray}
 This equation is similar to \citet{2007MNRAS.376.1680P} and \citet{2005ApJ...626....1B} but does not contain the unnecessary area correction factor, which would be present only for a Lagrangian description of bias.
-%\ALc{compare with Barkana loeb}
-%Which is the consisted with the window  function in \citet{2007MNRAS.376.1680P,2005ApJ...626....1B}.
 \bibliographystyle{apj}
 \bibliography{biblio_total}
 \end{document}
