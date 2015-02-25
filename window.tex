@@ -19,6 +19,8 @@
 \newcommand\Cc[1]{{\color{blue} \bf #1}} %% Christoph
 \newcommand\Ec[1]{{\color{magenta} \bf #1}} %% Ewald
 
+\newcommand{\calR}{\ensuremath{\mathbf{\hat{\mathcal{R}}}}}
+
 \SetSymbolFont{symbols}{bold}{OMS}{cmsy}{b}{n}
 %
 \DeclareSymbolFont{bmisymbols}{OML}{cmm}{b}{it}
@@ -562,23 +564,41 @@ The TeV fluctuations are biased with respect to the dark matter fluctuations, as
 \delta_E(\mathbf{\hat{x}},z)=b(z)\delta(\mathbf{\hat{x}},z),
 \label{eq:bias}
 \end{equation}
-with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, structures falling towards a central potential of a cluster have an infall velocity  towards the central overdensity, yielding different overdensities in redshift space $\delta_s$ and real space.
-%{[{ I removed rewrote the section about the redshift space distortions. I only kept the final equations rather than the complete derivation with Jacobian. I'm not fully sure about unifying the notations with the rest (for hats and stuff in paranthesis. We actually use z as a space coordinate in this part but as an indication of time in all the rest of the appendix). I corrected Eq. C4 and 5}]}\sout{ This yields the following redshift correction}}
-% \begin{equation}
-% \label{eq:vel_perturb}
-% dz'=d\hat r\frac{H(z')}{c}\left(1+\frac{dv_r(z')}{d\hat r}\right),
-% \end{equation}
-%where $dv_r$ are the velocity perturbations along the line of sight. The Fourier transform of $v_r$ gives \citep{1987MNRAS.227....1K}.
-% \begin{equation}
-% \label{eq:kaiser2}
-% \mathcal{F}\left(\frac{dv_r}{d\hat r}\right)=\mu^2 f \tilde{\delta}(\mathbf{\hat k}),
-% \end{equation}
-% }
-Assuming the scale of the fluctuations is small compared to the distance to the sources,   we have  
+with $b$ the Eulerian bias. If galaxies were moving exactly with the Hubble flow, their redshift would yield their exact distance to an observer. However, structures falling towards a central potential of a cluster have an infall velocity  towards the central overdensity, yielding different overdensities in redshift space $\delta_s$ and real space. \Cc{In our case, the blazar luminosity density evolution, the mean free path, and the bias as a function of redshift are all subject to this redshift space distortions as measured by the $z=0$ observer. We follow the derivation of the redshift space distortions of density fluctuations of \citet{MFW}. The key difference that we encounter is that redshift space distortions impact on $\mathbf{\mathcal{R}}=\mathbf{x}+\mathbf{r}$, whereas our computation involves the displacements $\mathbf{r}$ between the heated point and a distance source. To this end, we define a comoving redshift space distance}
+\begin{equation}
+\mathbf{\hat{s}} \equiv\frac{\mathbf{\dot{\hat{\mathcal{R}}}}}{a H(z)} = 
+\mathbf{\hat{\mathcal{R}}} + \frac{\hat{v}_{\mathcal{R}}}{H(z)} \mathbf{e}_\mathcal{R},
+\label{eq:s_redshift}
+\end{equation}
+which is given in units of length, $a=1/(1+z)$ is the cosmological scale factor, $\hat{v}_\mathcal{R}$ is the radial component of the comoving peculiar velocity, and $\mathbf{e}_\mathcal{R}$ is the unit vector along the line of sight. The conservation of particle number then implies
+\begin{equation}
+\hat n^{(\hat s)}(\hat s) d^3\mathbf{\hat s} = \hat n(\hat{\mathcal{R}}) d^3\mathbf{\hat{\mathcal{R}}},
+\qquad\mbox{or}\qquad
+\left[1+\delta^{(\hat s)}(\hat s)\right] d^3\mathbf{\hat s} = 
+\left[1+\delta(\hat{\mathcal{R}})\right] d^3\mathbf{\hat{\mathcal{R}}},
+\label{eq:conservation}
+\end{equation}
+where we employed the factor that the mean number density is the same in both spaces. Assuming statistical isotropy and homogeneity, we find
+\begin{equation}
+1+\delta^{(\hat s)}(\hat s) = \left[1+\delta(\calR)\right] \frac{\calR^2}{\left(\calR^+v_\calR/H(z)\right)^2}
+\left(1+\frac{1}{H(z)}\frac{\partial \hat{v}_\calR}{\partial\calR}\right)^{-1},
+\label{eq:conservation2}
+\end{equation}
+Assuming $\left|v_\calR\right|\ll \calR H(z)$ and keeping only terms up to lowest non-trivial order, we obtain
 \begin{equation}
   \label{eq:real_vs_z}
-  \delta_s(\mathbf{\hat{x}})=\delta(\mathbf{\hat{x}})-\frac{\partial }{\partial \hat{r}}\left(\frac{v_r}{H_0}\right).
+  \delta_s[\mathbf{s}(\calR)=
+  \delta(\calR)-\frac{1}{H(z)}\left(\frac{\partial}{\partial \calR} + \frac{2}{\calR}\right)\hat{v}_\calR\approx
+  \delta(\calR)-\frac{1}{H(z)}\frac{\partial \hat{v}_\calR}{\partial \calR},
 \end{equation}
+where we assumed in the second step that the scale of the fluctuations is small compared to the distance to the sources (i.e., we used the plane-parallel approximation according to \citealt{1987MNRAS.227....1K}). In the linear regime ($\delta(\calR)\ll 1$), the peculiar velocity field is related to the density field via the Zel'dovich approximation \citep{MFW},
+\begin{equation}
+  \label{eq:Zeldovich}
+  \delta(\calR) = -\frac{f}{b H(z)}\frac{\partial \hat{\mathbf{v}}}{\partial \calR}.
+\end{equation}
+
+
+
 where $v_r$ is the radial component of the peculiar velocity \citep{MFW}. In Fourier space, this gives
 \begin{equation}
   \label{eq:real_vs_z}
