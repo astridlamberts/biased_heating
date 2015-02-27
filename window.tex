@@ -501,9 +501,9 @@ $J_E$ is the specific intensity per unit energy (in erg s$^{-1}$ cm$^{-2}$ erg$^
 where the vector $\mathbf{\hat{r}}(\hat{r}(z,z'), \theta, \phi)$, $z$ is the absorption redshift, $\hat{\mathcal{E}}_E = \epsilon_E/(1+z')^3$ is the comoving specific emissivity defined in Eq.~\eqref{eq:spec_lum_dens}, $E' = E (1+z')/(1+z)$ and $\tau$ is the approximate optical depth given by
 \begin{equation}
 \label{eq:tau}
-\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{\hat D_{\mathrm{pp}}(E',z'')}\frac{d\hat r}{dz''}.
+\tau(E,z,z')\equiv \tau=\int_z^{z'}dz''\frac{1}{\hat D_{\mathrm{pp}}(E,z'')}\frac{d\hat r}{dz''}.
 \end{equation}
-An alert reader will recognize that the true optical depth must include the effect of a changing $E'$ as we integrate from $z$ to $z'$.  Here we assume the typical mean free paths for high energy photons are much smaller than the Hubble length so that $E' \approx E$ over the redshift interval is small compared to $z$  where integrand is nontrivial.  
+An alert reader will recognize that the true optical depth must include the effect of a changing \Pc{$E'' = E(1+z'')/(1+z)$ as we integrate along $z''$ from $z$ to $z'$}.  \Pc{However, h}ere we assume the typical mean free paths for high energy photons are much smaller than the Hubble length so that \Pc{$E'' \approx E$} over the redshift interval is small compared to $z$  where integrand is nontrivial.  
 We then find that the energy-integrated and volume-integrated heating rate is then given by 
 \begin{equation}
   \label{eq:int_exp_heat}
