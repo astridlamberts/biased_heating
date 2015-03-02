@@ -220,19 +220,13 @@ density $\hat{\Lambda}_Q$. The corresponding comoving TeV luminosity
 density, found by \citet{2012ApJ...752...23C} based on a fit to the
 comoving quasar luminosity density in \citet{2007ApJ...654..731H}, is
 given by
-% \begin{equation}
-% \label{eq:phi_quasar}
-% \hat{\Lambda}(z)=\hat{\Lambda}_0 10^{-0.0037x^4+0.085x^3-0.778x^2+2.795x-2.133}\,,
-% \end{equation}
 \begin{equation}
 \label{eq:phi_quasar}
-%\hat{\Lambda}(z)=\hat{\Lambda}_0 10^{-0.037z+1.47z^2-0.53z^3+0.064z^4-0.003z^5}
 \hat{\Lambda}(z)=\hat{\Lambda}_0 10^{1.18 z - 0.0812 z^2 - 0.182 z^3 + 0.0515 z^4 - 0.00418 z^5} 
 \end{equation}
 where 
 $\hat{\Lambda}_0=(1.7-4.8)\times 10^{-36}$erg s$^{-1}$ cm$^{-3}$ the
 blazar luminosity density at the current epoch. 
-%\ALc{[{Eq. 14 may need updating, so that we can remove Eq. 13}]}.
 
 
 
@@ -258,12 +252,9 @@ which is very similar to \citet{2012MNRAS.422..106P}. Our model for galaxy bias 
   \end{equation}
 Figure~\ref{fig:bias} shows the corresponding evolution of quasar and galaxy bias as a function of redshift. Using the same data, \citet{2008ApJ...678..627B} find that the quasar and galaxy bias can be fitted using a dark matter halo model of  $10^{13}h^{-1}M_{\odot}$ and $10^{12}h^{-1} M_{\odot}$ respectively. 
 
-%\sout{An estimate can be obtained from the observations of quasar bias \citep{2005MNRAS.356..415C,2007ApJ...658...85M,2007AJ....133.2222S}. We use a fit to an analytic model for a halo mass of$10^{13}h^{-1}M_{\odot}$ \citep{2008ApJ...678..627B}. TeV blazars may have a stronger bias, as radio-loud AGN are generally found in a more clustered environment than quasars. To illustrate the impact of the uncertainty on the bias, we also use a model for galaxy bias, based on a halo mass of $10^{12}h^{-1} M_{\odot}$, for comparison.}}
-%\Cc{[{\em Show additional figure with b(z) and fitting function.}]}
 
 \begin{figure}[h]
 \centering
-% \includegraphics[width = .45\textwidth ]{window_gal_qso}
 \includegraphics[width = .4\textwidth ]{bias}
 \caption{Galaxy (red line) and quasar (blue line) bias models used in our simulations.}
 \label{fig:bias}
@@ -298,7 +289,7 @@ Modeling fluctuations by implementing a filtering function in a large scale simu
 \section{Results}
 \begin{figure*}
 \centering
-\includegraphics[width = .45\textwidth ]{data_rho_z3_qso4.png}
+\includegraphics[width = .45\textwidth ]{data_rho_z3_qso4.pdf}
 \includegraphics[width = .45\textwidth ]{data_rho_z1_qso4.png}
 \includegraphics[width = .45\textwidth ]{data_delta_z3_gal2.png}
 \includegraphics[width = .45\textwidth ]{data_delta_z1_gal2.png}
@@ -367,7 +358,6 @@ Previous work on TeV blazar heating showed a significant increase in the tempera
 
 The impact of inhomogeneous heating becomes especially important around $z=2.5$, below which the impact of HeII reionization on the temperature of the IGM is limited \citep{2013MNRAS.435.3169C}. An increased temperature, with a strong scatter in underdense regions could then be attributed to inhomogeneous blazar heating. Direct measurements of the low density IGM are hard to obtain as the Lyman $\alpha$ forest is sensitive to overdensities of at least a few. The Lyman $\alpha$ forest of HeII traces lower density regions and is a promising observable, with more data becoming available \citep{2014arXiv1405.7405W}.
 
-%A good understanding of the IGM is crucial as it is the birthplace of the large scale structures we observe. TeV blazar heating increases its average temperature and entropy, even at early times, and will impact the formation and evolution of structures \citep{2012ApJ...752...24P}. Such heating occurs far away from the sources and is complimentary to other black hole feedback mechanisms directly impacting their host galaxies and clusters.
 
 Our model neglects important physical aspects of TeV blazars such as their duty cycle and beaming of the gamma-ray emission. The $\gamma$-ray duty cycle of BL Lac objects is of order of 10 $\%$ \citep{1996ApJ...464..600S}. As TeV blazars have low accretion rates, their lifetime is long $\simeq 5-7$ Gyr \citep{2002ApJ...571..226C}. The $\gamma$ ray sources are highly beamed, with observed opening angles peaking around 20$^{\circ}$ \citep{2009A&A...507L..33P}. Parsec scale VLBI observations of the inner parts of radio jets indicate variations of the position angle of around 20$^{\circ}$, up to 120$^{\circ}$ over more than a decade \citep{2013AJ....146..120L}. Assuming the gamma-ray emission follows the orientation of the radio jet, the rapid variability of the sources can potentially increase the scatter in the heating rate. Indeed, in the early universe, when few sources are present,  individual variability increases the inhomogeneity of blazar heating. In such case, our model is a lower limit for the true scatter. However, later on, as the number of sources at a  given point increases, the variability of the heating rate will be reduced.    On top of the intrinsic  variability  of the sources, shot noise, which becomes important when sources are rare, is not taken into account and will result in additional heating rate fluctuations. For instance, at $z \sim 1-2$, the number of sources that contributes half the heating is $\approx 10$ whereas at $z = 3$, it dwindles to $\approx 1$ \citep{2012ApJ...752...23C}.   While this would suggest that the shot noise is potentially large, this is mitigated somewhat by the fact that the next 25\% of the heating is provided by $\approx 100$ sources between $z=1-2$ and $\approx 10$ source at $z=3$. Hence, the fluctuations that we calculate in this work are likely a lower limit.
 
@@ -469,7 +459,6 @@ In the last step, we have assumed for simplicity that the fluctuations in the Te
 
 \begin{figure}
 \centering
-% \includegraphics[width = .45\textwidth ]{newtonian_window}
 \includegraphics[width = .45\textwidth ]{newtonian_window}
 \caption{Window function for a monochromatic source in a  non-expanding universe (Eq.~\eqref{eq:heat_fluc_newt3}) . The dashed red line
     shows a small mean free path
@@ -488,12 +477,7 @@ The heating rate in an expanding universe at a comoving point $\mathbf{\hat{x}}$
 where the interval $E_{\mathrm{min}}$ to $E_{\mathrm{max}}$ is the energy range over which pair
 production is possible. Quantities indicated by a hat are measured in the
 comoving frame.
-%The evolution of $J_E$ is dictated by the equation of radiative transfer in an expanding universe
-%\begin{equation}\label{eq:radiative transfer}
-%  \frac{\partial J_E}{\partial t} + H J_E\left(3 - \frac{\partial\ln J_E}{\partial\ln E} + \frac{c}{H D_{\mathrm{pp}}}\right)
-%  = \frac {c}{4\pi} \epsilon_E,
-%\end{equation}
-%where $H = \dot{a}/a$ is the Hubble parameter, $a$ is the scale factor, and $\epsilon_E$ is the specific proper emissivity.
+
 $J_E$ is the specific intensity per unit energy (in erg s$^{-1}$ cm$^{-2}$ erg$^{-1}$). Assuming a flat geometry on spatial hypersurfaces of the Friedmann-Robertson-Walker metric, $J_E$ is given by
 \begin{equation}\label{eq:expanding J}
   J_E(E, \mathbf{\hat{x}}) = \frac {(1 + z)^3} {4\pi} \int_{\Omega} d\Omega \int_z^{\infty} \frac{d z'}{1+z'}\,\frac{d\hat{r}}{dz'}\, {\hat{\mathcal{E}}_{E'}(\mathbf{\hat{r}}+\mathbf{\hat{x}}, z')}e^{-\tau(E,z,z')},
@@ -552,12 +536,11 @@ Fourier transforming yields $\tilde{\delta}(\mathbf{\hat k})$ on the left hand s
 \end{equation}
 \begin{figure}[h]
 \centering
-% \includegraphics[width = .45\textwidth ]{window_nobiases}
 \includegraphics[width = .45\textwidth ]{window_nobias}
 \caption{Window function for blazar heating in an expanding universe without account for clustering bias (Eq.~\eqref{eq:heat_fluc_exp1}) for $z=1$ (solid line), 2 (dashed line) and 4 (dotted line).}
 \label{fig:window_nobiases}
 \end{figure}
-Figure~\ref{fig:window_nobiases} shows the window function in an expanding universe at different redshifts.  The position of the breaks results from a combination between the value of the mean free path and the redshift evolution of the blazar luminosity density. %Comparing with non-expanding case in Fig. \ref{fig:window_newt} \textit{ blabla}
+Figure~\ref{fig:window_nobiases} shows the window function in an expanding universe at different redshifts.  The position of the breaks results from a combination between the value of the mean free path and the redshift evolution of the blazar luminosity density. 
 As discussed in the main text, the rapidly decreasing blazar luminosity density with increasing redshift for $z\gtrsim 2$, which moves the break toward larger wave vectors, dominates over the increasing comoving mean free path, which moves the break toward smaller wave vectors.  This is due to the fact that the integration over the energy of the photons, which includes lower energy photons with larger mean free paths, allows the former effect to dominate and moves the break toward smaller wave vectors with increasing redshift.
 The TeV emission fluctuations are not exactly equal to the dark matter density fluctuations. In the next section we will account for the various corrections that have to be taken into account to determine a more accurate window function.
 
