@@ -54,6 +54,10 @@
 {Boera}, E., {Murphy}, M.~T., {Becker}, G.~D., \& {Bolton}, J.~S. 2014, \mnras,
   441, 1916
 
+\bibitem[{{Bolton} {et~al.}(2004){Bolton}, {Meiksin}, \&
+  {White}}]{2004MNRAS.348L..43B}
+{Bolton}, J., {Meiksin}, A., \& {White}, M. 2004, \mnras, 348, L43
+
 \bibitem[{{Bolton} \& {Becker}(2009)}]{2009MNRAS.398L..26B}
 {Bolton}, J.~S., \& {Becker}, G.~D. 2009, \mnras, 398, L26
 
@@ -191,6 +195,9 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Yamada}, \& {Yasuda}}]{2006ApJ...637..631K}
 {Kashikawa}, N., {Yoshida}, M., {Shimasaku}, K., {et~al.} 2006, \apj, 637, 631
 
+\bibitem[{{Kirkman} \& {Tytler}(1997)}]{1997ApJ...484..672K}
+{Kirkman}, D., \& {Tytler}, D. 1997, \apj, 484, 672
+
 \bibitem[{{Kneiske} {et~al.}(2004){Kneiske}, {Bretz}, {Mannheim}, \&
   {Hartmann}}]{2004A&A...413..807K}
 {Kneiske}, T.~M., {Bretz}, T., {Mannheim}, K., \& {Hartmann}, D.~H. 2004, \aap,
@@ -207,6 +214,13 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
 
 \bibitem[{{Kravtsov}(2010)}]{2010AdAst2010E...8K}
 {Kravtsov}, A. 2010, Advances in Astronomy, 2010, arXiv:0906.3295
+
+\bibitem[{{Kriss} {et~al.}(2001){Kriss}, {Shull}, {Oegerle}, {Zheng},
+  {Davidsen}, {Songaila}, {Tumlinson}, {Cowie}, {Deharveng}, {Friedman},
+  {Giroux}, {Green}, {Hutchings}, {Jenkins}, {Kruk}, {Moos}, {Morton},
+  {Sembach}, \& {Tripp}}]{2001Sci...293.1112K}
+{Kriss}, G.~A., {Shull}, J.~M., {Oegerle}, W., {et~al.} 2001, Science, 293,
+  1112
 
 \bibitem[{{Lister} {et~al.}(2013){Lister}, {Aller}, {Aller}, {Homan},
   {Kellermann}, {Kovalev}, {Pushkarev}, {Richards}, {Ros}, \&
@@ -233,6 +247,9 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Hernquist}, {Hopkins}, {Dutta}, \&
   {Faucher-Gigu{\`e}re}}]{2009ApJ...694..842M}
 {McQuinn}, M., {Lidz}, A., {Zaldarriaga}, M., {et~al.} 2009, \apj, 694, 842
+
+\bibitem[{{Meiksin} \& {Tittley}(2012)}]{2012MNRAS.423....7M}
+{Meiksin}, A., \& {Tittley}, E.~R. 2012, \mnras, 423, 7
 
 \bibitem[{{Miniati} \& {Elyiv}(2013)}]{2013ApJ...770...54M}
 {Miniati}, F., \& {Elyiv}, A. 2013, \apj, 770, 54
@@ -357,6 +374,12 @@ Bret, A., Firpo, M.-C., \& Deutsch, C. 2004, Phys. Rev. E, 70, 046401
   {Giavalisco}, {Pettini}, \& {Kellogg}}]{1998ApJ...492..428S}
 {Steidel}, C.~C., {Adelberger}, K.~L., {Dickinson}, M., {et~al.} 1998, \apj,
   492, 428
+
+\bibitem[{{Syphers} \& {Shull}(2014)}]{2014ApJ...784...42S}
+{Syphers}, D., \& {Shull}, J.~M. 2014, \apj, 784, 42
+
+\bibitem[{{Tittley} \& {Meiksin}(2007)}]{2007MNRAS.380.1369T}
+{Tittley}, E.~R., \& {Meiksin}, A. 2007, \mnras, 380, 1369
 
 \bibitem[{{Venters}(2010)}]{Vent:10}
 {Venters}, T.~M. 2010, \apj, 710, 1530

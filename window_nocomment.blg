@@ -1,0 +1,66 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: window_nocomment.aux
+The style file: apj.bst
+Database file #1: biblio_total.bib
+Repeated entry---line 186 of file biblio_total.bib
+ : @article{2014ApJ...797..110C
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 7698 of file biblio_total.bib
+ : @article{2009MNRAS.398L..26B
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8295 of file biblio_total.bib
+ : @article{2005A&A...442..801M
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8336 of file biblio_total.bib
+ : @article{2006ApJ...637..631K
+ :                             ,
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty publisher in 1981csup.book.....H
+Warning--can't use both author and editor fields in Peebles
+You've used 84 entries,
+            3085 wiz_defined-function locations,
+            1317 strings with 29179 characters,
+and the built_in function-call counts, 42831 in all, are:
+= -- 3419
+> -- 3482
+< -- 25
++ -- 1165
+- -- 1259
+* -- 3820
+:= -- 8166
+add.period$ -- 84
+call.type$ -- 84
+change.case$ -- 584
+chr.to.int$ -- 83
+cite$ -- 86
+duplicate$ -- 1585
+empty$ -- 2375
+format.name$ -- 1365
+if$ -- 8386
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 84
+newline$ -- 256
+num.names$ -- 337
+pop$ -- 632
+preamble$ -- 1
+purify$ -- 584
+quote$ -- 0
+skip$ -- 1313
+stack$ -- 0
+substring$ -- 1735
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 750
+warning$ -- 2
+while$ -- 321
+width$ -- 0
+write$ -- 843
+(There were 4 error messages)

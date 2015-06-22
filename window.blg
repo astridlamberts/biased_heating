@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: window.aux
+The style file: apj.bst
+Database file #1: biblio_total.bib
+Repeated entry---line 7803 of file biblio_total.bib
+ : @article{2009MNRAS.398L..26B
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8400 of file biblio_total.bib
+ : @article{2005A&A...442..801M
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 8441 of file biblio_total.bib
+ : @article{2006ApJ...637..631K
+ :                             ,
+I'm skipping whatever remains of this entry
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty publisher in 1981csup.book.....H
+Warning--can't use both author and editor fields in MFW
+Warning--empty publisher in MFW
+Warning--empty pages in MFW
+Warning--can't use both author and editor fields in Peebles
+You've used 91 entries,
+            3085 wiz_defined-function locations,
+            1368 strings with 30912 characters,
+and the built_in function-call counts, 46049 in all, are:
+= -- 3686
+> -- 3707
+< -- 29
++ -- 1238
+- -- 1336
+* -- 4093
+:= -- 8770
+add.period$ -- 91
+call.type$ -- 91
+change.case$ -- 627
+chr.to.int$ -- 90
+cite$ -- 96
+duplicate$ -- 1717
+empty$ -- 2575
+format.name$ -- 1461
+if$ -- 9025
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 91
+newline$ -- 277
+num.names$ -- 366
+pop$ -- 685
+preamble$ -- 1
+purify$ -- 627
+quote$ -- 0
+skip$ -- 1420
+stack$ -- 0
+substring$ -- 1869
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 810
+warning$ -- 5
+while$ -- 348
+width$ -- 0
+write$ -- 912
+(There were 3 error messages)
