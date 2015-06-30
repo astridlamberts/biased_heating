@@ -3,15 +3,15 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: window.aux
 The style file: apj.bst
 Database file #1: biblio_total.bib
-Repeated entry---line 7803 of file biblio_total.bib
+Repeated entry---line 7821 of file biblio_total.bib
  : @article{2009MNRAS.398L..26B
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8400 of file biblio_total.bib
+Repeated entry---line 8418 of file biblio_total.bib
  : @article{2005A&A...442..801M
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 8441 of file biblio_total.bib
+Repeated entry---line 8459 of file biblio_total.bib
  : @article{2006ApJ...637..631K
  :                             ,
 I'm skipping whatever remains of this entry
@@ -21,45 +21,45 @@ Warning--can't use both author and editor fields in MFW
 Warning--empty publisher in MFW
 Warning--empty pages in MFW
 Warning--can't use both author and editor fields in Peebles
-You've used 91 entries,
+You've used 92 entries,
             3085 wiz_defined-function locations,
-            1368 strings with 30912 characters,
-and the built_in function-call counts, 46049 in all, are:
-= -- 3686
-> -- 3707
+            1376 strings with 31183 characters,
+and the built_in function-call counts, 46566 in all, are:
+= -- 3731
+> -- 3745
 < -- 29
-+ -- 1238
-- -- 1336
-* -- 4093
-:= -- 8770
-add.period$ -- 91
-call.type$ -- 91
-change.case$ -- 627
-chr.to.int$ -- 90
-cite$ -- 96
-duplicate$ -- 1717
-empty$ -- 2575
-format.name$ -- 1461
-if$ -- 9025
++ -- 1251
+- -- 1351
+* -- 4138
+:= -- 8865
+add.period$ -- 92
+call.type$ -- 92
+change.case$ -- 635
+chr.to.int$ -- 91
+cite$ -- 97
+duplicate$ -- 1736
+empty$ -- 2604
+format.name$ -- 1476
+if$ -- 9128
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 91
-newline$ -- 277
-num.names$ -- 366
-pop$ -- 685
+missing$ -- 92
+newline$ -- 280
+num.names$ -- 370
+pop$ -- 694
 preamble$ -- 1
-purify$ -- 627
+purify$ -- 635
 quote$ -- 0
-skip$ -- 1420
+skip$ -- 1436
 stack$ -- 0
-substring$ -- 1869
+substring$ -- 1893
 swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 810
+type$ -- 819
 warning$ -- 5
-while$ -- 348
+while$ -- 352
 width$ -- 0
-write$ -- 912
+write$ -- 922
 (There were 3 error messages)
