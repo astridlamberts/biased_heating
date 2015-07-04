@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.15)  30 JUN 2015 09:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.15)  4 JUL 2015 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -634,34 +634,6 @@ LaTeX Warning: A float is stuck (cannot be placed) on input line 380.
 
 Class revtex4 Warning: Deferred float stuck during \clearpage processing.
 
-! Extra }, or forgotten \endgroup.
-\UL@stop ...z@ \else \UL@putbox \fi \else \egroup 
-                                                  \egroup \UL@putbox \fi \if...
-l.386 ... is limited \citep{2013MNRAS.435.3169C}}}
-                                                  . An increased temperature...
-
-? 
-! Extra }, or forgotten \endgroup.
-\UL@stop ... \UL@putbox \fi \else \egroup \egroup 
-                                                  \UL@putbox \fi \ifnum \UL@...
-l.386 ... is limited \citep{2013MNRAS.435.3169C}}}
-                                                  . An increased temperature...
-
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.386 ... is limited \citep{2013MNRAS.435.3169C}}}
-                                                  . An increased temperature...
-
-? 
-! Missing } inserted.
-<inserted text> 
-                }
-l.386 ... is limited \citep{2013MNRAS.435.3169C}}}
-                                                  . An increased temperature...
-
-? 
 
 Underfull \hbox (badness 1194) in paragraph at lines 386--388
 \OML/cmm/m/it/10 z \OT1/cmr/m/n/10 = 2$\OT1/cmr/bx/sc/10 , which would not be e
@@ -715,10 +687,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5237 strings out of 494999
- 71510 string characters out of 6180227
+ 5238 strings out of 494999
+ 71521 string characters out of 6180227
  162026 words of memory out of 5000000
- 8318 multiletter control sequences out of 15000+600000
+ 8319 multiletter control sequences out of 15000+600000
  18199 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  39i,13n,28p,2223b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -749,7 +721,7 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on window.pdf (18 pages, 3736903 bytes).
+Output written on window.pdf (18 pages, 3750770 bytes).
 PDF statistics:
  392 PDF objects out of 1000 (max. 8388607)
  209 compressed objects within 3 object streams
