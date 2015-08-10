@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.15)  4 AUG 2015 10:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.12.15)  10 AUG 2015 11:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -494,12 +494,13 @@ File: data_U_z3_qso4.pdf Graphic file (type pdf)
 <use data_U_z3_qso4.pdf>
 Package pdftex.def Info: data_U_z3_qso4.pdf used on input line 307.
 (pdftex.def)             Requested size: 230.90128pt x 187.60524pt.
- <data_U_z1_qso4.pdf, id=96, 578.16pt x 469.755pt>
+
+<data_U_z1_qso4.pdf, id=96, 578.18309pt x 469.77408pt>
 File: data_U_z1_qso4.pdf Graphic file (type pdf)
 
 <use data_U_z1_qso4.pdf>
 Package pdftex.def Info: data_U_z1_qso4.pdf used on input line 308.
-(pdftex.def)             Requested size: 230.90128pt x 187.60478pt.
+(pdftex.def)             Requested size: 230.90128pt x 187.60524pt.
  [6] [7 <./data_rho_z3_qso4.pdf> <./data_rho_z1_qso4.pdf> <./data_delta_z3_gal2
 .pdf> <./data_delta_z1_gal2.pdf> <./data_delta_z3_qso4.pdf> <./data_delta_z1_qs
 o4.pdf>]
@@ -579,18 +580,19 @@ File: T_rho_gal_z1_vol.pdf Graphic file (type pdf)
 <use T_rho_gal_z1_vol.pdf>
 Package pdftex.def Info: T_rho_gal_z1_vol.pdf used on input line 356.
 (pdftex.def)             Requested size: 164.20132pt x 146.56093pt.
- <T_rho_qso_z1_vol.pdf, id=162, 650.43pt x 505.89pt>
+
+<T_rho_qso_z1_vol.pdf, id=162, 650.4561pt x 505.91006pt>
 File: T_rho_qso_z1_vol.pdf Graphic file (type pdf)
 
 <use T_rho_qso_z1_vol.pdf>
 Package pdftex.def Info: T_rho_qso_z1_vol.pdf used on input line 357.
-(pdftex.def)             Requested size: 164.20132pt x 146.55495pt.
+(pdftex.def)             Requested size: 164.20132pt x 146.56093pt.
 
-<full_PDF_256_gal_qso.pdf, id=164, 650.43pt x 505.89pt>
-File: full_PDF_256_gal_qso.pdf Graphic file (type pdf)
+<full_PDF_512_gal_qso.pdf, id=164, 650.43pt x 505.89pt>
+File: full_PDF_512_gal_qso.pdf Graphic file (type pdf)
 
-<use full_PDF_256_gal_qso.pdf>
-Package pdftex.def Info: full_PDF_256_gal_qso.pdf used on input line 364.
+<use full_PDF_512_gal_qso.pdf>
+Package pdftex.def Info: full_PDF_512_gal_qso.pdf used on input line 364.
 (pdftex.def)             Requested size: 230.90128pt x 179.58833pt.
 
 
@@ -617,12 +619,12 @@ File: delta_deltah_z3_qso_512.pdf Graphic file (type pdf)
 Package pdftex.def Info: delta_deltah_z3_qso_512.pdf used on input line 373.
 (pdftex.def)             Requested size: 230.90128pt x 179.58774pt.
 
-<delta_deltah_z1_qso_512.pdf, id=168, 650.43pt x 505.89pt>
+<delta_deltah_z1_qso_512.pdf, id=168, 650.4561pt x 505.91006pt>
 File: delta_deltah_z1_qso_512.pdf Graphic file (type pdf)
 
 <use delta_deltah_z1_qso_512.pdf>
 Package pdftex.def Info: delta_deltah_z1_qso_512.pdf used on input line 374.
-(pdftex.def)             Requested size: 230.90128pt x 179.58833pt.
+(pdftex.def)             Requested size: 230.90128pt x 179.58774pt.
 
 
 Class revtex4 Warning: Float cannot be placed.
@@ -642,9 +644,9 @@ LaTeX Warning: A float is stuck (cannot be placed) on input line 380.
 
 Class revtex4 Warning: Deferred float stuck during \clearpage processing.
 
-[10 <./full_PDF_256_gal_qso.pdf>]
+[10 <./full_PDF_512_gal_qso.pdf>]
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 397.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 396.
 
 [11 <./delta_deltah_z3_gal_512.pdf> <./delta_deltah_z1_gal_512.pdf> <./delta_de
 ltah_z3_qso_512.pdf> <./delta_deltah_z1_qso_512.pdf>]
@@ -657,14 +659,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
-[12] <newtonian_window.pdf, id=21601, 650.43pt x 578.16pt>
+[12] <newtonian_window.pdf, id=341, 650.43pt x 578.16pt>
 File: newtonian_window.pdf Graphic file (type pdf)
 
 <use newtonian_window.pdf>
 Package pdftex.def Info: newtonian_window.pdf used on input line 490.
 (pdftex.def)             Requested size: 230.90128pt x 205.24382pt.
  [13 <./newtonian_window.pdf>]
-<window_nobias.pdf, id=21644, 650.43pt x 578.16pt>
+<window_nobias.pdf, id=384, 650.43pt x 578.16pt>
 File: window_nobias.pdf Graphic file (type pdf)
  <use window_nobias.pdf>
 Package pdftex.def Info: window_nobias.pdf used on input line 567.
@@ -678,7 +680,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  5264 strings out of 494999
  71882 string characters out of 6180227
- 164588 words of memory out of 5000000
+ 164605 words of memory out of 5000000
  8341 multiletter control sequences out of 15000+600000
  18199 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -709,12 +711,11 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on window.pdf (18 pages, 18773500 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on window.pdf (18 pages, 6825667 bytes).
 PDF statistics:
- 21786 PDF objects out of 22161 (max. 8388607)
- 348 compressed objects within 4 object streams
+ 526 PDF objects out of 1000 (max. 8388607)
+ 316 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
